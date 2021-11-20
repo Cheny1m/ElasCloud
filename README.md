@@ -1,2 +1,4 @@
 # FlexCloud
-Prepartition_A_new_paradigm_for_the_load_balance_of_virtual_machine_reservations_in_data_centers——ICC2014FormalVersion
+
+# Project Statement:
+This project is a resource scheduling simulator of cloud data center using SVN for version control which is based on the paper: **preparation and new example of load balancing and reservation of virtual machines in Data Center** - icc2014 format version and imported from **https://sourceforge.net/projects/flexcloud/files/**.
