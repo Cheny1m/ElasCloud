@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<PhysicalMachine>
+    <pmInfo>
+        <pmType>1</pmType>
+        <cpu>16</cpu>
+        <mem>30</mem>
+        <storage>3380</storage>
+        <minPower>210</minPower>
+        <maxPower>300</maxPower>
+    </pmInfo>
+    <pmInfo>
+        <pmType>2</pmType>
+        <cpu>52</cpu>
+        <mem>136</mem>
+        <storage>3380</storage>
+        <minPower>420</minPower>
+        <maxPower>600</maxPower>
+    </pmInfo>
+    <pmInfo>
+        <pmType>3</pmType>
+        <cpu>40</cpu>
+        <mem>14</mem>
+        <storage>3380</storage>
+        <minPower>350</minPower>
+        <maxPower>500</maxPower>
+    </pmInfo>
+</PhysicalMachine>

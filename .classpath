@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="jar/xom-1.2.6.jar"/>
+	<classpathentry kind="lib" path="jar/jcommon-1.0.17.jar"/>
+	<classpathentry kind="lib" path="jar/jfreechart-1%5B2%5D.0.8a.jar"/>
+	<classpathentry kind="lib" path="jar/jxl.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
