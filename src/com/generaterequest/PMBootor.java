@@ -53,7 +53,7 @@ public class PMBootor {
 				PMNum.add(PMNumTwo);
 				PMNumThree = getProperties("type3");
 				PMNum.add(PMNumThree);
-				System.out.println(PMNum.get(0) + " " + PMNum.get(1) + " " + PMNum.get(2));
+				//System.out.println(PMNum.get(0) + " " + PMNum.get(1) + " " + PMNum.get(2));
 				return PMNum;
 
 			}
@@ -78,14 +78,14 @@ public class PMBootor {
 				PMNum.add(PMNumTwo);
 				PMNumThree = getProperties("type3");
 				PMNum.add(PMNumThree);
-				System.out.println(PMNum.get(0) + " " + PMNum.get(1) + " " + PMNum.get(2));
+				//System.out.println(PMNum.get(0) + " " + PMNum.get(1) + " " + PMNum.get(2));
 				
 				return PMNum;
         }
         
 	public int getProperties(String propertyName){
 			String s = property.getProperty(propertyName);
-			System.out.println(propertyName + ": " + s);
+			//System.out.println(propertyName + ": " + s);
 			return Integer.parseInt(s);
 	}
 	/**
