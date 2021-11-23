@@ -63,7 +63,7 @@ public class ConfController {
             dcf.generateReuquest();
 
             dcf.allocate(oa);
-            confSelectedIndices(selectedIndices);
+            confSelectedIndices(selectedIndices,0);
             dcf.showIndex();
             setDataSet(dcf.getIndexValues(), oa.getDescription(), dcf.getIndexNames());
             DataCenterADDJFrame.algorithmDataCenterMap.put(oa.getDescription(), dcf.getArr_dc());
@@ -84,7 +84,7 @@ public class ConfController {
 
 
             lbf.allocate(ofa);//Allocated PM ID
-            confSelectedIndices(selectedIndices);
+            confSelectedIndices(selectedIndices,1);
             lbf.showIndex();
             setDataSet(lbf.getIndexValues(), ofa.getDescription(), lbf.getIndexNames());
             
@@ -106,27 +106,36 @@ public class ConfController {
         ai.setOlrsa(selectedAlgortihm.get(index++));
         ai.setIW(selectedAlgortihm.get(index++));
         ai.setEdf(selectedAlgortihm.get(index++));
-        ai.setLPT(selectedAlgortihm.get(index++));
         ai.setCMP(selectedAlgortihm.get(index++));
+        ai.setLPT(selectedAlgortihm.get(index++));
         ai.setMIG(selectedAlgortihm.get(index++));
 
     }
 
-    public void confSelectedIndices(ArrayList<Boolean> selectedIndices) {
+    public void confSelectedIndices(ArrayList<Boolean> selectedIndices,int f) {
         int index = 0;
         /*
          * Sequence should be strictly set. Find the sequence in the interface.
          */
-        dcf.getIndexItem().setAverageUility(selectedIndices.get(index++));
-        dcf.getIndexItem().setImbalanceDegree(selectedIndices.get(index++));
-        dcf.getIndexItem().setMakespan(selectedIndices.get(index++));
-               //lbf.getIndexItem().setSkew_makespan(selectedIndices.get(index++));
-        dcf.getIndexItem().setCapacity_makespan(selectedIndices.get(index++));
-               //lbf.getIndexItem().setSkew_capaciy_makespan(selectedIndices.get(index++));
+        if (f == 0){
+            dcf.getIndexItem().setAverageUility(selectedIndices.get(index++));
+            //lbf.getIndexItem().setAverageUility(selectedIndices.get(index++));
+            dcf.getIndexItem().setImbalanceDegree(selectedIndices.get(index++));
+            dcf.getIndexItem().setMakespan(selectedIndices.get(index++));
+            //lbf.getIndexItem().setSkew_makespan(selectedIndices.get(index++));
+            dcf.getIndexItem().setCapacity_makespan(selectedIndices.get(index++));
+            //lbf.getIndexItem().setSkew_capaciy_makespan(selectedIndices.get(index++));
 //        lbf.getIndexItem().setEffectivePM(selectedIndices.get(index++));
 //        lbf.getIndexItem().setEnergyConsumption(selectedIndices.get(index++));
 //        lbf.getIndexItem().setRejectedVMNum(selectedIndices.get(index++));
-        dcf.getIndexItem().setProcessTime(selectedIndices.get(index++));
+//        dcf.getIndexItem().setProcessTime(selectedIndices.get(index++));
+        }
+        else {
+            lbf.getIndexItem().setAverageUility(selectedIndices.get(index++));
+            lbf.getIndexItem().setImbalanceDegree(selectedIndices.get(index++));
+            lbf.getIndexItem().setMakespan(selectedIndices.get(index++));
+            lbf.getIndexItem().setCapacity_makespan(selectedIndices.get(index++));
+        }
     }
 
     public void setSelectedIndices(ArrayList<Boolean> selectedIndices) {

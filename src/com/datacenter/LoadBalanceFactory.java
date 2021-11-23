@@ -20,6 +20,7 @@ import com.resource.PhysicalMachine;
 import com.resource.VirtualMachine;
 import com.schedule.loadbalance.OfflineAlgorithm;
 import com.schedule.loadbalance.OnlineAlgorithm;
+import com.schedule.loadbalance.RandomAlgorithm;
 
 /**
  * This class implements the interface DataCenterFactory, that is to say,
@@ -207,6 +208,7 @@ public class LoadBalanceFactory implements DataCenterImp {
 	@Override
 	public void allocate(OfflineAlgorithm ofla) {
 		LoadBalanceFactory.print.println("Starting allocating requests......");
+		//System.out.println(vmQueue + "  "+pmQueueOne+"  "+pmQueueTwo+" "+pmQueueThree);
 		ofla.allocate(vmQueue, pmQueueOne, pmQueueTwo, pmQueueThree);
 		ii = new IndexItem(pmQueueOne, pmQueueTwo, pmQueueThree);
 		LoadBalanceFactory.print.println("Allocation finished......");
@@ -330,13 +332,13 @@ public class LoadBalanceFactory implements DataCenterImp {
 	}
 
 	public static void main(String[] args) {
-		// LoadBalanceFactory dcf = new LoadBalanceFactory();
-		// dcf.createVM(new CreateVM());
-		// // dcf.createVM(new CreateVMByEndTime(new CreateVM()));
-		// // dcf.createVM(new CreateVMByPorcessTime(new CreateVM()));
-		// dcf.bootPM(new PMBootor());
-		// dcf.generateReuquest();
-		// dcf.allocate(new RandomAlgorithm());//Allocated PM ID
-		// dcf.showIndex();
+//		 LoadBalanceFactory dcf = new LoadBalanceFactory();
+//		 dcf.createVM(new CreateVM());
+//		 // dcf.createVM(new CreateVMByEndTime(new CreateVM()));
+//		 // dcf.createVM(new CreateVMByPorcessTime(new CreateVM()));
+//		 dcf.bootPM(new PMBootor());
+//		 dcf.generateReuquest();
+//		 dcf.allocate(new RandomAlgorithm());//Allocated PM ID
+//		 dcf.showIndex();
 	}
 }

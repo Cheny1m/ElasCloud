@@ -63,7 +63,7 @@ public class EnergySavingCMP extends OfflineAlgorithm{
 			ArrayList<PhysicalMachine> p_pmQueueThree) {
 		// TODO Auto-generated method stub
     	//CMP core methods
-    	this.vmQueue = processCMP(p_vmQueue, p_pmQueueOne.size());
+    	this.vmQueue = processCMP(p_vmQueue, p_pmQueueThree.size());
     	
 		this.pmQueueOne = p_pmQueueOne;
 		this.pmQueueTwo = p_pmQueueTwo;
@@ -90,7 +90,7 @@ public class EnergySavingCMP extends OfflineAlgorithm{
 			LoadBalanceFactory.print.println("CMP-Index:"+index);
 			//Three queues should be decided which queue would be added.
 			if( vm.getVmType() > 0 && vm.getVmType() <= 3){
-				allocateVm(vm, pmQueueOne.get(index));
+				allocateVm(vm, pmQueueThree.get(index));
 			}
 			else if( vm.getVmType() > 3 && vm.getVmType() <= 6 ){
 				allocateVm(vm, pmQueueTwo.get(index));
@@ -230,8 +230,8 @@ public class EnergySavingCMP extends OfflineAlgorithm{
 			if(p_currentTime >= vm5.getEndTime()){
 				if(pmNo >= 0 && pmNo < pmNum.get(0)){
                                     for(int j = 0; j < pmNum.get(0); j++){
-					if(pmNo == pmQueueOne.get(j).getNo()){
-                                        updateResource(vm5, pmQueueOne.get(j), increase);
+					if(pmNo == pmQueueThree.get(j).getNo()){
+                                        updateResource(vm5, pmQueueThree.get(j), increase);
                                         break;
                                         }
                                     }
@@ -259,7 +259,7 @@ public class EnergySavingCMP extends OfflineAlgorithm{
 
     private void sortPM(VirtualMachine vm1) {
         if(vm1.getVmType() > 0 && vm1.getVmType() <= 3) {
-            Collections.sort(pmQueueOne, new SortByCurrentUtility(currentTime));
+            Collections.sort(pmQueueThree, new SortByCurrentUtility(currentTime));
         }
         else if(vm1.getVmType() > 3 && vm1.getVmType() <= 6){
             Collections.sort(pmQueueTwo, new SortByCurrentUtility(currentTime));
@@ -274,10 +274,10 @@ public class EnergySavingCMP extends OfflineAlgorithm{
      * a new VM queue with new capacity_makespan value. The start time and end time 
      * may be different from the previous ones.
      * @param p_vmQueue
-     * @param pmQueueOneSize
+     * @param pmQueueThreeSize
      * @return
      */
-    private ArrayList<VirtualMachine> processCMP(ArrayList<VirtualMachine> p_vmQueue, int pmQueueOneSize){
+    private ArrayList<VirtualMachine> processCMP(ArrayList<VirtualMachine> p_vmQueue, int pmQueueThreeSize){
     	int capacity_makespan = 0;
     	int maxCapacity_makespan = 0;
     	int averageCapacity_makespan = 0;
@@ -297,7 +297,7 @@ public class EnergySavingCMP extends OfflineAlgorithm{
     		}
     		averageCapacity_makespan +=  capacity_makespan;
     	}
-    	averageCapacity_makespan /= pmQueueOneSize;
+    	averageCapacity_makespan /=pmQueueThreeSize;
     	partitionCapacity_makespan = maxCapacity_makespan > averageCapacity_makespan ? 
     			maxCapacity_makespan: averageCapacity_makespan;
     	partitionCapacity_makespan /= 4;

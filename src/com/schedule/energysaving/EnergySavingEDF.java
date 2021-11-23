@@ -72,7 +72,14 @@ public class EnergySavingEDF extends OfflineAlgorithm{
 	//	System.out.println(pmQueueOne.get(0).resource.get(0).getCpuUtility());
 	//	System.out.println(pmQueueOne.get(0).resource.get(0).getMemUtility());
 	//	System.out.println(pmQueueOne.get(0).resource.get(0).getStoUtility());
-		
+//		System.out.println(pmQueueOne);
+//		System.out.println(pmQueueTwo);
+//		System.out.println(pmQueueThree);
+//
+//		System.out.println(pmQueueOne.size());
+//		System.out.println(pmQueueTwo.size());
+//		System.out.println(pmQueueThree.size());
+
 		pmTotalNum = pmQueueOne.size() + pmQueueTwo.size() + pmQueueThree.size();
 		while(!vmQueue.isEmpty()){
 			//Pick out the vm with startTime less than currentTime to allocate
@@ -88,10 +95,10 @@ public class EnergySavingEDF extends OfflineAlgorithm{
 				
 			//Randomly find a PM
 			index = 0;
-			LoadBalanceFactory.print.println("LPT-Index:"+index);
+			LoadBalanceFactory.print.println("EDF-Index:"+index);
 			//Three queues should be decided which queue would be added.
 			if( vm.getVmType() > 0 && vm.getVmType() <= 3){
-				allocateVm(vm, pmQueueOne.get(index));
+				allocateVm(vm, pmQueueThree.get(index));
 			}
 			else if( vm.getVmType() > 3 && vm.getVmType() <= 6 ){
 				allocateVm(vm, pmQueueTwo.get(index));
@@ -181,7 +188,7 @@ public class EnergySavingEDF extends OfflineAlgorithm{
 	/**
 	 * Update the available resource. When parameter 3 equals to increase, available resource
 	 * would increased, else resource would be decreased.
-	 * @param vm4s
+	 * @param vm4
 	 * @param pm4
 	 * @param incOrDec
 	 */

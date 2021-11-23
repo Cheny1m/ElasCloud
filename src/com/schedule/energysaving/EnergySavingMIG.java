@@ -76,9 +76,9 @@ public class EnergySavingMIG extends OfflineAlgorithm {
         this.pmQueueTwo = p_pmQueueTwo;
         this.pmQueueThree = p_pmQueueThree;
 
-        //	System.out.println(pmQueueOne.get(0).resource.get(0).getCpuUtility());
-        //	System.out.println(pmQueueOne.get(0).resource.get(0).getMemUtility());
-        //	System.out.println(pmQueueOne.get(0).resource.get(0).getStoUtility());
+//        System.out.println(pmQueueOne.get(0).resource.get(0).getCpuUtility());
+//        System.out.println(pmQueueOne.get(0).resource.get(0).getMemUtility());
+//        System.out.println(pmQueueOne.get(0).resource.get(0).getStoUtility());
 
         pmTotalNum = pmQueueOne.size() + pmQueueTwo.size() + pmQueueThree.size();
         while (!vmQueue.isEmpty()) {
@@ -96,8 +96,10 @@ public class EnergySavingMIG extends OfflineAlgorithm {
             index = 0;
             LoadBalanceFactory.print.println("MIG-Index:" + index);
             //Three queues should be decided which queue would be added.
+            System.out.println(vm.getVmType());
             if (vm.getVmType() > 0 && vm.getVmType() <= 3) {
-                allocateVm(vm, pmQueueOne.get(index));
+                System.out.println(pmQueueThree);
+                allocateVm(vm, pmQueueThree.get(index));
             } else if (vm.getVmType() > 3 && vm.getVmType() <= 6) {
                 allocateVm(vm, pmQueueTwo.get(index));
             } else {
@@ -107,7 +109,7 @@ public class EnergySavingMIG extends OfflineAlgorithm {
         LoadBalanceFactory.print.println("Start Re-allocation......");
         //Max total capacitymakespan multiply the threshold factor
         threshold *= getThreshold();
-        reallocateVm(pmQueueOne);
+        reallocateVm(pmQueueThree);
         reallocateVm(pmQueueTwo);
         reallocateVm(pmQueueThree);
         
@@ -242,8 +244,8 @@ public class EnergySavingMIG extends OfflineAlgorithm {
             if (p_currentTime >= vm5.getEndTime()) {
                 if (pmNo >= 0 && pmNo < pmNum.get(0)) {
                     for (int j = 0; j < pmNum.get(0); j++) {
-                        if (pmNo == pmQueueOne.get(j).getNo()) {
-                            updateResource(vm5, pmQueueOne.get(j), increase);
+                        if (pmNo == pmQueueThree.get(j).getNo()) {
+                            updateResource(vm5, pmQueueThree.get(j), increase);
                             break;
                         }
                     }
@@ -269,7 +271,7 @@ public class EnergySavingMIG extends OfflineAlgorithm {
 
     private void sortPM(VirtualMachine vm1) {
         if (vm1.getVmType() > 0 && vm1.getVmType() <= 3) {
-            Collections.sort(pmQueueOne, new SortByCurrentUtility(currentTime));
+            Collections.sort(pmQueueThree, new SortByCurrentUtility(currentTime));
         } else if (vm1.getVmType() > 3 && vm1.getVmType() <= 6) {
             Collections.sort(pmQueueTwo, new SortByCurrentUtility(currentTime));
         } else {

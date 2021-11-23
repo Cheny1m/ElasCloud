@@ -92,7 +92,7 @@ public class EnergySavingLPT extends OfflineAlgorithm{
 			LoadBalanceFactory.print.println("LPT-Index:"+index);
 			//Three queues should be decided which queue would be added.
 			if( vm.getVmType() > 0 && vm.getVmType() <= 3){
-				allocateVm(vm, pmQueueOne.get(index));
+				allocateVm(vm, pmQueueThree.get(index));
 			}
 			else if( vm.getVmType() > 3 && vm.getVmType() <= 6 ){
 				allocateVm(vm, pmQueueTwo.get(index));
@@ -232,8 +232,8 @@ public class EnergySavingLPT extends OfflineAlgorithm{
 			if(p_currentTime >= vm5.getEndTime()){
 				if(pmNo >= 0 && pmNo < pmNum.get(0)){
                                     for(int j = 0; j < pmNum.get(0); j++){
-					if(pmNo == pmQueueOne.get(j).getNo()){
-                                        updateResource(vm5, pmQueueOne.get(j), increase);
+					if(pmNo == pmQueueThree.get(j).getNo()){
+                                        updateResource(vm5, pmQueueThree.get(j), increase);
                                         break;
                                         }
                                     }
@@ -261,7 +261,7 @@ public class EnergySavingLPT extends OfflineAlgorithm{
 
     private void sortPM(VirtualMachine vm1) {
         if(vm1.getVmType() > 0 && vm1.getVmType() <= 3) {
-            Collections.sort(pmQueueOne, new SortByCurrentUtility(currentTime));
+            Collections.sort(pmQueueThree, new SortByCurrentUtility(currentTime));
         }
         else if(vm1.getVmType() > 3 && vm1.getVmType() <= 6){
             Collections.sort(pmQueueTwo, new SortByCurrentUtility(currentTime));

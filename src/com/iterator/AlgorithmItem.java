@@ -76,23 +76,23 @@ public class AlgorithmItem {
 		this.olrsa = olrsa;
 	}
 
+	public boolean isEdf() {  return edf; }
+
 	public void setEdf(boolean edf) {
 		this.edf = edf;
 	}
 
-	private boolean isEdf() {
-		return edf;
-	}
+	// private boolean isEdf() {  return edf; }
 
-	private boolean isLPT() {
-		return lpt;
-	}
+	//private boolean isLPT() { return lpt; }
+
+	public boolean isLPT() { return lpt; }
 
 	public void setLPT(boolean lpt) {
 		this.lpt = lpt;
 	}
 
-	private boolean isCMP() {
+	public boolean isCMP() {
 		return cmp;
 	}
 
@@ -108,7 +108,7 @@ public class AlgorithmItem {
 		this.drs = drs;
 	}
 
-	private boolean isSAE() {
+	public boolean isSAE() {
 		return sae;
 	}
 
@@ -116,7 +116,7 @@ public class AlgorithmItem {
 		this.sae = sae;
 	}
 
-	private boolean isMIG() {
+	public boolean isMIG() {
 		return mig;
 	}
 
