@@ -92,6 +92,7 @@ public class DRSAlgorithm extends OnlineAlgorithm {
 		int allocatedDataCenterID;
 		int allocatedRackID;
 
+		//当vm不为空时，如果当前时间有vm任务执行，否则时间加一
 		while (!vmQueue.isEmpty()) {
 			if (currentTime >= vmQueue.get(vmId).getStartTime()) {
 				vm = vmQueue.get(vmId);

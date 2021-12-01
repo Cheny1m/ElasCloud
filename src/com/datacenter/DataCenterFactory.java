@@ -16,7 +16,7 @@ import java.util.HashMap;
 
 /**
  * This class is the basic class factory to produce factories for LoadBalance
- * Factory and EnergySaving Factory. In this class, the general data center 
+ * Factory and EnergySaving Factory. In this class, the general data center
  * processing flows are included.
  * 1. Requests are produced by CreateVM in particular creating algorithm;
  * 2. Initialize Physical Machines can provide services and resources;
@@ -24,8 +24,8 @@ import java.util.HashMap;
  * 4. Use different algorithm to schedule the requests;
  * 5. Calculate the value of needed compared indices;
  * 6. Output the needed results.
- * In CloudSche, some design patterns are used: 
- * Decorator, Abstract Factory, Strategy, Iterator design patterns. 
+ * In CloudSche, some design patterns are used:
+ * Decorator, Abstract Factory, Strategy, Iterator design patterns.
  * 
  * @author Minxian
  *
@@ -36,6 +36,7 @@ public class DataCenterFactory {
     public static final String FINISHEDINFO = "---Allocation Finished---";
     public static final String FAILEDINFO = "---Resource not enough, try another PM---";
     ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
+    //数据中心list  3个pm列表的合成
     ArrayList<DataCenter> arr_dc = new ArrayList<DataCenter>();
     IndexItem ii;
     ComparisonIndex ci;
@@ -63,6 +64,7 @@ public class DataCenterFactory {
         }
     }
 
+    //初始化数据中心；与LoadBalanceFactory不同的点  代替LoadBalanceFactory.bootPM()
     public void iniDataCenters() {
 //        arr_dc = DataCenterADDJFrame.arr_dc;
 //        for (DataCenter dc : arr_dc) {
@@ -70,8 +72,10 @@ public class DataCenterFactory {
 //        }
     	arr_dc.clear();
 //    	/**Test Case #2
+        System.out.println("Start initializing data center...");
         DataCenter dc1 = new DataCenter(0, 1000);
         ArrayList<Rack> arr_rack = new ArrayList<Rack>();
+        //机架未与GUI实现对接
         arr_rack.add(new Rack(0, 50, 0, 0, 0));
         arr_rack.add(new Rack(1, 50, 0, 0, 100));
         dc1.setArr_rack(arr_rack);
@@ -85,6 +89,7 @@ public class DataCenterFactory {
         dc2.setArr_rack(arr_rack1);
         dc2.initalAllResourse();
         arr_dc.add(dc2);
+        System.out.println(arr_dc.size() +" Center racks have been generated......");
 //      */  
     	
     	/** Test Case #1
@@ -102,19 +107,26 @@ public class DataCenterFactory {
      * Allocate VM requests to corresponding PM
      * @param aa
      */
+    //请求；与loadbalance的区别是将3个pm序列合成了数据中心
     public void allocate(OnlineAlgorithm onla) {
-        DataCenterFactory.print.println("Starting allocating requests......");
+        DataCenterFactory.print.println("Starting online allocating requests......");
+        //arr_dc 两个数据中心
         onla.allocate(vmQueue, arr_dc);
         ii = new IndexItem(arr_dc);
         DataCenterFactory.print.println("Allocation finished......");
     }
 
     public void allocate(OfflineAlgorithm ofla) {
+        DataCenterFactory.print.println("Starting offline allocating requests......");
+        ofla.allocate(vmQueue, arr_dc);
+        ii = new IndexItem(arr_dc);
+        DataCenterFactory.print.println("Allocation finished......");
     }
 
     /**
      * Generating the VM requests from the creating VM source file
      */
+    //任务生成方式相同
     public void generateReuquest() {
         DataCenterFactory.print.println("Now generating requests......");
         RequestGenerator rg = new RequestGenerator();
@@ -166,4 +178,6 @@ public class DataCenterFactory {
 
         return "";
     }
+
+    //好像未添加比较值模块
 }

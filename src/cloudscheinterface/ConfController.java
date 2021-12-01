@@ -26,7 +26,6 @@ import org.jfree.data.category.DefaultCategoryDataset;
 public class ConfController {
 
 	
-	
     DataCenterFactory dcf = new DataCenterFactory();
     ArrayList<Boolean> selectedIndices = new ArrayList<Boolean>();
     ArrayList<String> selectedAlgorithms = new ArrayList<String>();
@@ -38,6 +37,7 @@ public class ConfController {
     Iterator algorithmIterator, algorithmIterator2;
     ComparisonIndex ci;
     CreateVM cv;
+    //JFreeCharts类型
     DefaultCategoryDataset dataset = new DefaultCategoryDataset();
     DefaultCategoryDataset dataset1 = new DefaultCategoryDataset(); //Show the ratio of some indices with large values
     String distribution;
@@ -47,6 +47,7 @@ public class ConfController {
 
     public void run() {
 
+        //生成两个迭代器类型
         algorithmIterator = ai.createIterator();
         algorithmIterator2 = ai.createOfflineIterator();
         clearPreviousData();
@@ -54,6 +55,7 @@ public class ConfController {
 
         dcf.iniPrinter();
         dcf.createVM(new CreateVM());
+        //当在在线算法的迭代器中存有在线算法时
         while (algorithmIterator.hasNext()) {
             oa = (OnlineAlgorithm) algorithmIterator.next();
             DataCenterFactory.print.println(oa.getDescription());
@@ -61,32 +63,47 @@ public class ConfController {
 
             dcf.iniDataCenters();
             dcf.generateReuquest();
-
+            //分配
             dcf.allocate(oa);
-            confSelectedIndices(selectedIndices,0);
+            //获取对比条件
+            confSelectedIndices(selectedIndices);
+
             dcf.showIndex();
             setDataSet(dcf.getIndexValues(), oa.getDescription(), dcf.getIndexNames());
             DataCenterADDJFrame.algorithmDataCenterMap.put(oa.getDescription(), dcf.getArr_dc());
         }
         
-        lbf.iniPrinter();
+        dcf.iniPrinter();
         while (algorithmIterator2.hasNext()) {
             //May add reflective method in the future.
             ofa = (OfflineAlgorithm) algorithmIterator2.next();
-            LoadBalanceFactory.print.println(ofa.getDescription());
-            
-            lbf = new LoadBalanceFactory();
-            new CreateLLNLRequests();
-            ofa.createVM(lbf); //Different with online iterator
-            
-            lbf.bootPM(new PMBootor());
-            lbf.generateReuquest();
+            DataCenterFactory.print.println(ofa.getDescription());
+            selectedAlgorithms.add(ofa.getDescription());
 
+            dcf.iniDataCenters();
+            dcf.generateReuquest();
 
-            lbf.allocate(ofa);//Allocated PM ID
-            confSelectedIndices(selectedIndices,1);
-            lbf.showIndex();
-            setDataSet(lbf.getIndexValues(), ofa.getDescription(), lbf.getIndexNames());
+            //分配
+            dcf.allocate(ofa);
+            //获取对比条件
+            confSelectedIndices(selectedIndices);
+
+            dcf.showIndex();
+            setDataSet(dcf.getIndexValues(), ofa.getDescription(), dcf.getIndexNames());
+            DataCenterADDJFrame.algorithmDataCenterMap.put(oa.getDescription(), dcf.getArr_dc());
+            
+//            lbf = new LoadBalanceFactory();
+//            new CreateLLNLRequests();
+//            ofa.createVM(lbf); //Different with online iterator
+//
+//            lbf.bootPM(new PMBootor());
+//            lbf.generateReuquest();
+//
+//
+//            lbf.allocate(ofa);//Allocated PM ID
+//            confSelectedIndices(selectedIndices);
+//            lbf.showIndex();
+//            setDataSet(lbf.getIndexValues(), ofa.getDescription(), lbf.getIndexNames());
             
 			
         }
@@ -100,6 +117,7 @@ public class ConfController {
     public void confSelectedAlgorithm(ArrayList<Boolean> selectedAlgortihm) {
         int index = 0;
         //The sequence should be strictly set.
+        //以此取哪些算法被选取
         ai.setRandomAlgortihm(selectedAlgortihm.get(index++));
         ai.setDRS(selectedAlgortihm.get(index++));
         ai.setSAE(selectedAlgortihm.get(index++));
@@ -109,34 +127,35 @@ public class ConfController {
         ai.setCMP(selectedAlgortihm.get(index++));
         ai.setLPT(selectedAlgortihm.get(index++));
         ai.setMIG(selectedAlgortihm.get(index++));
-
+        ai.setRR(selectedAlgortihm.get(index++));
     }
 
-    public void confSelectedIndices(ArrayList<Boolean> selectedIndices,int f) {
+    public void confSelectedIndices(ArrayList<Boolean> selectedIndices) {
         int index = 0;
         /*
          * Sequence should be strictly set. Find the sequence in the interface.
          */
-        if (f == 0){
-            dcf.getIndexItem().setAverageUility(selectedIndices.get(index++));
-            //lbf.getIndexItem().setAverageUility(selectedIndices.get(index++));
-            dcf.getIndexItem().setImbalanceDegree(selectedIndices.get(index++));
-            dcf.getIndexItem().setMakespan(selectedIndices.get(index++));
-            //lbf.getIndexItem().setSkew_makespan(selectedIndices.get(index++));
-            dcf.getIndexItem().setCapacity_makespan(selectedIndices.get(index++));
+        //添加对比条件
+        dcf.getIndexItem().setAverageUility(selectedIndices.get(index++));
+        dcf.getIndexItem().setImbalanceDegree(selectedIndices.get(index++));
+        dcf.getIndexItem().setMakespan(selectedIndices.get(index++));
+        dcf.getIndexItem().setCapacity_makespan(selectedIndices.get(index++));
+
+        dcf.getIndexItem().setSkew_makespan(selectedIndices.get(index++));
+        dcf.getIndexItem().setSkew_capaciy_makespan(selectedIndices.get(index++));
+
+        dcf.getIndexItem().setEffectivePM(selectedIndices.get(index++));
+        dcf.getIndexItem().setEnergyConsumption(selectedIndices.get(index++));
+        dcf.getIndexItem().setRejectedVMNum(selectedIndices.get(index++));
+
             //lbf.getIndexItem().setSkew_capaciy_makespan(selectedIndices.get(index++));
 //        lbf.getIndexItem().setEffectivePM(selectedIndices.get(index++));
 //        lbf.getIndexItem().setEnergyConsumption(selectedIndices.get(index++));
 //        lbf.getIndexItem().setRejectedVMNum(selectedIndices.get(index++));
 //        dcf.getIndexItem().setProcessTime(selectedIndices.get(index++));
-        }
-        else {
-            lbf.getIndexItem().setAverageUility(selectedIndices.get(index++));
-            lbf.getIndexItem().setImbalanceDegree(selectedIndices.get(index++));
-            lbf.getIndexItem().setMakespan(selectedIndices.get(index++));
-            lbf.getIndexItem().setCapacity_makespan(selectedIndices.get(index++));
-        }
+
     }
+
 
     public void setSelectedIndices(ArrayList<Boolean> selectedIndices) {
         this.selectedIndices = selectedIndices;
@@ -217,7 +236,7 @@ public class ConfController {
         this.distribution = string;
     }
 
-    private String getRequestsDistribution() {
+    public String getRequestsDistribution() {
         return distribution;
     }
 }

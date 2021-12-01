@@ -1,4286 +1,2139 @@
 Printer has been initialized......
-Now Generating VMs......
-0 33 107 1
-1 21 102 2
-2 16 25 2
-3 17 24 1
-4 14 17 1
-5 18 23 1
-6 23 29 2
-7 12 14 1
-8 17 26 1
-9 23 101 2
-10 27 113 1
-11 23 98 1
-12 29 95 1
-13 15 21 2
-14 12 21 1
-15 23 95 1
-16 16 25 1
-17 19 21 1
-18 27 28 1
-19 32 113 2
-20 19 94 1
-21 20 30 1
-22 27 100 1
-23 32 101 1
-24 23 107 1
-25 24 105 2
-26 20 22 1
-27 21 107 2
-28 28 31 1
-29 22 90 1
-30 19 24 2
-31 30 38 1
-32 22 25 2
-33 28 29 1
-34 17 20 1
-35 16 18 2
-36 21 28 1
-37 17 26 2
-38 15 26 1
-39 23 28 1
-40 25 31 2
-41 26 27 2
-42 29 89 2
-43 17 20 1
-44 14 39 1
-45 12 115 1
-46 22 104 1
-47 32 107 1
-48 40 78 1
-49 18 30 1
-50 30 38 2
-51 30 102 2
-52 21 25 2
-53 21 92 2
-54 27 98 1
-55 29 107 1
-56 31 35 2
-57 21 27 2
-58 38 118 1
-59 5 21 1
-60 15 41 1
-61 25 35 2
-62 34 104 1
-63 25 27 1
-64 19 29 1
-65 17 96 1
-66 21 103 1
-67 28 30 1
-68 33 98 2
-69 29 86 2
-70 37 92 1
-71 25 104 1
-72 26 38 1
-73 26 100 1
-74 18 20 1
-75 36 103 1
-76 19 22 1
-77 30 102 1
-78 24 96 2
-79 26 31 2
-80 31 91 2
-81 27 32 1
-82 15 33 2
-83 31 103 2
-84 2 17 1
-85 18 114 1
-86 14 29 2
-87 35 107 1
-88 27 105 2
-89 18 34 1
-90 35 104 2
-91 24 27 1
-92 25 99 1
-93 28 99 1
-94 20 21 1
-95 27 93 2
-96 22 115 1
-97 23 80 2
-98 24 27 1
-99 16 31 2
-
-wholeSystemAverageUtility0.0
-0 18 87 2
-1 24 75 2
-2 25 26 1
-3 28 88 2
-4 31 103 1
-5 29 37 1
-6 24 25 1
-7 16 23 1
-8 23 92 2
-9 27 83 1
-10 24 29 1
-11 28 29 2
-12 26 27 1
-13 11 17 1
-14 24 29 1
-15 28 31 1
-16 16 103 2
-17 29 111 2
-18 41 110 2
-19 29 82 1
-20 8 13 1
-21 10 19 1
-22 24 34 2
-23 25 28 1
-24 24 36 2
-25 16 24 2
-26 16 96 2
-27 25 28 2
-28 19 25 2
-29 29 95 2
-30 18 107 2
-31 25 100 2
-32 20 29 2
-33 26 122 1
-34 8 23 1
-35 25 27 2
-36 25 102 2
-37 23 24 2
-38 32 100 2
-39 17 24 1
-40 29 89 1
-41 24 26 2
-42 28 95 1
-43 28 86 2
-44 17 96 1
-45 21 116 1
-46 18 24 2
-47 43 96 2
-48 21 23 2
-49 16 25 1
-50 28 31 2
-51 38 98 1
-52 34 108 1
-53 23 28 1
-54 19 32 2
-55 30 97 2
-56 20 25 2
-57 19 87 1
-58 20 30 1
-59 27 37 1
-60 23 33 2
-61 11 32 1
-62 18 100 1
-63 28 110 1
-64 32 86 2
-65 29 101 1
-66 32 105 1
-67 30 103 1
-68 37 88 1
-69 29 108 1
-70 6 36 1
-71 11 25 2
-72 23 28 1
-73 40 106 1
-74 20 98 1
-75 20 107 2
-76 14 21 1
-77 15 23 2
-78 17 33 1
-79 17 20 2
-80 23 101 2
-81 30 31 1
-82 18 23 1
-83 21 96 1
-84 16 35 2
-85 21 34 1
-86 34 80 2
-87 25 93 1
-88 24 36 1
-89 23 125 1
-90 14 29 2
-91 28 107 1
-92 27 92 1
-93 31 105 2
-94 26 92 2
-95 30 118 2
-96 20 77 1
-97 36 103 2
-98 30 92 1
-99 26 104 1
-
-wholeSystemAverageUtility0.0
-wholeSystemAverageUtility0.0
-
-Resource is updated(inc)
-===currentTime:89===
-===currentTime:90===
-===currentTime:91===
-===currentTime:92===
-===currentTime:93===
-LPT-Index:0
-VM is rejected
-===currentTime:94===
-LPT-Index:0
-Allocate:VM8 to PM4
-Resource is updated(dec)
-===currentTime:95===
-===currentTime:96===
-===currentTime:97===
-===currentTime:98===
-===currentTime:99===
-===currentTime:100===
-Remove:VM1 from PM1
-Resource is updated(inc)
-===currentTime:101===
-===currentTime:102===
-===currentTime:103===
-===currentTime:104===
-===currentTime:105===
-===currentTime:106===
-===currentTime:107===
-===currentTime:108===
-===currentTime:109===
-===currentTime:110===
-===currentTime:111===
-LPT-Index:0
-Allocate:VM9 to PM5
-Resource is updated(dec)
-===currentTime:112===
-===currentTime:113===
-===currentTime:114===
-LPT-Index:0
-VM is rejected
-===currentTime:115===
-===currentTime:116===
-===currentTime:117===
-===currentTime:118===
-===currentTime:119===
-===currentTime:120===
-===currentTime:121===
-===currentTime:122===
-===currentTime:123===
-===currentTime:124===
-===currentTime:125===
-Remove:VM8 from PM4
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM11 to PM6
-Resource is updated(dec)
-===currentTime:126===
-LPT-Index:0
-Allocate:VM12 to PM7
-Resource is updated(dec)
-===currentTime:127===
-===currentTime:128===
-===currentTime:129===
-===currentTime:130===
-===currentTime:131===
-===currentTime:132===
-===currentTime:133===
-===currentTime:134===
-LPT-Index:0
-VM is rejected
-===currentTime:135===
-===currentTime:136===
-===currentTime:137===
-===currentTime:138===
-===currentTime:139===
-===currentTime:140===
-===currentTime:141===
-===currentTime:142===
-===currentTime:143===
-===currentTime:144===
-===currentTime:145===
-===currentTime:146===
-===currentTime:147===
-===currentTime:148===
-===currentTime:149===
-===currentTime:150===
-===currentTime:151===
-===currentTime:152===
-===currentTime:153===
-===currentTime:154===
-===currentTime:155===
-===currentTime:156===
-Remove:VM11 from PM6
-Resource is updated(inc)
-===currentTime:157===
-Remove:VM12 from PM7
-Resource is updated(inc)
-===currentTime:158===
-===currentTime:159===
-===currentTime:160===
-===currentTime:161===
-===currentTime:162===
-LPT-Index:0
-Allocate:VM14 to PM8
-Resource is updated(dec)
-===currentTime:163===
-===currentTime:164===
-===currentTime:165===
-===currentTime:166===
-LPT-Index:0
-Allocate:VM15 to PM9
-Resource is updated(dec)
-===currentTime:167===
-===currentTime:168===
-===currentTime:169===
-===currentTime:170===
-===currentTime:171===
-===currentTime:172===
-===currentTime:173===
-===currentTime:174===
-===currentTime:175===
-===currentTime:176===
-===currentTime:177===
-===currentTime:178===
-===currentTime:179===
-===currentTime:180===
-===currentTime:181===
-LPT-Index:0
-VM is rejected
-===currentTime:182===
-===currentTime:183===
-===currentTime:184===
-===currentTime:185===
-===currentTime:186===
-===currentTime:187===
-===currentTime:188===
-===currentTime:189===
-===currentTime:190===
-===currentTime:191===
-===currentTime:192===
-===currentTime:193===
-Remove:VM14 from PM8
-Resource is updated(inc)
-===currentTime:194===
-===currentTime:195===
-===currentTime:196===
-===currentTime:197===
-===currentTime:198===
-===currentTime:199===
-===currentTime:200===
-===currentTime:201===
-===currentTime:202===
-===currentTime:203===
-===currentTime:204===
-===currentTime:205===
-===currentTime:206===
-===currentTime:207===
-===currentTime:208===
-===currentTime:209===
-===currentTime:210===
-===currentTime:211===
-LPT-Index:0
-Allocate:VM17 to PM10
-Resource is updated(dec)
-===currentTime:212===
-===currentTime:213===
-===currentTime:214===
-===currentTime:215===
-===currentTime:216===
-===currentTime:217===
-===currentTime:218===
-===currentTime:219===
-===currentTime:220===
-===currentTime:221===
-===currentTime:222===
-===currentTime:223===
-===currentTime:224===
-===currentTime:225===
-===currentTime:226===
-===currentTime:227===
-===currentTime:228===
-===currentTime:229===
-===currentTime:230===
-===currentTime:231===
-===currentTime:232===
-===currentTime:233===
-===currentTime:234===
-===currentTime:235===
-===currentTime:236===
-===currentTime:237===
-===currentTime:238===
-===currentTime:239===
-===currentTime:240===
-===currentTime:241===
-===currentTime:242===
-Remove:VM17 from PM10
-Resource is updated(inc)
-===currentTime:243===
-===currentTime:244===
-===currentTime:245===
-===currentTime:246===
-===currentTime:247===
-===currentTime:248===
-===currentTime:249===
-===currentTime:250===
-===currentTime:251===
-===currentTime:252===
-===currentTime:253===
-===currentTime:254===
-===currentTime:255===
-===currentTime:256===
-===currentTime:257===
-===currentTime:258===
-===currentTime:259===
-===currentTime:260===
-===currentTime:261===
-===currentTime:262===
-===currentTime:263===
-===currentTime:264===
-===currentTime:265===
-===currentTime:266===
-===currentTime:267===
-===currentTime:268===
-===currentTime:269===
-===currentTime:270===
-===currentTime:271===
-===currentTime:272===
-===currentTime:273===
-===currentTime:274===
-===currentTime:275===
-===currentTime:276===
-===currentTime:277===
-===currentTime:278===
-===currentTime:279===
-===currentTime:280===
-===currentTime:281===
-===currentTime:282===
-===currentTime:283===
-===currentTime:284===
-===currentTime:285===
-===currentTime:286===
-LPT-Index:0
-Allocate:VM18 to PM11
-Resource is updated(dec)
-===currentTime:287===
-===currentTime:288===
-===currentTime:289===
-===currentTime:290===
-===currentTime:291===
-===currentTime:292===
-===currentTime:293===
-===currentTime:294===
-===currentTime:295===
-===currentTime:296===
-===currentTime:297===
-===currentTime:298===
-===currentTime:299===
-===currentTime:300===
-===currentTime:301===
-===currentTime:302===
-===currentTime:303===
-===currentTime:304===
-===currentTime:305===
-===currentTime:306===
-===currentTime:307===
-===currentTime:308===
-===currentTime:309===
-===currentTime:310===
-===currentTime:311===
-===currentTime:312===
-===currentTime:313===
-===currentTime:314===
-===currentTime:315===
-===currentTime:316===
-===currentTime:317===
-===currentTime:318===
-===currentTime:319===
-===currentTime:320===
-===currentTime:321===
-===currentTime:322===
-===currentTime:323===
-===currentTime:324===
-LPT-Index:0
-Allocate:VM19 to PM12
-Resource is updated(dec)
-===currentTime:325===
-LPT-Index:0
-VM is rejected
-===currentTime:326===
-===currentTime:327===
-===currentTime:328===
-===currentTime:329===
-===currentTime:330===
-===currentTime:331===
-===currentTime:332===
-===currentTime:333===
-===currentTime:334===
-===currentTime:335===
-===currentTime:336===
-===currentTime:337===
-===currentTime:338===
-===currentTime:339===
-===currentTime:340===
-===currentTime:341===
-===currentTime:342===
-===currentTime:343===
-===currentTime:344===
-===currentTime:345===
-===currentTime:346===
-LPT-Index:0
-VM is rejected
-===currentTime:347===
-===currentTime:348===
-===currentTime:349===
-===currentTime:350===
-===currentTime:351===
-===currentTime:352===
-===currentTime:353===
-===currentTime:354===
-===currentTime:355===
-===currentTime:356===
-===currentTime:357===
-===currentTime:358===
-Remove:VM18 from PM11
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM22 to PM13
-Resource is updated(dec)
-===currentTime:359===
-===currentTime:360===
-===currentTime:361===
-===currentTime:362===
-===currentTime:363===
-===currentTime:364===
-===currentTime:365===
-===currentTime:366===
-===currentTime:367===
-===currentTime:368===
-===currentTime:369===
-===currentTime:370===
-===currentTime:371===
-===currentTime:372===
-===currentTime:373===
-===currentTime:374===
-===currentTime:375===
-===currentTime:376===
-===currentTime:377===
-===currentTime:378===
-===currentTime:379===
-===currentTime:380===
-===currentTime:381===
-===currentTime:382===
-===currentTime:383===
-===currentTime:384===
-===currentTime:385===
-LPT-Index:0
-Allocate:VM23 to PM14
-Resource is updated(dec)
-LPT-Index:0
-VM is rejected
-===currentTime:386===
-===currentTime:387===
-===currentTime:388===
-===currentTime:389===
-===currentTime:390===
-===currentTime:391===
-===currentTime:392===
-LPT-Index:0
-VM is rejected
-===currentTime:393===
-===currentTime:394===
-===currentTime:395===
-===currentTime:396===
-===currentTime:397===
-===currentTime:398===
-===currentTime:399===
-===currentTime:400===
-===currentTime:401===
-===currentTime:402===
-===currentTime:403===
-===currentTime:404===
-===currentTime:405===
-===currentTime:406===
-===currentTime:407===
-===currentTime:408===
-===currentTime:409===
-===currentTime:410===
-===currentTime:411===
-===currentTime:412===
-===currentTime:413===
-===currentTime:414===
-===currentTime:415===
-===currentTime:416===
-===currentTime:417===
-===currentTime:418===
-===currentTime:419===
-===currentTime:420===
-===currentTime:421===
-===currentTime:422===
-===currentTime:423===
-===currentTime:424===
-===currentTime:425===
-===currentTime:426===
-===currentTime:427===
-===currentTime:428===
-===currentTime:429===
-===currentTime:430===
-===currentTime:431===
-===currentTime:432===
-===currentTime:433===
-===currentTime:434===
-LPT-Index:0
-Allocate:VM26 to PM15
-Resource is updated(dec)
-===currentTime:435===
-===currentTime:436===
-===currentTime:437===
-===currentTime:438===
-===currentTime:439===
-===currentTime:440===
-===currentTime:441===
-===currentTime:442===
-===currentTime:443===
-===currentTime:444===
-===currentTime:445===
-===currentTime:446===
-===currentTime:447===
-===currentTime:448===
-===currentTime:449===
-===currentTime:450===
-===currentTime:451===
-===currentTime:452===
-===currentTime:453===
-===currentTime:454===
-===currentTime:455===
-===currentTime:456===
-===currentTime:457===
-===currentTime:458===
-===currentTime:459===
-===currentTime:460===
-===currentTime:461===
-===currentTime:462===
-===currentTime:463===
-===currentTime:464===
-===currentTime:465===
-===currentTime:466===
-===currentTime:467===
-===currentTime:468===
-LPT-Index:0
-Allocate:VM27 to PM16
-Resource is updated(dec)
-===currentTime:469===
-===currentTime:470===
-===currentTime:471===
-===currentTime:472===
-===currentTime:473===
-===currentTime:474===
-Remove:VM26 from PM15
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM28 to PM17
-Resource is updated(dec)
-===currentTime:475===
-===currentTime:476===
-===currentTime:477===
-===currentTime:478===
-===currentTime:479===
-===currentTime:480===
-===currentTime:481===
-===currentTime:482===
-===currentTime:483===
-===currentTime:484===
-LPT-Index:0
-Allocate:VM29 to PM18
-Resource is updated(dec)
-===currentTime:485===
-===currentTime:486===
-===currentTime:487===
-===currentTime:488===
-===currentTime:489===
-===currentTime:490===
-===currentTime:491===
-===currentTime:492===
-===currentTime:493===
-===currentTime:494===
-===currentTime:495===
-===currentTime:496===
-===currentTime:497===
-===currentTime:498===
-===currentTime:499===
-Remove:VM6 from PM3
-Resource is updated(inc)
-Remove:VM27 from PM16
-Resource is updated(inc)
-===currentTime:500===
-===currentTime:501===
-===currentTime:502===
-===currentTime:503===
-LPT-Index:0
-Allocate:VM34 to PM19
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM33 to PM20
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM30 to PM21
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM31 to PM22
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM32 to PM23
-Resource is updated(dec)
-===currentTime:504===
-===currentTime:505===
-===currentTime:506===
-===currentTime:507===
-===currentTime:508===
-===currentTime:509===
-===currentTime:510===
-===currentTime:511===
-LPT-Index:0
-VM is rejected
-LPT-Index:0
-Allocate:VM36 to PM24
-Resource is updated(dec)
-===currentTime:512===
-Remove:VM28 from PM17
-Resource is updated(inc)
-LPT-Index:0
-VM is rejected
-===currentTime:513===
-===currentTime:514===
-===currentTime:515===
-===currentTime:516===
-===currentTime:517===
-===currentTime:518===
-===currentTime:519===
-===currentTime:520===
-===currentTime:521===
-===currentTime:522===
-===currentTime:523===
-===currentTime:524===
-LPT-Index:0
-Allocate:VM38 to PM25
-Resource is updated(dec)
-===currentTime:525===
-LPT-Index:0
-Allocate:VM39 to PM26
-Resource is updated(dec)
-===currentTime:526===
-===currentTime:527===
-LPT-Index:0
-Allocate:VM40 to PM27
-Resource is updated(dec)
-===currentTime:528===
-===currentTime:529===
-===currentTime:530===
-===currentTime:531===
-===currentTime:532===
-===currentTime:533===
-===currentTime:534===
-===currentTime:535===
-===currentTime:536===
-===currentTime:537===
-===currentTime:538===
-===currentTime:539===
-===currentTime:540===
-===currentTime:541===
-===currentTime:542===
-===currentTime:543===
-===currentTime:544===
-===currentTime:545===
-===currentTime:546===
-===currentTime:547===
-===currentTime:548===
-===currentTime:549===
-===currentTime:550===
-Remove:VM36 from PM24
-Resource is updated(inc)
-===currentTime:551===
-===currentTime:552===
-===currentTime:553===
-===currentTime:554===
-===currentTime:555===
-===currentTime:556===
-===currentTime:557===
-===currentTime:558===
-===currentTime:559===
-===currentTime:560===
-===currentTime:561===
-===currentTime:562===
-Remove:VM29 from PM18
-Resource is updated(inc)
-===currentTime:563===
-===currentTime:564===
-===currentTime:565===
-===currentTime:566===
-===currentTime:567===
-===currentTime:568===
-===currentTime:569===
-===currentTime:570===
-===currentTime:571===
-===currentTime:572===
-===currentTime:573===
-===currentTime:574===
-===currentTime:575===
-===currentTime:576===
-===currentTime:577===
-===currentTime:578===
-===currentTime:579===
-===currentTime:580===
-===currentTime:581===
-===currentTime:582===
-Remove:VM32 from PM23
-Resource is updated(inc)
-===currentTime:583===
-===currentTime:584===
-===currentTime:585===
-Remove:VM9 from PM5
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM41 to PM28
-Resource is updated(dec)
-===currentTime:586===
-===currentTime:587===
-===currentTime:588===
-===currentTime:589===
-===currentTime:590===
-===currentTime:591===
-===currentTime:592===
-===currentTime:593===
-===currentTime:594===
-===currentTime:595===
-Remove:VM15 from PM9
-Resource is updated(inc)
-===currentTime:596===
-===currentTime:597===
-===currentTime:598===
-===currentTime:599===
-===currentTime:600===
-===currentTime:601===
-===currentTime:602===
-LPT-Index:0
-Allocate:VM42 to PM29
-Resource is updated(dec)
-===currentTime:603===
-===currentTime:604===
-===currentTime:605===
-===currentTime:606===
-===currentTime:607===
-===currentTime:608===
-===currentTime:609===
-===currentTime:610===
-===currentTime:611===
-===currentTime:612===
-===currentTime:613===
-===currentTime:614===
-===currentTime:615===
-===currentTime:616===
-===currentTime:617===
-===currentTime:618===
-===currentTime:619===
-===currentTime:620===
-===currentTime:621===
-===currentTime:622===
-===currentTime:623===
-===currentTime:624===
-===currentTime:625===
-Remove:VM31 from PM22
-Resource is updated(inc)
-===currentTime:626===
-===currentTime:627===
-===currentTime:628===
-===currentTime:629===
-===currentTime:630===
-===currentTime:631===
-===currentTime:632===
-===currentTime:633===
-===currentTime:634===
-===currentTime:635===
-===currentTime:636===
-===currentTime:637===
-===currentTime:638===
-===currentTime:639===
-===currentTime:640===
-===currentTime:641===
-===currentTime:642===
-===currentTime:643===
-===currentTime:644===
-===currentTime:645===
-Remove:VM19 from PM12
-Resource is updated(inc)
-===currentTime:646===
-===currentTime:647===
-===currentTime:648===
-===currentTime:649===
-===currentTime:650===
-===currentTime:651===
-LPT-Index:0
-VM is rejected
-===currentTime:652===
-===currentTime:653===
-Remove:VM30 from PM21
-Resource is updated(inc)
-===currentTime:654===
-===currentTime:655===
-===currentTime:656===
-===currentTime:657===
-===currentTime:658===
-===currentTime:659===
-===currentTime:660===
-LPT-Index:0
-Allocate:VM44 to PM30
-Resource is updated(dec)
-===currentTime:661===
-===currentTime:662===
-Remove:VM40 from PM27
-Resource is updated(inc)
-===currentTime:663===
-===currentTime:664===
-===currentTime:665===
-===currentTime:666===
-===currentTime:667===
-===currentTime:668===
-===currentTime:669===
-===currentTime:670===
-===currentTime:671===
-===currentTime:672===
-===currentTime:673===
-===currentTime:674===
-===currentTime:675===
-===currentTime:676===
-===currentTime:677===
-Remove:VM33 from PM20
-Resource is updated(inc)
-===currentTime:678===
-LPT-Index:0
-Allocate:VM45 to PM31
-Resource is updated(dec)
-===currentTime:679===
-Remove:VM22 from PM13
-Resource is updated(inc)
-===currentTime:680===
-===currentTime:681===
-===currentTime:682===
-===currentTime:683===
-===currentTime:684===
-===currentTime:685===
-===currentTime:686===
-===currentTime:687===
-===currentTime:688===
-===currentTime:689===
-===currentTime:690===
-===currentTime:691===
-===currentTime:692===
-===currentTime:693===
-===currentTime:694===
-===currentTime:695===
-===currentTime:696===
-===currentTime:697===
-===currentTime:698===
-===currentTime:699===
-===currentTime:700===
-===currentTime:701===
-===currentTime:702===
-===currentTime:703===
-===currentTime:704===
-===currentTime:705===
-===currentTime:706===
-===currentTime:707===
-===currentTime:708===
-===currentTime:709===
-===currentTime:710===
-===currentTime:711===
-===currentTime:712===
-===currentTime:713===
-===currentTime:714===
-===currentTime:715===
-===currentTime:716===
-===currentTime:717===
-===currentTime:718===
-===currentTime:719===
-===currentTime:720===
-===currentTime:721===
-===currentTime:722===
-===currentTime:723===
-===currentTime:724===
-LPT-Index:0
-Allocate:VM46 to PM32
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM47 to PM33
-Resource is updated(dec)
-===currentTime:725===
-===currentTime:726===
-===currentTime:727===
-===currentTime:728===
-LPT-Index:0
-Allocate:VM48 to PM34
-Resource is updated(dec)
-===currentTime:729===
-===currentTime:730===
-===currentTime:731===
-===currentTime:732===
-===currentTime:733===
-===currentTime:734===
-===currentTime:735===
-===currentTime:736===
-===currentTime:737===
-===currentTime:738===
-LPT-Index:0
-Allocate:VM49 to PM35
-Resource is updated(dec)
-===currentTime:739===
-===currentTime:740===
-===currentTime:741===
-===currentTime:742===
-===currentTime:743===
-===currentTime:744===
-===currentTime:745===
-===currentTime:746===
-LPT-Index:0
-Allocate:VM50 to PM36
-Resource is updated(dec)
-===currentTime:747===
-===currentTime:748===
-Remove:VM44 from PM30
-Resource is updated(inc)
-===currentTime:749===
-LPT-Index:0
-Allocate:VM51 to PM37
-Resource is updated(dec)
-===currentTime:750===
-===currentTime:751===
-===currentTime:752===
-===currentTime:753===
-LPT-Index:0
-VM is rejected
-===currentTime:754===
-===currentTime:755===
-===currentTime:756===
-===currentTime:757===
-===currentTime:758===
-Remove:VM2 from PM0
-Resource is updated(inc)
-===currentTime:759===
-===currentTime:760===
-===currentTime:761===
-===currentTime:762===
-===currentTime:763===
-===currentTime:764===
-===currentTime:765===
-===currentTime:766===
-===currentTime:767===
-===currentTime:768===
-LPT-Index:0
-Allocate:VM53 to PM38
-Resource is updated(dec)
-===currentTime:769===
-Remove:VM42 from PM29
-Resource is updated(inc)
-===currentTime:770===
-===currentTime:771===
-===currentTime:772===
-Remove:VM47 from PM33
-Resource is updated(inc)
-===currentTime:773===
-===currentTime:774===
-===currentTime:775===
-===currentTime:776===
-===currentTime:777===
-===currentTime:778===
-===currentTime:779===
-===currentTime:780===
-===currentTime:781===
-===currentTime:782===
-===currentTime:783===
-===currentTime:784===
-===currentTime:785===
-===currentTime:786===
-===currentTime:787===
-===currentTime:788===
-===currentTime:789===
-===currentTime:790===
-Remove:VM34 from PM19
-Resource is updated(inc)
-===currentTime:791===
-===currentTime:792===
-===currentTime:793===
-Remove:VM48 from PM34
-Resource is updated(inc)
-===currentTime:794===
-===currentTime:795===
-===currentTime:796===
-===currentTime:797===
-===currentTime:798===
-===currentTime:799===
-===currentTime:800===
-===currentTime:801===
-===currentTime:802===
-===currentTime:803===
-===currentTime:804===
-===currentTime:805===
-===currentTime:806===
-===currentTime:807===
-===currentTime:808===
-===currentTime:809===
-===currentTime:810===
-===currentTime:811===
-===currentTime:812===
-LPT-Index:0
-Allocate:VM54 to PM39
-Resource is updated(dec)
-===currentTime:813===
-===currentTime:814===
-===currentTime:815===
-===currentTime:816===
-===currentTime:817===
-===currentTime:818===
-===currentTime:819===
-===currentTime:820===
-===currentTime:821===
-===currentTime:822===
-===currentTime:823===
-===currentTime:824===
-===currentTime:825===
-===currentTime:826===
-===currentTime:827===
-===currentTime:828===
-===currentTime:829===
-===currentTime:830===
-===currentTime:831===
-===currentTime:832===
-===currentTime:833===
-===currentTime:834===
-===currentTime:835===
-===currentTime:836===
-Remove:VM51 from PM37
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM55 to PM40
-Resource is updated(dec)
-===currentTime:837===
-===currentTime:838===
-===currentTime:839===
-===currentTime:840===
-===currentTime:841===
-===currentTime:842===
-Remove:VM49 from PM35
-Resource is updated(inc)
-===currentTime:843===
-Remove:VM54 from PM39
-Resource is updated(inc)
-===currentTime:844===
-LPT-Index:0
-Allocate:VM56 to PM41
-Resource is updated(dec)
-===currentTime:845===
-===currentTime:846===
-===currentTime:847===
-===currentTime:848===
-===currentTime:849===
-===currentTime:850===
-===currentTime:851===
-===currentTime:852===
-===currentTime:853===
-Remove:VM45 from PM31
-Resource is updated(inc)
-===currentTime:854===
-===currentTime:855===
-===currentTime:856===
-===currentTime:857===
-===currentTime:858===
-===currentTime:859===
-===currentTime:860===
-===currentTime:861===
-===currentTime:862===
-===currentTime:863===
-===currentTime:864===
-===currentTime:865===
-===currentTime:866===
-===currentTime:867===
-===currentTime:868===
-===currentTime:869===
-===currentTime:870===
-===currentTime:871===
-===currentTime:872===
-===currentTime:873===
-===currentTime:874===
-===currentTime:875===
-Remove:VM56 from PM41
-Resource is updated(inc)
-===currentTime:876===
-===currentTime:877===
-===currentTime:878===
-===currentTime:879===
-===currentTime:880===
-===currentTime:881===
-===currentTime:882===
-===currentTime:883===
-===currentTime:884===
-===currentTime:885===
-===currentTime:886===
-===currentTime:887===
-===currentTime:888===
-===currentTime:889===
-===currentTime:890===
-===currentTime:891===
-===currentTime:892===
-===currentTime:893===
-===currentTime:894===
-===currentTime:895===
-===currentTime:896===
-===currentTime:897===
-===currentTime:898===
-===currentTime:899===
-===currentTime:900===
-===currentTime:901===
-===currentTime:902===
-===currentTime:903===
-===currentTime:904===
-===currentTime:905===
-===currentTime:906===
-===currentTime:907===
-===currentTime:908===
-===currentTime:909===
-===currentTime:910===
-===currentTime:911===
-===currentTime:912===
-===currentTime:913===
-===currentTime:914===
-===currentTime:915===
-===currentTime:916===
-===currentTime:917===
-===currentTime:918===
-===currentTime:919===
-===currentTime:920===
-===currentTime:921===
-===currentTime:922===
-===currentTime:923===
-Remove:VM55 from PM40
-Resource is updated(inc)
-===currentTime:924===
-===currentTime:925===
-===currentTime:926===
-===currentTime:927===
-===currentTime:928===
-===currentTime:929===
-===currentTime:930===
-===currentTime:931===
-===currentTime:932===
-===currentTime:933===
-===currentTime:934===
-Remove:VM53 from PM38
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM57 to PM42
-Resource is updated(dec)
-===currentTime:935===
-===currentTime:936===
-LPT-Index:0
-Allocate:VM58 to PM43
-Resource is updated(dec)
-===currentTime:937===
-===currentTime:938===
-===currentTime:939===
-===currentTime:940===
-===currentTime:941===
-===currentTime:942===
-===currentTime:943===
-===currentTime:944===
-===currentTime:945===
-===currentTime:946===
-===currentTime:947===
-===currentTime:948===
-===currentTime:949===
-===currentTime:950===
-===currentTime:951===
-===currentTime:952===
-===currentTime:953===
-===currentTime:954===
-===currentTime:955===
-===currentTime:956===
-===currentTime:957===
-===currentTime:958===
-===currentTime:959===
-===currentTime:960===
-===currentTime:961===
-===currentTime:962===
-===currentTime:963===
-===currentTime:964===
-===currentTime:965===
-===currentTime:966===
-===currentTime:967===
-===currentTime:968===
-===currentTime:969===
-===currentTime:970===
-===currentTime:971===
-===currentTime:972===
-===currentTime:973===
-===currentTime:974===
-===currentTime:975===
-===currentTime:976===
-===currentTime:977===
-===currentTime:978===
-===currentTime:979===
-===currentTime:980===
-===currentTime:981===
-===currentTime:982===
-===currentTime:983===
-===currentTime:984===
-===currentTime:985===
-===currentTime:986===
-===currentTime:987===
-===currentTime:988===
-===currentTime:989===
-===currentTime:990===
-===currentTime:991===
-===currentTime:992===
-===currentTime:993===
-===currentTime:994===
-===currentTime:995===
-===currentTime:996===
-===currentTime:997===
-Remove:VM58 from PM43
-Resource is updated(inc)
-===currentTime:998===
-===currentTime:999===
-===currentTime:1000===
-LPT-Index:0
-Allocate:VM59 to PM44
-Resource is updated(dec)
-===currentTime:1001===
-===currentTime:1002===
-===currentTime:1003===
-===currentTime:1004===
-===currentTime:1005===
-===currentTime:1006===
-===currentTime:1007===
-===currentTime:1008===
-===currentTime:1009===
-===currentTime:1010===
-===currentTime:1011===
-===currentTime:1012===
-===currentTime:1013===
-===currentTime:1014===
-===currentTime:1015===
-===currentTime:1016===
-===currentTime:1017===
-===currentTime:1018===
-===currentTime:1019===
-===currentTime:1020===
-===currentTime:1021===
-===currentTime:1022===
-===currentTime:1023===
-===currentTime:1024===
-===currentTime:1025===
-===currentTime:1026===
-===currentTime:1027===
-===currentTime:1028===
-===currentTime:1029===
-===currentTime:1030===
-===currentTime:1031===
-===currentTime:1032===
-===currentTime:1033===
-===currentTime:1034===
-===currentTime:1035===
-===currentTime:1036===
-===currentTime:1037===
-===currentTime:1038===
-===currentTime:1039===
-===currentTime:1040===
-===currentTime:1041===
-===currentTime:1042===
-===currentTime:1043===
-LPT-Index:0
-Allocate:VM60 to PM45
-Resource is updated(dec)
-===currentTime:1044===
-Remove:VM41 from PM28
-Resource is updated(inc)
-===currentTime:1045===
-===currentTime:1046===
-===currentTime:1047===
-===currentTime:1048===
-===currentTime:1049===
-Remove:VM59 from PM44
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM61 to PM46
-Resource is updated(dec)
-===currentTime:1050===
-===currentTime:1051===
-===currentTime:1052===
-===currentTime:1053===
-===currentTime:1054===
-===currentTime:1055===
-===currentTime:1056===
-===currentTime:1057===
-===currentTime:1058===
-===currentTime:1059===
-===currentTime:1060===
-===currentTime:1061===
-===currentTime:1062===
-===currentTime:1063===
-LPT-Index:0
-Allocate:VM62 to PM47
-Resource is updated(dec)
-===currentTime:1064===
-===currentTime:1065===
-===currentTime:1066===
-===currentTime:1067===
-===currentTime:1068===
-===currentTime:1069===
-===currentTime:1070===
-===currentTime:1071===
-===currentTime:1072===
-===currentTime:1073===
-===currentTime:1074===
-===currentTime:1075===
-===currentTime:1076===
-===currentTime:1077===
-===currentTime:1078===
-===currentTime:1079===
-===currentTime:1080===
-===currentTime:1081===
-===currentTime:1082===
-===currentTime:1083===
-===currentTime:1084===
-===currentTime:1085===
-===currentTime:1086===
-===currentTime:1087===
-===currentTime:1088===
-===currentTime:1089===
-LPT-Index:0
-Allocate:VM63 to PM48
-Resource is updated(dec)
-===currentTime:1090===
-===currentTime:1091===
-LPT-Index:0
-Allocate:VM64 to PM49
-Resource is updated(dec)
-===currentTime:1092===
-===currentTime:1093===
-===currentTime:1094===
-===currentTime:1095===
-===currentTime:1096===
-===currentTime:1097===
-===currentTime:1098===
-===currentTime:1099===
-Remove:VM57 from PM42
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM65 to PM2
-Resource is updated(dec)
-===currentTime:1100===
-===currentTime:1101===
-===currentTime:1102===
-===currentTime:1103===
-===currentTime:1104===
-===currentTime:1105===
-===currentTime:1106===
-Remove:VM23 from PM14
-Resource is updated(inc)
-===currentTime:1107===
-===currentTime:1108===
-===currentTime:1109===
-===currentTime:1110===
-===currentTime:1111===
-===currentTime:1112===
-===currentTime:1113===
-===currentTime:1114===
-===currentTime:1115===
-===currentTime:1116===
-===currentTime:1117===
-===currentTime:1118===
-===currentTime:1119===
-===currentTime:1120===
-===currentTime:1121===
-===currentTime:1122===
-===currentTime:1123===
-===currentTime:1124===
-===currentTime:1125===
-LPT-Index:0
-Allocate:VM66 to PM1
-Resource is updated(dec)
-===currentTime:1126===
-Remove:VM64 from PM49
-Resource is updated(inc)
-===currentTime:1127===
-===currentTime:1128===
-===currentTime:1129===
-===currentTime:1130===
-===currentTime:1131===
-===currentTime:1132===
-===currentTime:1133===
-===currentTime:1134===
-Remove:VM50 from PM36
-Resource is updated(inc)
-===currentTime:1135===
-===currentTime:1136===
-===currentTime:1137===
-===currentTime:1138===
-===currentTime:1139===
-===currentTime:1140===
-===currentTime:1141===
-===currentTime:1142===
-LPT-Index:0
-VM is rejected
-===currentTime:1143===
-LPT-Index:0
-VM is rejected
-===currentTime:1144===
-===currentTime:1145===
-===currentTime:1146===
-===currentTime:1147===
-===currentTime:1148===
-Remove:VM62 from PM47
-Resource is updated(inc)
-===currentTime:1149===
-===currentTime:1150===
-===currentTime:1151===
-===currentTime:1152===
-===currentTime:1153===
-===currentTime:1154===
-===currentTime:1155===
-===currentTime:1156===
-===currentTime:1157===
-===currentTime:1158===
-===currentTime:1159===
-===currentTime:1160===
-Remove:VM66 from PM1
-Resource is updated(inc)
-===currentTime:1161===
-LPT-Index:0
-Allocate:VM69 to PM4
-Resource is updated(dec)
-===currentTime:1162===
-===currentTime:1163===
-===currentTime:1164===
-===currentTime:1165===
-===currentTime:1166===
-===currentTime:1167===
-===currentTime:1168===
-===currentTime:1169===
-===currentTime:1170===
-===currentTime:1171===
-LPT-Index:0
-VM is rejected
-===currentTime:1172===
-===currentTime:1173===
-===currentTime:1174===
-===currentTime:1175===
-===currentTime:1176===
-===currentTime:1177===
-===currentTime:1178===
-===currentTime:1179===
-===currentTime:1180===
-===currentTime:1181===
-Remove:VM63 from PM48
-Resource is updated(inc)
-===currentTime:1182===
-===currentTime:1183===
-===currentTime:1184===
-===currentTime:1185===
-===currentTime:1186===
-LPT-Index:0
-Allocate:VM71 to PM7
-Resource is updated(dec)
-===currentTime:1187===
-===currentTime:1188===
-===currentTime:1189===
-===currentTime:1190===
-===currentTime:1191===
-===currentTime:1192===
-===currentTime:1193===
-===currentTime:1194===
-===currentTime:1195===
-===currentTime:1196===
-===currentTime:1197===
-===currentTime:1198===
-===currentTime:1199===
-===currentTime:1200===
-===currentTime:1201===
-LPT-Index:0
-Allocate:VM72 to PM6
-Resource is updated(dec)
-===currentTime:1202===
-LPT-Index:0
-Allocate:VM73 to PM8
-Resource is updated(dec)
-===currentTime:1203===
-===currentTime:1204===
-===currentTime:1205===
-===currentTime:1206===
-===currentTime:1207===
-===currentTime:1208===
-===currentTime:1209===
-===currentTime:1210===
-===currentTime:1211===
-===currentTime:1212===
-===currentTime:1213===
-===currentTime:1214===
-===currentTime:1215===
-===currentTime:1216===
-===currentTime:1217===
-===currentTime:1218===
-===currentTime:1219===
-===currentTime:1220===
-===currentTime:1221===
-===currentTime:1222===
-===currentTime:1223===
-===currentTime:1224===
-===currentTime:1225===
-===currentTime:1226===
-Remove:VM61 from PM46
-Resource is updated(inc)
-===currentTime:1227===
-===currentTime:1228===
-===currentTime:1229===
-===currentTime:1230===
-===currentTime:1231===
-LPT-Index:0
-Allocate:VM75 to PM10
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM76 to PM11
-Resource is updated(dec)
-===currentTime:1232===
-LPT-Index:0
-Allocate:VM74 to PM15
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM77 to PM16
-Resource is updated(dec)
-===currentTime:1233===
-Remove:VM73 from PM8
-Resource is updated(inc)
-===currentTime:1234===
-===currentTime:1235===
-===currentTime:1236===
-===currentTime:1237===
-LPT-Index:0
-Allocate:VM78 to PM3
-Resource is updated(dec)
-===currentTime:1238===
-===currentTime:1239===
-===currentTime:1240===
-===currentTime:1241===
-===currentTime:1242===
-===currentTime:1243===
-===currentTime:1244===
-LPT-Index:0
-Allocate:VM79 to PM17
-Resource is updated(dec)
-===currentTime:1245===
-Remove:VM38 from PM25
-Resource is updated(inc)
-===currentTime:1246===
-Remove:VM39 from PM26
-Resource is updated(inc)
-Remove:VM69 from PM4
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM80 to PM23
-Resource is updated(dec)
-===currentTime:1247===
-===currentTime:1248===
-===currentTime:1249===
-===currentTime:1250===
-===currentTime:1251===
-===currentTime:1252===
-===currentTime:1253===
-===currentTime:1254===
-===currentTime:1255===
-===currentTime:1256===
-===currentTime:1257===
-===currentTime:1258===
-===currentTime:1259===
-===currentTime:1260===
-===currentTime:1261===
-===currentTime:1262===
-===currentTime:1263===
-===currentTime:1264===
-===currentTime:1265===
-===currentTime:1266===
-LPT-Index:0
-Allocate:VM81 to PM18
-Resource is updated(dec)
-===currentTime:1267===
-Remove:VM71 from PM7
-Resource is updated(inc)
-===currentTime:1268===
-Remove:VM78 from PM3
-Resource is updated(inc)
-===currentTime:1269===
-===currentTime:1270===
-===currentTime:1271===
-LPT-Index:0
-Allocate:VM83 to PM24
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM82 to PM9
-Resource is updated(dec)
-===currentTime:1272===
-===currentTime:1273===
-LPT-Index:0
-VM is rejected
-===currentTime:1274===
-===currentTime:1275===
-===currentTime:1276===
-===currentTime:1277===
-===currentTime:1278===
-===currentTime:1279===
-===currentTime:1280===
-===currentTime:1281===
-===currentTime:1282===
-===currentTime:1283===
-===currentTime:1284===
-===currentTime:1285===
-===currentTime:1286===
-===currentTime:1287===
-===currentTime:1288===
-===currentTime:1289===
-===currentTime:1290===
-LPT-Index:0
-Allocate:VM85 to PM5
-Resource is updated(dec)
-===currentTime:1291===
-===currentTime:1292===
-===currentTime:1293===
-===currentTime:1294===
-===currentTime:1295===
-===currentTime:1296===
-===currentTime:1297===
-===currentTime:1298===
-===currentTime:1299===
-===currentTime:1300===
-===currentTime:1301===
-===currentTime:1302===
-===currentTime:1303===
-===currentTime:1304===
-LPT-Index:0
-Allocate:VM86 to PM22
-Resource is updated(dec)
-===currentTime:1305===
-LPT-Index:0
-Allocate:VM87 to PM21
-Resource is updated(dec)
-===currentTime:1306===
-===currentTime:1307===
-===currentTime:1308===
-===currentTime:1309===
-===currentTime:1310===
-===currentTime:1311===
-===currentTime:1312===
-===currentTime:1313===
-===currentTime:1314===
-===currentTime:1315===
-===currentTime:1316===
-===currentTime:1317===
-===currentTime:1318===
-===currentTime:1319===
-===currentTime:1320===
-===currentTime:1321===
-Remove:VM85 from PM5
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM88 to PM12
-Resource is updated(dec)
-===currentTime:1322===
-Remove:VM80 from PM23
-Resource is updated(inc)
-===currentTime:1323===
-===currentTime:1324===
-Remove:VM46 from PM32
-Resource is updated(inc)
-===currentTime:1325===
-===currentTime:1326===
-===currentTime:1327===
-===currentTime:1328===
-LPT-Index:0
-VM is rejected
-LPT-Index:0
-Allocate:VM90 to PM27
-Resource is updated(dec)
-===currentTime:1329===
-===currentTime:1330===
-===currentTime:1331===
-LPT-Index:0
-Allocate:VM91 to PM20
-Resource is updated(dec)
-===currentTime:1332===
-===currentTime:1333===
-===currentTime:1334===
-===currentTime:1335===
-Remove:VM86 from PM22
-Resource is updated(inc)
-===currentTime:1336===
-Remove:VM87 from PM21
-Resource is updated(inc)
-===currentTime:1337===
-===currentTime:1338===
-===currentTime:1339===
-===currentTime:1340===
-===currentTime:1341===
-===currentTime:1342===
-===currentTime:1343===
-===currentTime:1344===
-===currentTime:1345===
-===currentTime:1346===
-===currentTime:1347===
-===currentTime:1348===
-===currentTime:1349===
-===currentTime:1350===
-===currentTime:1351===
-===currentTime:1352===
-Remove:VM76 from PM11
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM92 to PM13
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM93 to PM30
-Resource is updated(dec)
-LPT-Index:0
-Allocate:VM94 to PM0
-Resource is updated(dec)
-===currentTime:1353===
-===currentTime:1354===
-Remove:VM81 from PM18
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM95 to PM33
-Resource is updated(dec)
-===currentTime:1355===
-===currentTime:1356===
-===currentTime:1357===
-===currentTime:1358===
-===currentTime:1359===
-===currentTime:1360===
-===currentTime:1361===
-Remove:VM82 from PM9
-Resource is updated(inc)
-===currentTime:1362===
-===currentTime:1363===
-===currentTime:1364===
-===currentTime:1365===
-===currentTime:1366===
-===currentTime:1367===
-===currentTime:1368===
-===currentTime:1369===
-===currentTime:1370===
-===currentTime:1371===
-===currentTime:1372===
-===currentTime:1373===
-===currentTime:1374===
-===currentTime:1375===
-===currentTime:1376===
-===currentTime:1377===
-===currentTime:1378===
-Remove:VM77 from PM16
-Resource is updated(inc)
-===currentTime:1379===
-===currentTime:1380===
-===currentTime:1381===
-===currentTime:1382===
-===currentTime:1383===
-===currentTime:1384===
-===currentTime:1385===
-===currentTime:1386===
-===currentTime:1387===
-===currentTime:1388===
-===currentTime:1389===
-===currentTime:1390===
-===currentTime:1391===
-===currentTime:1392===
-Remove:VM91 from PM20
-Resource is updated(inc)
-===currentTime:1393===
-Remove:VM88 from PM12
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM96 to PM34
-Resource is updated(dec)
-===currentTime:1394===
-===currentTime:1395===
-===currentTime:1396===
-===currentTime:1397===
-===currentTime:1398===
-LPT-Index:0
-VM is rejected
-===currentTime:1399===
-Remove:VM94 from PM0
-Resource is updated(inc)
-===currentTime:1400===
-===currentTime:1401===
-===currentTime:1402===
-===currentTime:1403===
-===currentTime:1404===
-===currentTime:1405===
-===currentTime:1406===
-===currentTime:1407===
-===currentTime:1408===
-LPT-Index:0
-Allocate:VM98 to PM29
-Resource is updated(dec)
-===currentTime:1409===
-Remove:VM90 from PM27
-Resource is updated(inc)
-LPT-Index:0
-Allocate:VM99 to PM19
-Resource is updated(dec)
-===currentTime:1410===
----Allocation Finished---
-Allocation finished......
----Outputs:---
-Collecting comparison indices and algorithms results......
-Average Utility: 0.0
-Imbalance Degree: 0.0
-Makespan: 0.0
-Effective PM: 0.0
-ProcessTime: 0.0
----Offline-EDF Algorithm---
-Now Generating VMs......
-Now starting PMs......
-PMs have been booted......
+---Offline-LPT Algorithm---
 Now generating requests......
 Requests have been generated......
-Starting allocating requests......
+Starting offline allocating requests......
+---Offline-LPT Algorithm---
 ===currentTime:1===
 ===currentTime:2===
 ===currentTime:3===
 ===currentTime:4===
+Allocate:VM80 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
 ===currentTime:5===
-===currentTime:6===
-EDF-Index:0
-Allocate:VM70 to PM0
+Allocate:VM90 to DataCenter1 Rack0 PM0
 Resource is updated(dec)
-===currentTime:7===
-===currentTime:8===
-EDF-Index:0
-Allocate:VM34 to PM0
-Resource is updated(dec)
-EDF-Index:0
-Allocate:VM20 to PM0
-Resource is updated(dec)
-===currentTime:9===
-===currentTime:10===
-EDF-Index:0
-Allocate:VM21 to PM0
-Resource is updated(dec)
-===currentTime:11===
-EDF-Index:0
-Allocate:VM61 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-Allocate:VM13 to PM0
-Resource is updated(dec)
-===currentTime:12===
-===currentTime:13===
-Remove:VM20 from PM0
-Resource is updated(inc)
-===currentTime:14===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-Allocate:VM76 to PM0
-Resource is updated(dec)
-===currentTime:15===
-EDF-Index:0
-VM is rejected
-===currentTime:16===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-Allocate:VM49 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-Allocate:VM7 to PM0
-Resource is updated(dec)
-===currentTime:17===
-Remove:VM13 from PM0
-Resource is updated(inc)
-EDF-Index:0
-Allocate:VM44 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:18===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:19===
-Remove:VM21 from PM0
-Resource is updated(inc)
-EDF-Index:0
-Allocate:VM57 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:20===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:21===
-Remove:VM76 from PM0
-Resource is updated(inc)
-EDF-Index:0
-Allocate:VM45 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:22===
-===currentTime:23===
-Remove:VM34 from PM0
-Resource is updated(inc)
-Remove:VM7 from PM0
-Resource is updated(inc)
-EDF-Index:0
-Allocate:VM89 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-Allocate:VM53 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-===currentTime:24===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:25===
-Remove:VM49 from PM0
-Resource is updated(inc)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-Allocate:VM87 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-Allocate:VM6 to PM0
-Resource is updated(dec)
-===currentTime:26===
-Remove:VM6 from PM0
-Resource is updated(inc)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:27===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:28===
-Remove:VM53 from PM0
-Resource is updated(inc)
-EDF-Index:0
-Allocate:VM63 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:29===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:30===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:31===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:32===
-Remove:VM61 from PM0
-Resource is updated(inc)
-EDF-Index:0
-Allocate:VM66 to PM0
-Resource is updated(dec)
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:33===
-EDF-Index:0
-VM is rejected
-===currentTime:34===
-EDF-Index:0
-VM is rejected
-EDF-Index:0
-VM is rejected
-===currentTime:35===
-===currentTime:36===
-Remove:VM70 from PM0
-Resource is updated(inc)
-EDF-Index:0
-VM is rejected
-===currentTime:37===
-EDF-Index:0
-Allocate:VM68 to PM0
-Resource is updated(dec)
-===currentTime:38===
-EDF-Index:0
-VM is rejected
-===currentTime:39===
-===currentTime:40===
-EDF-Index:0
-VM is rejected
-===currentTime:41===
-EDF-Index:0
-VM is rejected
-===currentTime:42===
-===currentTime:43===
-EDF-Index:0
-VM is rejected
-===currentTime:44===
----Allocation Finished---
-Allocation finished......
----Outputs:---
-Collecting comparison indices and algorithms results......
-Average Utility: 0.0
-Imbalance Degree: 0.0
-Makespan: 0.0
-Effective PM: 0.0
-ProcessTime: 0.0
----Offline-CMP Algorithm---
-Now Generating VMs......
-Now starting PMs......
-PMs have been booted......
-Now generating requests......
-Requests have been generated......
-Starting allocating requests......
-PCM:1442
-Partition Times:15
-===currentTime:1===
-===currentTime:2===
-===currentTime:3===
-===currentTime:4===
-===currentTime:5===
 ===currentTime:6===
 ===currentTime:7===
 ===currentTime:8===
+Allocate:VM34 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
 ===currentTime:9===
+Remove:VM34 from DataCenter0 Rack1 PM1
+Resource is updated(inc)
+Allocate:VM8 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
 ===currentTime:10===
+Allocate:VM54 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
 ===currentTime:11===
 ===currentTime:12===
 ===currentTime:13===
+Allocate:VM24 to DataCenter1 Rack1 PM1
+Resource is updated(dec)
+Allocate:VM93 to DataCenter1 Rack1 PM2
+Resource is updated(dec)
 ===currentTime:14===
+Allocate:VM21 to DataCenter1 Rack1 PM3
+Resource is updated(dec)
 ===currentTime:15===
+Allocate:VM0 to DataCenter1 Rack1 PM4
+Resource is updated(dec)
+Allocate:VM28 to DataCenter1 Rack1 PM5
+Resource is updated(dec)
 ===currentTime:16===
+Allocate:VM19 to DataCenter1 Rack1 PM6
+Resource is updated(dec)
+Allocate:VM82 to DataCenter0 Rack0 PM1
+Resource is updated(dec)
+Allocate:VM85 to DataCenter0 Rack0 PM2
+Resource is updated(dec)
 ===currentTime:17===
+Allocate:VM6 to DataCenter0 Rack0 PM3
+Resource is updated(dec)
+Allocate:VM31 to DataCenter0 Rack0 PM4
+Resource is updated(dec)
+Allocate:VM46 to DataCenter0 Rack0 PM5
+Resource is updated(dec)
+Allocate:VM75 to DataCenter0 Rack0 PM6
+Resource is updated(dec)
 ===currentTime:18===
+Allocate:VM1 to DataCenter0 Rack0 PM7
+Resource is updated(dec)
+Allocate:VM12 to DataCenter0 Rack0 PM8
+Resource is updated(dec)
+Allocate:VM40 to DataCenter0 Rack0 PM9
+Resource is updated(dec)
+Allocate:VM88 to DataCenter0 Rack0 PM10
+Resource is updated(dec)
 ===currentTime:19===
+Remove:VM46 from DataCenter0 Rack0 PM16
+Resource is updated(inc)
+Remove:VM40 from DataCenter0 Rack0 PM20
+Resource is updated(inc)
+Allocate:VM2 to DataCenter0 Rack0 PM11
+Resource is updated(dec)
+Allocate:VM38 to DataCenter0 Rack1 PM2
+Resource is updated(dec)
+Allocate:VM78 to DataCenter0 Rack1 PM3
+Resource is updated(dec)
+Allocate:VM92 to DataCenter0 Rack1 PM4
+Resource is updated(dec)
 ===currentTime:20===
+Remove:VM28 from DataCenter1 Rack1 PM6
+Resource is updated(inc)
+Allocate:VM89 to DataCenter0 Rack1 PM5
+Resource is updated(dec)
+Allocate:VM96 to DataCenter0 Rack1 PM6
+Resource is updated(dec)
 ===currentTime:21===
+Remove:VM6 from DataCenter0 Rack0 PM10
+Resource is updated(inc)
+Allocate:VM43 to DataCenter0 Rack1 PM7
+Resource is updated(dec)
+Allocate:VM58 to DataCenter0 Rack1 PM8
+Resource is updated(dec)
+Allocate:VM63 to DataCenter0 Rack1 PM9
+Resource is updated(dec)
+Allocate:VM71 to DataCenter0 Rack1 PM10
+Resource is updated(dec)
 ===currentTime:22===
+Allocate:VM17 to DataCenter0 Rack1 PM11
+Resource is updated(dec)
+Allocate:VM25 to DataCenter0 Rack1 PM12
+Resource is updated(dec)
 ===currentTime:23===
+Remove:VM75 from DataCenter0 Rack0 PM19
+Resource is updated(inc)
+Allocate:VM9 to DataCenter0 Rack1 PM13
+Resource is updated(dec)
+Allocate:VM26 to DataCenter0 Rack0 PM12
+Resource is updated(dec)
+Allocate:VM35 to DataCenter0 Rack0 PM13
+Resource is updated(dec)
+Allocate:VM39 to DataCenter0 Rack0 PM14
+Resource is updated(dec)
+Allocate:VM45 to DataCenter0 Rack0 PM15
+Resource is updated(dec)
+Allocate:VM50 to DataCenter1 Rack0 PM1
+Resource is updated(dec)
+Allocate:VM76 to DataCenter1 Rack0 PM2
+Resource is updated(dec)
+Allocate:VM83 to DataCenter1 Rack0 PM3
+Resource is updated(dec)
+Allocate:VM91 to DataCenter1 Rack0 PM4
+Resource is updated(dec)
+Allocate:VM99 to DataCenter1 Rack0 PM5
+Resource is updated(dec)
 ===currentTime:24===
+Remove:VM54 from DataCenter1 Rack1 PM14
+Resource is updated(inc)
+Remove:VM31 from DataCenter0 Rack0 PM10
+Resource is updated(inc)
+Remove:VM78 from DataCenter0 Rack1 PM10
+Resource is updated(inc)
+Remove:VM89 from DataCenter0 Rack1 PM12
+Resource is updated(inc)
+Remove:VM50 from DataCenter1 Rack0 PM17
+Resource is updated(inc)
+Allocate:VM10 to DataCenter1 Rack0 PM6
+Resource is updated(dec)
+Allocate:VM33 to DataCenter1 Rack0 PM7
+Resource is updated(dec)
+Allocate:VM49 to DataCenter1 Rack0 PM8
+Resource is updated(dec)
+Allocate:VM94 to DataCenter1 Rack0 PM9
+Resource is updated(dec)
 ===currentTime:25===
+Remove:VM90 from DataCenter1 Rack0 PM16
+Resource is updated(inc)
+Remove:VM24 from DataCenter1 Rack1 PM15
+Resource is updated(inc)
+Remove:VM85 from DataCenter0 Rack0 PM12
+Resource is updated(inc)
+Remove:VM92 from DataCenter0 Rack1 PM11
+Resource is updated(inc)
+Remove:VM71 from DataCenter0 Rack1 PM17
+Resource is updated(inc)
+Remove:VM99 from DataCenter1 Rack0 PM21
+Resource is updated(inc)
+Remove:VM33 from DataCenter1 Rack0 PM23
+Resource is updated(inc)
+Remove:VM94 from DataCenter1 Rack0 PM25
+Resource is updated(inc)
+Allocate:VM3 to DataCenter1 Rack0 PM10
+Resource is updated(dec)
+Allocate:VM11 to DataCenter0 Rack1 PM14
+Resource is updated(dec)
+Allocate:VM30 to DataCenter0 Rack1 PM15
+Resource is updated(dec)
+Allocate:VM41 to DataCenter0 Rack1 PM16
+Resource is updated(dec)
+Allocate:VM48 to DataCenter0 Rack1 PM17
+Resource is updated(dec)
+Allocate:VM57 to DataCenter0 Rack1 PM18
+Resource is updated(dec)
+Allocate:VM61 to DataCenter0 Rack1 PM19
+Resource is updated(dec)
+Allocate:VM69 to DataCenter0 Rack1 PM20
+Resource is updated(dec)
+Allocate:VM73 to DataCenter0 Rack1 PM21
+Resource is updated(dec)
+Allocate:VM95 to DataCenter0 Rack1 PM22
+Resource is updated(dec)
 ===currentTime:26===
+Remove:VM35 from DataCenter0 Rack0 PM36
+Resource is updated(inc)
+Remove:VM10 from DataCenter1 Rack0 PM17
+Resource is updated(inc)
+Allocate:VM44 to DataCenter0 Rack1 PM23
+Resource is updated(dec)
+Allocate:VM59 to DataCenter0 Rack1 PM24
+Resource is updated(dec)
+Allocate:VM86 to DataCenter0 Rack1 PM25
+Resource is updated(dec)
+Allocate:VM97 to DataCenter0 Rack1 PM26
+Resource is updated(dec)
 ===currentTime:27===
+Remove:VM12 from DataCenter0 Rack0 PM35
+Resource is updated(inc)
+Remove:VM96 from DataCenter0 Rack1 PM22
+Resource is updated(inc)
+Remove:VM17 from DataCenter0 Rack1 PM27
+Resource is updated(inc)
+Remove:VM49 from DataCenter1 Rack0 PM19
+Resource is updated(inc)
+Remove:VM57 from DataCenter0 Rack1 PM34
+Resource is updated(inc)
+Remove:VM44 from DataCenter0 Rack1 PM39
+Resource is updated(inc)
+Remove:VM97 from DataCenter0 Rack1 PM42
+Resource is updated(inc)
+Allocate:VM23 to DataCenter0 Rack1 PM27
+Resource is updated(dec)
+Allocate:VM42 to DataCenter0 Rack0 PM16
+Resource is updated(dec)
+Allocate:VM55 to DataCenter0 Rack0 PM17
+Resource is updated(dec)
+Allocate:VM62 to DataCenter0 Rack0 PM18
+Resource is updated(dec)
+Allocate:VM81 to DataCenter0 Rack0 PM19
+Resource is updated(dec)
+Allocate:VM87 to DataCenter0 Rack0 PM20
+Resource is updated(dec)
 ===currentTime:28===
+Remove:VM82 from DataCenter0 Rack0 PM22
+Resource is updated(inc)
+Remove:VM88 from DataCenter0 Rack0 PM31
+Resource is updated(inc)
+Allocate:VM60 to DataCenter0 Rack0 PM21
+Resource is updated(dec)
+Allocate:VM72 to DataCenter0 Rack0 PM22
+Resource is updated(dec)
 ===currentTime:29===
+Remove:VM80 from DataCenter0 Rack0 PM23
+Resource is updated(inc)
+Remove:VM21 from DataCenter1 Rack1 PM10
+Resource is updated(inc)
+Remove:VM72 from DataCenter0 Rack0 PM45
+Resource is updated(inc)
+Allocate:VM13 to DataCenter0 Rack0 PM23
+Resource is updated(dec)
+Allocate:VM18 to DataCenter0 Rack0 PM24
+Resource is updated(dec)
+Allocate:VM51 to DataCenter0 Rack0 PM25
+Resource is updated(dec)
+Allocate:VM64 to DataCenter0 Rack0 PM26
+Resource is updated(dec)
+Allocate:VM67 to DataCenter0 Rack0 PM27
+Resource is updated(dec)
+Allocate:VM84 to DataCenter1 Rack1 PM7
+Resource is updated(dec)
 ===currentTime:30===
+Remove:VM8 from DataCenter0 Rack1 PM12
+Resource is updated(inc)
+Remove:VM91 from DataCenter1 Rack0 PM32
+Resource is updated(inc)
+Remove:VM11 from DataCenter0 Rack1 PM25
+Resource is updated(inc)
+Allocate:VM14 to DataCenter1 Rack1 PM8
+Resource is updated(dec)
+Allocate:VM27 to DataCenter1 Rack1 PM9
+Resource is updated(dec)
+Allocate:VM56 to DataCenter1 Rack1 PM10
+Resource is updated(dec)
+Allocate:VM79 to DataCenter1 Rack1 PM11
+Resource is updated(dec)
 ===currentTime:31===
+Remove:VM41 from DataCenter0 Rack1 PM27
+Resource is updated(inc)
+Allocate:VM4 to DataCenter1 Rack1 PM12
+Resource is updated(dec)
+Allocate:VM66 to DataCenter1 Rack1 PM13
+Resource is updated(dec)
 ===currentTime:32===
+Remove:VM93 from DataCenter1 Rack1 PM30
+Resource is updated(inc)
+Remove:VM76 from DataCenter1 Rack0 PM30
+Resource is updated(inc)
+Remove:VM81 from DataCenter0 Rack0 PM33
+Resource is updated(inc)
+Remove:VM18 from DataCenter0 Rack0 PM38
+Resource is updated(inc)
+Allocate:VM32 to DataCenter1 Rack1 PM14
+Resource is updated(dec)
+Allocate:VM37 to DataCenter1 Rack1 PM15
+Resource is updated(dec)
+Allocate:VM68 to DataCenter1 Rack1 PM16
+Resource is updated(dec)
+Allocate:VM98 to DataCenter1 Rack1 PM17
+Resource is updated(dec)
 ===currentTime:33===
+Remove:VM38 from DataCenter0 Rack1 PM13
+Resource is updated(inc)
+Allocate:VM5 to DataCenter1 Rack1 PM18
+Resource is updated(dec)
+Allocate:VM70 to DataCenter1 Rack1 PM19
+Resource is updated(dec)
+Allocate:VM77 to DataCenter1 Rack1 PM20
+Resource is updated(dec)
 ===currentTime:34===
+Remove:VM0 from DataCenter1 Rack1 PM32
+Resource is updated(inc)
+Remove:VM59 from DataCenter0 Rack1 PM35
+Resource is updated(inc)
+Remove:VM27 from DataCenter1 Rack1 PM37
+Resource is updated(inc)
+Allocate:VM74 to DataCenter1 Rack1 PM21
+Resource is updated(dec)
 ===currentTime:35===
+Remove:VM1 from DataCenter0 Rack0 PM29
+Resource is updated(inc)
+Remove:VM61 from DataCenter0 Rack1 PM30
+Resource is updated(inc)
+Remove:VM86 from DataCenter0 Rack1 PM36
+Resource is updated(inc)
+Allocate:VM7 to DataCenter1 Rack1 PM22
+Resource is updated(dec)
+Allocate:VM53 to DataCenter1 Rack1 PM23
+Resource is updated(dec)
 ===currentTime:36===
-CMP-Index:0
-Allocate:VM0 to PM0
+Allocate:VM16 to DataCenter1 Rack1 PM24
+Resource is updated(dec)
+Allocate:VM47 to DataCenter1 Rack1 PM25
 Resource is updated(dec)
 ===currentTime:37===
-CMP-Index:0
-Allocate:VM1 to PM1
-Resource is updated(dec)
+Remove:VM25 from DataCenter0 Rack1 PM23
+Resource is updated(inc)
+Remove:VM55 from DataCenter0 Rack0 PM43
+Resource is updated(inc)
+Remove:VM98 from DataCenter1 Rack1 PM45
+Resource is updated(inc)
 ===currentTime:38===
-CMP-Index:0
-Allocate:VM2 to PM2
+Remove:VM66 from DataCenter1 Rack1 PM41
+Resource is updated(inc)
+Allocate:VM52 to DataCenter1 Rack1 PM26
 Resource is updated(dec)
 ===currentTime:39===
 ===currentTime:40===
+Allocate:VM36 to DataCenter1 Rack1 PM27
+Resource is updated(dec)
 ===currentTime:41===
+Allocate:VM65 to DataCenter1 Rack1 PM28
+Resource is updated(dec)
 ===currentTime:42===
+Allocate:VM22 to DataCenter1 Rack1 PM29
+Resource is updated(dec)
 ===currentTime:43===
+Remove:VM83 from DataCenter1 Rack0 PM31
+Resource is updated(inc)
+Allocate:VM15 to DataCenter1 Rack1 PM30
+Resource is updated(dec)
 ===currentTime:44===
+Allocate:VM20 to DataCenter1 Rack1 PM31
+Resource is updated(dec)
 ===currentTime:45===
 ===currentTime:46===
+Remove:VM39 from DataCenter0 Rack0 PM46
+Resource is updated(inc)
 ===currentTime:47===
 ===currentTime:48===
-CMP-Index:0
-VM is rejected
+Allocate:VM29 to DataCenter1 Rack1 PM32
+Resource is updated(dec)
 ===currentTime:49===
+---Allocation Finished---
+Allocation finished......
+###DataCenter1###
+###Rack1###
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+PM5 0.0625 0.05666667 0.04733728 0.055501316
+PM1 0.25 0.25 0.2514793 0.25049308
+PM0 0.25 0.25 0.2514793 0.25049308
+PM3 0.0625 0.05666667 0.04733728 0.055501316
+PM2 0.25 0.25 0.2514793 0.25049308
+PM9 0.25 0.25 0.2514793 0.25049308
+PM4 0.25 0.25 0.2514793 0.25049308
+PM17 0.5 0.5 0.5 0.5
+PM13 0.5 0.5 0.5 0.5
+PM30 0.0625 0.05666667 0.04733728 0.055501316
+PM28 0.0625 0.056666665 0.04733728 0.055501312
+PM25 0.0625 0.05666667 0.04733728 0.055501316
+PM24 0.0625 0.05666667 0.04733728 0.055501316
+PM21 0.0625 0.05666667 0.04733728 0.055501316
+PM20 0.0625 0.05666667 0.04733728 0.055501316
+PM7 0.0625 0.05666667 0.04733728 0.055501316
+PM32 0.25 0.25 0.2514793 0.25049308
+PM29 0.25 0.25 0.2514793 0.25049308
+PM26 0.25 0.25 0.2514793 0.25049308
+PM22 0.25 0.25 0.2514793 0.25049308
+PM16 0.25 0.25 0.2514793 0.25049308
+PM15 0.25 0.25 0.2514793 0.25049308
+PM14 0.25 0.25 0.2514793 0.25049308
+PM12 0.25 0.25 0.2514793 0.25049308
+PM11 0.25 0.25 0.2514793 0.25049308
+PM10 0.25 0.25 0.2514793 0.25049308
+PM8 0.25 0.25 0.2514793 0.25049308
+PM31 0.5 0.5 0.5 0.5
+PM27 0.5 0.5 0.5 0.5
+PM23 0.5 0.5 0.5 0.5
+PM19 0.5 0.5 0.5 0.5
+PM18 0.5 0.5 0.5 0.5
+PM6 0.5 0.5 0.5 0.5
+###Rack0###
+PM11 0.0 0.0 0.0 0.0
+PM12 0.0 0.0 0.0 0.0
+PM13 0.0 0.0 0.0 0.0
+PM14 0.0 0.0 0.0 0.0
+PM15 0.0 0.0 0.0 0.0
+PM16 0.0 0.0 0.0 0.0
+PM17 0.0 0.0 0.0 0.0
+PM18 0.0 0.0 0.0 0.0
+PM19 0.0 0.0 0.0 0.0
+PM20 0.0 0.0 0.0 0.0
+PM21 0.0 0.0 0.0 0.0
+PM22 0.0 0.0 0.0 0.0
+PM23 0.0 0.0 0.0 0.0
+PM24 0.0 0.0 0.0 0.0
+PM25 0.0 0.0 0.0 0.0
+PM26 0.0 0.0 0.0 0.0
+PM27 0.0 0.0 0.0 0.0
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+PM9 0.0625 0.05666667 0.04733728 0.055501316
+PM1 0.5 0.5 0.5 0.5
+PM8 0.0625 0.056666672 0.04733728 0.055501316
+PM3 0.25 0.25 0.2514793 0.25049308
+PM0 0.25 0.25 0.2514793 0.25049308
+PM10 0.5 0.5 0.5 0.5
+PM7 0.5 0.5 0.5 0.5
+PM6 0.5 0.5 0.5 0.5
+PM5 0.5 0.5 0.5 0.5
+PM4 0.5 0.5 0.5 0.5
+PM2 0.5 0.5 0.5 0.5
+dataCenterAverageUtility0.21126789
+###DataCenter0###
+###Rack0###
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+PM3 0.0625 0.05666667 0.04733728 0.055501316
+PM9 0.5 0.5 0.5 0.5
+PM5 0.5 0.5 0.5 0.5
+PM13 0.0625 0.056666672 0.04733728 0.055501316
+PM6 0.0625 0.056666672 0.04733728 0.055501316
+PM4 0.25 0.25 0.2514793 0.25049308
+PM2 0.25 0.25 0.2514793 0.25049308
+PM8 0.0625 0.05666667 0.04733728 0.055501316
+PM10 0.25 0.25 0.2514793 0.25049308
+PM1 0.5 0.5 0.5 0.5
+PM26 0.0625 0.05666667 0.04733728 0.055501316
+PM16 0.0625 0.05666667 0.04733728 0.055501316
+PM14 0.0625 0.05666667 0.04733728 0.055501316
+PM0 0.0625 0.05666667 0.04733728 0.055501316
+PM25 0.25 0.25 0.2514793 0.25049308
+PM24 0.25 0.25 0.2514793 0.25049308
+PM23 0.25 0.25 0.2514793 0.25049308
+PM21 0.25 0.25 0.2514793 0.25049308
+PM18 0.25 0.25 0.2514793 0.25049308
+PM12 0.25 0.25 0.2514793 0.25049308
+PM11 0.25 0.25 0.2514793 0.25049308
+PM27 0.5 0.5 0.5 0.5
+PM22 0.5 0.5 0.5 0.5
+PM20 0.5 0.5 0.5 0.5
+PM19 0.5 0.5 0.5 0.5
+PM17 0.5 0.5 0.5 0.5
+PM15 0.5 0.5 0.5 0.5
+PM7 0.5 0.5 0.5 0.5
+###Rack1###
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+PM0 0.5 0.5 0.5 0.5
+PM3 0.25 0.25 0.2514793 0.25049308
+PM5 0.5 0.5 0.5 0.5
+PM4 0.0625 0.056666672 0.04733728 0.055501316
+PM10 0.5 0.5 0.5 0.5
+PM26 0.25 0.25 0.2514793 0.25049308
+PM21 0.0625 0.05666667 0.04733728 0.055501316
+PM18 0.0625 0.05666667 0.04733728 0.055501316
+PM16 0.0625 0.056666672 0.04733728 0.055501316
+PM14 0.0625 0.05666667 0.04733728 0.055501316
+PM9 0.0625 0.05666667 0.04733728 0.055501316
+PM8 0.0625 0.05666667 0.04733728 0.055501316
+PM24 0.25 0.25 0.2514793 0.25049308
+PM22 0.25 0.25 0.2514793 0.25049308
+PM20 0.25 0.25 0.2514793 0.25049308
+PM17 0.25 0.25 0.2514793 0.25049308
+PM15 0.25 0.25 0.2514793 0.25049308
+PM13 0.25 0.25 0.2514793 0.25049308
+PM11 0.25 0.25 0.2514793 0.25049308
+PM7 0.25 0.25 0.2514793 0.25049308
+PM6 0.25 0.25 0.2514793 0.25049308
+PM27 0.5 0.5 0.5 0.5
+PM25 0.5 0.5 0.5 0.5
+PM23 0.5 0.5 0.5 0.5
+PM19 0.5 0.5 0.5 0.5
+PM12 0.5 0.5 0.5 0.5
+PM2 0.5 0.5 0.5 0.5
+PM1 0.5 0.5 0.5 0.5
+dataCenterAverageUtility0.59844005
+wholeSystemAverageUtility=0.40485397
+---Outputs:---
+Collecting comparison indices and algorithms results......
+Average Utility: 0.40485397
+Imbalance Degree: 0.038706895
+Makespan: 0.5
+Skew(Makespan): 0.11100263
+---Offline-CMP Algorithm---
+Now generating requests......
+Requests have been generated......
+Starting offline allocating requests......
+---Offline-CMP Algorithm---
+PCM:154
+Partition Times:35
+===currentTime:1===
+===currentTime:2===
+===currentTime:3===
+===currentTime:4===
+Allocate:VM113 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+===currentTime:5===
+Allocate:VM124 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+===currentTime:6===
+===currentTime:7===
+===currentTime:8===
+Allocate:VM51 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:9===
+Remove:VM51 from DataCenter0 Rack1 PM0
+Resource is updated(inc)
+Allocate:VM13 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
+===currentTime:10===
+Remove:VM13 from DataCenter0 Rack1 PM1
+Resource is updated(inc)
+Allocate:VM79 to DataCenter0 Rack1 PM2
+Resource is updated(dec)
+===currentTime:11===
+Allocate:VM14 to DataCenter0 Rack0 PM1
+Resource is updated(dec)
+===currentTime:12===
+===currentTime:13===
+Allocate:VM37 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM127 to DataCenter1 Rack1 PM1
+Resource is updated(dec)
+===currentTime:14===
+Allocate:VM32 to DataCenter1 Rack1 PM2
+Resource is updated(dec)
+===currentTime:15===
+Allocate:VM0 to DataCenter1 Rack1 PM3
+Resource is updated(dec)
+Allocate:VM42 to DataCenter1 Rack1 PM4
+Resource is updated(dec)
+===currentTime:16===
+Allocate:VM28 to DataCenter1 Rack1 PM5
+Resource is updated(dec)
+Allocate:VM115 to DataCenter0 Rack1 PM3
+Resource is updated(dec)
+Allocate:VM118 to DataCenter0 Rack1 PM4
+Resource is updated(dec)
+===currentTime:17===
+Allocate:VM10 to DataCenter0 Rack1 PM5
+Resource is updated(dec)
+Allocate:VM47 to DataCenter0 Rack1 PM6
+Resource is updated(dec)
+Allocate:VM67 to DataCenter0 Rack1 PM7
+Resource is updated(dec)
+Allocate:VM107 to DataCenter0 Rack1 PM8
+Resource is updated(dec)
+===currentTime:18===
+Allocate:VM1 to DataCenter0 Rack1 PM9
+Resource is updated(dec)
+Allocate:VM19 to DataCenter0 Rack1 PM10
+Resource is updated(dec)
+Allocate:VM59 to DataCenter0 Rack1 PM11
+Resource is updated(dec)
+Allocate:VM122 to DataCenter0 Rack1 PM12
+Resource is updated(dec)
+===currentTime:19===
+Remove:VM67 from DataCenter0 Rack1 PM8
+Resource is updated(inc)
+Remove:VM59 from DataCenter0 Rack1 PM12
+Resource is updated(inc)
+Allocate:VM2 to DataCenter0 Rack1 PM13
+Resource is updated(dec)
+Allocate:VM57 to DataCenter0 Rack0 PM2
+Resource is updated(dec)
+Allocate:VM110 to DataCenter0 Rack0 PM3
+Resource is updated(dec)
+Allocate:VM126 to DataCenter0 Rack0 PM4
+Resource is updated(dec)
+===currentTime:20===
+Remove:VM42 from DataCenter1 Rack1 PM4
+Resource is updated(inc)
+Allocate:VM123 to DataCenter0 Rack0 PM5
+Resource is updated(dec)
+Allocate:VM131 to DataCenter0 Rack0 PM6
+Resource is updated(dec)
+===currentTime:21===
+Remove:VM10 from DataCenter0 Rack1 PM18
+Resource is updated(inc)
+Allocate:VM62 to DataCenter0 Rack0 PM7
+Resource is updated(dec)
+Allocate:VM84 to DataCenter0 Rack0 PM8
+Resource is updated(dec)
+Allocate:VM91 to DataCenter0 Rack0 PM9
+Resource is updated(dec)
+Allocate:VM103 to DataCenter0 Rack0 PM10
+Resource is updated(dec)
+===currentTime:22===
+Allocate:VM26 to DataCenter0 Rack0 PM11
+Resource is updated(dec)
+Allocate:VM38 to DataCenter0 Rack0 PM12
+Resource is updated(dec)
+===currentTime:23===
+Remove:VM107 from DataCenter0 Rack1 PM21
+Resource is updated(inc)
+Allocate:VM15 to DataCenter0 Rack0 PM13
+Resource is updated(dec)
+Allocate:VM39 to DataCenter0 Rack1 PM14
+Resource is updated(dec)
+Allocate:VM52 to DataCenter0 Rack1 PM15
+Resource is updated(dec)
+Allocate:VM58 to DataCenter0 Rack1 PM16
+Resource is updated(dec)
+Allocate:VM65 to DataCenter0 Rack1 PM17
+Resource is updated(dec)
+Allocate:VM72 to DataCenter1 Rack0 PM1
+Resource is updated(dec)
+Allocate:VM108 to DataCenter1 Rack0 PM2
+Resource is updated(dec)
+Allocate:VM116 to DataCenter1 Rack0 PM3
+Resource is updated(dec)
+Allocate:VM125 to DataCenter1 Rack0 PM4
+Resource is updated(dec)
+Allocate:VM134 to DataCenter1 Rack0 PM5
+Resource is updated(dec)
+===currentTime:24===
+Remove:VM79 from DataCenter0 Rack1 PM7
+Resource is updated(inc)
+Remove:VM47 from DataCenter0 Rack1 PM11
+Resource is updated(inc)
+Remove:VM110 from DataCenter0 Rack0 PM8
+Resource is updated(inc)
+Remove:VM123 from DataCenter0 Rack0 PM10
+Resource is updated(inc)
+Remove:VM72 from DataCenter1 Rack0 PM18
+Resource is updated(inc)
+Allocate:VM17 to DataCenter1 Rack0 PM6
+Resource is updated(dec)
+Allocate:VM50 to DataCenter1 Rack0 PM7
+Resource is updated(dec)
+Allocate:VM71 to DataCenter1 Rack0 PM8
+Resource is updated(dec)
+Allocate:VM128 to DataCenter1 Rack0 PM9
+Resource is updated(dec)
+===currentTime:25===
+Remove:VM124 from DataCenter1 Rack0 PM17
+Resource is updated(inc)
+Remove:VM37 from DataCenter1 Rack1 PM13
+Resource is updated(inc)
+Remove:VM118 from DataCenter0 Rack1 PM9
+Resource is updated(inc)
+Remove:VM126 from DataCenter0 Rack0 PM13
+Resource is updated(inc)
+Remove:VM103 from DataCenter0 Rack0 PM19
+Resource is updated(inc)
+Remove:VM134 from DataCenter1 Rack0 PM22
+Resource is updated(inc)
+Remove:VM50 from DataCenter1 Rack0 PM24
+Resource is updated(inc)
+Remove:VM128 from DataCenter1 Rack0 PM26
+Resource is updated(inc)
+Allocate:VM4 to DataCenter1 Rack0 PM10
+Resource is updated(dec)
+Allocate:VM18 to DataCenter0 Rack0 PM14
+Resource is updated(dec)
+Allocate:VM45 to DataCenter0 Rack0 PM15
+Resource is updated(dec)
+Allocate:VM60 to DataCenter0 Rack0 PM16
+Resource is updated(dec)
+Allocate:VM69 to DataCenter0 Rack0 PM17
+Resource is updated(dec)
+Allocate:VM83 to DataCenter0 Rack0 PM18
+Resource is updated(dec)
+Allocate:VM88 to DataCenter0 Rack0 PM19
+Resource is updated(dec)
+Allocate:VM99 to DataCenter0 Rack0 PM20
+Resource is updated(dec)
+Allocate:VM105 to DataCenter0 Rack0 PM21
+Resource is updated(dec)
+Allocate:VM129 to DataCenter0 Rack0 PM22
+Resource is updated(dec)
+Allocate:VM132 to DataCenter0 Rack0 PM23
+Resource is updated(dec)
+===currentTime:26===
+Remove:VM52 from DataCenter0 Rack1 PM32
+Resource is updated(inc)
+Remove:VM17 from DataCenter1 Rack0 PM16
+Resource is updated(inc)
+Remove:VM132 from DataCenter0 Rack0 PM46
+Resource is updated(inc)
+Allocate:VM64 to DataCenter0 Rack0 PM24
+Resource is updated(dec)
+Allocate:VM85 to DataCenter0 Rack0 PM25
+Resource is updated(dec)
+Allocate:VM119 to DataCenter0 Rack0 PM26
+Resource is updated(dec)
+===currentTime:27===
+Remove:VM19 from DataCenter0 Rack1 PM27
+Resource is updated(inc)
+Remove:VM131 from DataCenter0 Rack0 PM32
+Resource is updated(inc)
+Remove:VM26 from DataCenter0 Rack0 PM37
+Resource is updated(inc)
+Remove:VM71 from DataCenter1 Rack0 PM18
+Resource is updated(inc)
+Remove:VM83 from DataCenter0 Rack0 PM44
+Resource is updated(inc)
+Remove:VM64 from DataCenter0 Rack0 PM21
+Resource is updated(inc)
+Allocate:VM35 to DataCenter0 Rack0 PM27
+Resource is updated(dec)
+Allocate:VM61 to DataCenter0 Rack1 PM18
+Resource is updated(dec)
+Allocate:VM80 to DataCenter0 Rack1 PM19
+Resource is updated(dec)
+Allocate:VM89 to DataCenter0 Rack1 PM20
+Resource is updated(dec)
+Allocate:VM114 to DataCenter0 Rack1 PM21
+Resource is updated(dec)
+Allocate:VM120 to DataCenter0 Rack1 PM22
+Resource is updated(dec)
+===currentTime:28===
+Remove:VM115 from DataCenter0 Rack1 PM30
+Resource is updated(inc)
+Remove:VM122 from DataCenter0 Rack1 PM39
+Resource is updated(inc)
+Allocate:VM86 to DataCenter0 Rack1 PM23
+Resource is updated(dec)
+Allocate:VM104 to DataCenter0 Rack1 PM24
+Resource is updated(dec)
+===currentTime:29===
+Remove:VM113 from DataCenter0 Rack0 PM24
+Resource is updated(inc)
+Remove:VM32 from DataCenter1 Rack1 PM7
+Resource is updated(inc)
+Remove:VM104 from DataCenter0 Rack1 PM18
+Resource is updated(inc)
+Allocate:VM20 to DataCenter0 Rack1 PM25
+Resource is updated(dec)
+Allocate:VM27 to DataCenter0 Rack1 PM26
+Resource is updated(dec)
+Allocate:VM73 to DataCenter0 Rack1 PM27
+Resource is updated(dec)
+Allocate:VM92 to DataCenter0 Rack1 PM28
+Resource is updated(dec)
+Allocate:VM95 to DataCenter0 Rack1 PM29
+Resource is updated(dec)
+Allocate:VM117 to DataCenter1 Rack1 PM6
+Resource is updated(dec)
+===currentTime:30===
+Remove:VM14 from DataCenter0 Rack0 PM7
+Resource is updated(inc)
+Remove:VM125 from DataCenter1 Rack0 PM33
+Resource is updated(inc)
+Remove:VM18 from DataCenter0 Rack0 PM20
+Resource is updated(inc)
+Allocate:VM22 to DataCenter1 Rack1 PM7
+Resource is updated(dec)
+Allocate:VM41 to DataCenter1 Rack1 PM8
+Resource is updated(dec)
+Allocate:VM81 to DataCenter1 Rack1 PM9
+Resource is updated(dec)
+Allocate:VM111 to DataCenter1 Rack1 PM10
+Resource is updated(dec)
+===currentTime:31===
+Remove:VM62 from DataCenter0 Rack0 PM17
+Resource is updated(inc)
+Remove:VM60 from DataCenter0 Rack0 PM26
+Resource is updated(inc)
+Allocate:VM6 to DataCenter1 Rack1 PM11
+Resource is updated(dec)
+Allocate:VM94 to DataCenter1 Rack1 PM12
+Resource is updated(dec)
+Allocate:VM97 to DataCenter1 Rack1 PM13
+Resource is updated(dec)
+===currentTime:32===
+Remove:VM127 from DataCenter1 Rack1 PM28
+Resource is updated(inc)
+Remove:VM108 from DataCenter1 Rack0 PM31
+Resource is updated(inc)
+Remove:VM114 from DataCenter0 Rack1 PM31
+Resource is updated(inc)
+Remove:VM27 from DataCenter0 Rack1 PM36
+Resource is updated(inc)
+Allocate:VM48 to DataCenter1 Rack1 PM14
+Resource is updated(dec)
+Allocate:VM55 to DataCenter1 Rack1 PM15
+Resource is updated(dec)
+Allocate:VM63 to DataCenter1 Rack1 PM16
+Resource is updated(dec)
+Allocate:VM133 to DataCenter1 Rack1 PM17
+Resource is updated(dec)
+===currentTime:33===
+Remove:VM57 from DataCenter0 Rack0 PM19
+Resource is updated(inc)
+Remove:VM99 from DataCenter0 Rack0 PM37
+Resource is updated(inc)
+Allocate:VM8 to DataCenter1 Rack1 PM18
+Resource is updated(dec)
+Allocate:VM101 to DataCenter1 Rack1 PM19
+Resource is updated(dec)
+Allocate:VM106 to DataCenter1 Rack1 PM20
+Resource is updated(dec)
+===currentTime:34===
+Remove:VM0 from DataCenter1 Rack1 PM30
+Resource is updated(inc)
+Remove:VM85 from DataCenter0 Rack0 PM45
+Resource is updated(inc)
+Remove:VM41 from DataCenter1 Rack1 PM35
+Resource is updated(inc)
+Allocate:VM100 to DataCenter1 Rack1 PM21
+Resource is updated(dec)
+Allocate:VM109 to DataCenter1 Rack1 PM22
+Resource is updated(dec)
+===currentTime:35===
+Remove:VM1 from DataCenter0 Rack1 PM19
+Resource is updated(inc)
+Remove:VM88 from DataCenter0 Rack0 PM41
+Resource is updated(inc)
+Remove:VM119 from DataCenter0 Rack0 PM48
+Resource is updated(inc)
+Allocate:VM11 to DataCenter1 Rack1 PM23
+Resource is updated(dec)
+Allocate:VM77 to DataCenter1 Rack1 PM24
+Resource is updated(dec)
+===currentTime:36===
+Allocate:VM25 to DataCenter1 Rack1 PM25
+Resource is updated(dec)
+Allocate:VM68 to DataCenter1 Rack1 PM26
+Resource is updated(dec)
+===currentTime:37===
+Remove:VM38 from DataCenter0 Rack0 PM38
+Resource is updated(inc)
+Remove:VM80 from DataCenter0 Rack1 PM29
+Resource is updated(inc)
+Remove:VM133 from DataCenter1 Rack1 PM44
+Resource is updated(inc)
+===currentTime:38===
+Remove:VM94 from DataCenter1 Rack1 PM39
+Resource is updated(inc)
+Allocate:VM75 to DataCenter1 Rack1 PM27
+Resource is updated(dec)
+===currentTime:39===
+===currentTime:40===
+Remove:VM22 from DataCenter1 Rack1 PM34
+Resource is updated(inc)
+Allocate:VM53 to DataCenter1 Rack1 PM28
+Resource is updated(dec)
+===currentTime:41===
+Remove:VM81 from DataCenter1 Rack1 PM36
+Resource is updated(inc)
+Remove:VM75 from DataCenter1 Rack1 PM9
+Resource is updated(inc)
+Allocate:VM23 to DataCenter1 Rack1 PM29
+Resource is updated(dec)
+Allocate:VM82 to DataCenter1 Rack1 PM30
+Resource is updated(dec)
+Allocate:VM93 to DataCenter1 Rack1 PM31
+Resource is updated(dec)
+===currentTime:42===
+Allocate:VM33 to DataCenter1 Rack1 PM32
+Resource is updated(dec)
+Allocate:VM76 to DataCenter1 Rack1 PM33
+Resource is updated(dec)
+===currentTime:43===
+Remove:VM116 from DataCenter1 Rack0 PM32
+Resource is updated(inc)
+Allocate:VM24 to DataCenter1 Rack1 PM34
+Resource is updated(dec)
+Allocate:VM30 to DataCenter1 Rack1 PM35
+Resource is updated(dec)
+===currentTime:44===
+Remove:VM120 from DataCenter0 Rack1 PM32
+Resource is updated(inc)
+===currentTime:45===
+Allocate:VM121 to DataCenter1 Rack1 PM36
+Resource is updated(dec)
+===currentTime:46===
+Remove:VM58 from DataCenter0 Rack1 PM26
+Resource is updated(inc)
+===currentTime:47===
+Remove:VM28 from DataCenter1 Rack1 PM32
+Resource is updated(inc)
+===currentTime:48===
+Remove:VM89 from DataCenter0 Rack1 PM30
+Resource is updated(inc)
+Remove:VM97 from DataCenter1 Rack1 PM40
+Resource is updated(inc)
+Remove:VM33 from DataCenter1 Rack1 PM23
+Resource is updated(inc)
+Allocate:VM29 to DataCenter1 Rack1 PM37
+Resource is updated(dec)
+Allocate:VM43 to DataCenter1 Rack1 PM38
+Resource is updated(dec)
+===currentTime:49===
+Allocate:VM34 to DataCenter1 Rack1 PM39
+Resource is updated(dec)
+Allocate:VM90 to DataCenter1 Rack1 PM40
+Resource is updated(dec)
+Allocate:VM98 to DataCenter1 Rack1 PM41
+Resource is updated(dec)
 ===currentTime:50===
 ===currentTime:51===
 ===currentTime:52===
+Remove:VM8 from DataCenter1 Rack1 PM45
+Resource is updated(inc)
 ===currentTime:53===
+Remove:VM45 from DataCenter0 Rack0 PM6
+Resource is updated(inc)
+Allocate:VM9 to DataCenter1 Rack1 PM42
+Resource is updated(dec)
 ===currentTime:54===
+Allocate:VM46 to DataCenter1 Rack1 PM43
+Resource is updated(dec)
 ===currentTime:55===
 ===currentTime:56===
-CMP-Index:0
-Allocate:VM5 to PM3
-Resource is updated(dec)
 ===currentTime:57===
+Remove:VM6 from DataCenter1 Rack1 PM38
+Resource is updated(inc)
 ===currentTime:58===
+Remove:VM20 from DataCenter0 Rack1 PM35
+Resource is updated(inc)
+Allocate:VM7 to DataCenter1 Rack1 PM44
+Resource is updated(dec)
 ===currentTime:59===
+Allocate:VM21 to DataCenter1 Rack1 PM45
+Resource is updated(dec)
 ===currentTime:60===
-CMP-Index:0
-VM is rejected
 ===currentTime:61===
+Remove:VM69 from DataCenter0 Rack0 PM40
+Resource is updated(inc)
 ===currentTime:62===
+Allocate:VM70 to DataCenter1 Rack1 PM46
+Resource is updated(dec)
 ===currentTime:63===
+Remove:VM43 from DataCenter1 Rack1 PM11
+Resource is updated(inc)
 ===currentTime:64===
+Remove:VM65 from DataCenter0 Rack1 PM27
+Resource is updated(inc)
+Remove:VM121 from DataCenter1 Rack1 PM15
+Resource is updated(inc)
+Allocate:VM44 to DataCenter1 Rack1 PM47
+Resource is updated(dec)
 ===currentTime:65===
+Remove:VM2 from DataCenter0 Rack1 PM23
+Resource is updated(inc)
+Remove:VM129 from DataCenter0 Rack0 PM30
+Resource is updated(inc)
+Remove:VM55 from DataCenter1 Rack1 PM42
+Resource is updated(inc)
+Allocate:VM66 to DataCenter1 Rack1 PM48
+Resource is updated(dec)
 ===currentTime:66===
+Remove:VM86 from DataCenter0 Rack1 PM33
+Resource is updated(inc)
+Remove:VM92 from DataCenter0 Rack1 PM38
+Resource is updated(inc)
+Allocate:VM3 to DataCenter1 Rack1 PM49
+Resource is updated(dec)
+Allocate:VM56 to DataCenter1 Rack1 PM31
+Resource is updated(dec)
+Allocate:VM130 to DataCenter1 Rack1 PM34
+Resource is updated(dec)
 ===currentTime:67===
+Remove:VM39 from DataCenter0 Rack1 PM24
+Resource is updated(inc)
+Remove:VM29 from DataCenter1 Rack1 PM13
+Resource is updated(inc)
+Allocate:VM87 to DataCenter1 Rack1 PM26
+Resource is updated(dec)
 ===currentTime:68===
+Allocate:VM40 to DataCenter1 Rack1 PM25
+Resource is updated(dec)
 ===currentTime:69===
 ===currentTime:70===
+Remove:VM63 from DataCenter1 Rack1 PM43
+Resource is updated(inc)
 ===currentTime:71===
 ===currentTime:72===
+Remove:VM101 from DataCenter1 Rack1 PM46
+Resource is updated(inc)
+Remove:VM100 from DataCenter1 Rack1 PM48
+Resource is updated(inc)
+Remove:VM9 from DataCenter1 Rack1 PM26
+Resource is updated(inc)
 ===currentTime:73===
+Allocate:VM102 to DataCenter1 Rack1 PM22
+Resource is updated(dec)
 ===currentTime:74===
+Remove:VM111 from DataCenter1 Rack1 PM37
+Resource is updated(inc)
+Remove:VM77 from DataCenter1 Rack1 PM18
+Resource is updated(inc)
 ===currentTime:75===
+Allocate:VM78 to DataCenter1 Rack1 PM20
+Resource is updated(dec)
+Allocate:VM112 to DataCenter1 Rack1 PM6
+Resource is updated(dec)
 ===currentTime:76===
 ===currentTime:77===
 ===currentTime:78===
 ===currentTime:79===
+Remove:VM15 from DataCenter0 Rack0 PM44
+Resource is updated(inc)
+Remove:VM23 from DataCenter1 Rack1 PM4
+Resource is updated(inc)
 ===currentTime:80===
+Remove:VM82 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+Remove:VM76 from DataCenter1 Rack1 PM22
+Resource is updated(inc)
+Allocate:VM16 to DataCenter1 Rack1 PM4
+Resource is updated(dec)
 ===currentTime:81===
+Remove:VM53 from DataCenter1 Rack1 PM8
+Resource is updated(inc)
 ===currentTime:82===
+Remove:VM4 from DataCenter1 Rack0 PM39
+Resource is updated(inc)
+Remove:VM35 from DataCenter0 Rack0 PM15
+Resource is updated(inc)
+Remove:VM48 from DataCenter1 Rack1 PM41
+Resource is updated(inc)
+Allocate:VM54 to DataCenter1 Rack1 PM2
+Resource is updated(dec)
 ===currentTime:83===
-CMP-Index:0
-Allocate:VM7 to PM4
+Allocate:VM5 to DataCenter1 Rack1 PM6
+Resource is updated(dec)
+Allocate:VM36 to DataCenter1 Rack1 PM25
 Resource is updated(dec)
 ===currentTime:84===
+Remove:VM73 from DataCenter0 Rack1 PM37
+Resource is updated(inc)
+Remove:VM66 from DataCenter1 Rack1 PM2
+Resource is updated(inc)
+Allocate:VM49 to DataCenter1 Rack1 PM31
+Resource is updated(dec)
 ===currentTime:85===
+Allocate:VM74 to DataCenter1 Rack1 PM26
+Resource is updated(dec)
 ===currentTime:86===
 ===currentTime:87===
+Remove:VM34 from DataCenter1 Rack1 PM7
+Resource is updated(inc)
+Remove:VM98 from DataCenter1 Rack1 PM3
+Resource is updated(inc)
 ===currentTime:88===
-Remove:VM5 from PM3
+Remove:VM95 from DataCenter0 Rack1 PM39
+Resource is updated(inc)
+Remove:VM90 from DataCenter1 Rack1 PM6
 Resource is updated(inc)
 ===currentTime:89===
+Remove:VM105 from DataCenter0 Rack0 PM23
+Resource is updated(inc)
+---Resource not enough, try another PM---
+Allocate:VM96 to DataCenter1 Rack1 PM34
+Resource is updated(dec)
 ===currentTime:90===
+Remove:VM109 from DataCenter1 Rack1 PM49
+Resource is updated(inc)
 ===currentTime:91===
 ===currentTime:92===
+Remove:VM84 from DataCenter0 Rack0 PM45
+Resource is updated(inc)
+Remove:VM46 from DataCenter1 Rack1 PM24
+Resource is updated(inc)
+Remove:VM102 from DataCenter1 Rack1 PM49
+Resource is updated(inc)
 ===currentTime:93===
-CMP-Index:0
-VM is rejected
+Remove:VM30 from DataCenter1 Rack1 PM17
+Resource is updated(inc)
 ===currentTime:94===
-CMP-Index:0
-Allocate:VM10 to PM5
+Remove:VM78 from DataCenter1 Rack1 PM47
+Resource is updated(inc)
+Allocate:VM31 to DataCenter1 Rack1 PM20
 Resource is updated(dec)
 ===currentTime:95===
 ===currentTime:96===
+Remove:VM11 from DataCenter1 Rack1 PM21
+Resource is updated(inc)
+Remove:VM7 from DataCenter1 Rack1 PM19
+Resource is updated(inc)
 ===currentTime:97===
+Remove:VM24 from DataCenter1 Rack1 PM20
+Resource is updated(inc)
+Allocate:VM12 to DataCenter1 Rack1 PM22
+Resource is updated(dec)
 ===currentTime:98===
-===currentTime:99===
-===currentTime:100===
-Remove:VM1 from PM1
-Resource is updated(inc)
-===currentTime:101===
-===currentTime:102===
-===currentTime:103===
-===currentTime:104===
-===currentTime:105===
-===currentTime:106===
-===currentTime:107===
-===currentTime:108===
-===currentTime:109===
-===currentTime:110===
-===currentTime:111===
-CMP-Index:0
-Allocate:VM11 to PM6
-Resource is updated(dec)
-===currentTime:112===
-===currentTime:113===
-===currentTime:114===
-CMP-Index:0
-VM is rejected
-===currentTime:115===
-===currentTime:116===
-===currentTime:117===
-===currentTime:118===
-===currentTime:119===
-===currentTime:120===
-===currentTime:121===
-===currentTime:122===
-===currentTime:123===
-===currentTime:124===
-===currentTime:125===
-Remove:VM10 from PM5
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM14 to PM7
-Resource is updated(dec)
-===currentTime:126===
-CMP-Index:0
-Allocate:VM15 to PM8
-Resource is updated(dec)
-===currentTime:127===
-===currentTime:128===
-===currentTime:129===
-===currentTime:130===
-===currentTime:131===
-===currentTime:132===
-===currentTime:133===
-===currentTime:134===
-CMP-Index:0
-VM is rejected
-===currentTime:135===
-===currentTime:136===
-===currentTime:137===
-===currentTime:138===
-Remove:VM7 from PM4
-Resource is updated(inc)
-===currentTime:139===
-CMP-Index:0
-Allocate:VM8 to PM9
-Resource is updated(dec)
-===currentTime:140===
-===currentTime:141===
-===currentTime:142===
-===currentTime:143===
-===currentTime:144===
-===currentTime:145===
-===currentTime:146===
-===currentTime:147===
-===currentTime:148===
-===currentTime:149===
-===currentTime:150===
-===currentTime:151===
-===currentTime:152===
-===currentTime:153===
-===currentTime:154===
-===currentTime:155===
-===currentTime:156===
-Remove:VM14 from PM7
-Resource is updated(inc)
-===currentTime:157===
-Remove:VM15 from PM8
-Resource is updated(inc)
-===currentTime:158===
-===currentTime:159===
-===currentTime:160===
-===currentTime:161===
-===currentTime:162===
-CMP-Index:0
-Allocate:VM17 to PM10
-Resource is updated(dec)
-===currentTime:163===
-===currentTime:164===
-===currentTime:165===
-===currentTime:166===
-CMP-Index:0
-Allocate:VM18 to PM11
-Resource is updated(dec)
-===currentTime:167===
-===currentTime:168===
-===currentTime:169===
-===currentTime:170===
-===currentTime:171===
-===currentTime:172===
-===currentTime:173===
-===currentTime:174===
-===currentTime:175===
-===currentTime:176===
-===currentTime:177===
-===currentTime:178===
-===currentTime:179===
-===currentTime:180===
-===currentTime:181===
-CMP-Index:0
-VM is rejected
-===currentTime:182===
-===currentTime:183===
-===currentTime:184===
-===currentTime:185===
-===currentTime:186===
-===currentTime:187===
-===currentTime:188===
-===currentTime:189===
-===currentTime:190===
-===currentTime:191===
-===currentTime:192===
-===currentTime:193===
-Remove:VM17 from PM10
-Resource is updated(inc)
-===currentTime:194===
-===currentTime:195===
-===currentTime:196===
-===currentTime:197===
-===currentTime:198===
-===currentTime:199===
-===currentTime:200===
-===currentTime:201===
-===currentTime:202===
-===currentTime:203===
-===currentTime:204===
-===currentTime:205===
-===currentTime:206===
-===currentTime:207===
-===currentTime:208===
-===currentTime:209===
-===currentTime:210===
-===currentTime:211===
-CMP-Index:0
-Allocate:VM20 to PM12
-Resource is updated(dec)
-===currentTime:212===
-===currentTime:213===
-===currentTime:214===
-===currentTime:215===
-===currentTime:216===
-===currentTime:217===
-===currentTime:218===
-===currentTime:219===
-===currentTime:220===
-===currentTime:221===
-===currentTime:222===
-===currentTime:223===
-===currentTime:224===
-Remove:VM11 from PM6
-Resource is updated(inc)
-===currentTime:225===
-CMP-Index:0
-Allocate:VM12 to PM13
-Resource is updated(dec)
-===currentTime:226===
-===currentTime:227===
-===currentTime:228===
-===currentTime:229===
-===currentTime:230===
-===currentTime:231===
-===currentTime:232===
-===currentTime:233===
-===currentTime:234===
-===currentTime:235===
-===currentTime:236===
-===currentTime:237===
-===currentTime:238===
-===currentTime:239===
-===currentTime:240===
-===currentTime:241===
-===currentTime:242===
-Remove:VM20 from PM12
-Resource is updated(inc)
-===currentTime:243===
-===currentTime:244===
-===currentTime:245===
-===currentTime:246===
-===currentTime:247===
-===currentTime:248===
-===currentTime:249===
-===currentTime:250===
-===currentTime:251===
-===currentTime:252===
-===currentTime:253===
-===currentTime:254===
-===currentTime:255===
-===currentTime:256===
-===currentTime:257===
-===currentTime:258===
-===currentTime:259===
-===currentTime:260===
-===currentTime:261===
-===currentTime:262===
-===currentTime:263===
-===currentTime:264===
-===currentTime:265===
-===currentTime:266===
-===currentTime:267===
-===currentTime:268===
-===currentTime:269===
-===currentTime:270===
-===currentTime:271===
-===currentTime:272===
-===currentTime:273===
-===currentTime:274===
-===currentTime:275===
-===currentTime:276===
-===currentTime:277===
-===currentTime:278===
-===currentTime:279===
-===currentTime:280===
-===currentTime:281===
-===currentTime:282===
-===currentTime:283===
-===currentTime:284===
-===currentTime:285===
-===currentTime:286===
-CMP-Index:0
-Allocate:VM21 to PM14
-Resource is updated(dec)
-===currentTime:287===
-===currentTime:288===
-===currentTime:289===
-===currentTime:290===
-===currentTime:291===
-===currentTime:292===
-===currentTime:293===
-===currentTime:294===
-===currentTime:295===
-===currentTime:296===
-===currentTime:297===
-===currentTime:298===
-===currentTime:299===
-===currentTime:300===
-===currentTime:301===
-===currentTime:302===
-===currentTime:303===
-===currentTime:304===
-===currentTime:305===
-===currentTime:306===
-===currentTime:307===
-===currentTime:308===
-===currentTime:309===
-===currentTime:310===
-===currentTime:311===
-===currentTime:312===
-===currentTime:313===
-===currentTime:314===
-===currentTime:315===
-===currentTime:316===
-===currentTime:317===
-===currentTime:318===
-===currentTime:319===
-===currentTime:320===
-===currentTime:321===
-===currentTime:322===
-===currentTime:323===
-===currentTime:324===
-CMP-Index:0
-Allocate:VM22 to PM15
-Resource is updated(dec)
-===currentTime:325===
-CMP-Index:0
-VM is rejected
-===currentTime:326===
-===currentTime:327===
-===currentTime:328===
-===currentTime:329===
-===currentTime:330===
-===currentTime:331===
-===currentTime:332===
-===currentTime:333===
-===currentTime:334===
-===currentTime:335===
-===currentTime:336===
-===currentTime:337===
-===currentTime:338===
-===currentTime:339===
-===currentTime:340===
-===currentTime:341===
-===currentTime:342===
-===currentTime:343===
-===currentTime:344===
-===currentTime:345===
-===currentTime:346===
-CMP-Index:0
-VM is rejected
-===currentTime:347===
-===currentTime:348===
-===currentTime:349===
-===currentTime:350===
-===currentTime:351===
-===currentTime:352===
-===currentTime:353===
-===currentTime:354===
-===currentTime:355===
-===currentTime:356===
-===currentTime:357===
-===currentTime:358===
-Remove:VM21 from PM14
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM25 to PM16
-Resource is updated(dec)
-===currentTime:359===
-===currentTime:360===
-===currentTime:361===
-===currentTime:362===
-===currentTime:363===
-===currentTime:364===
-===currentTime:365===
-===currentTime:366===
-===currentTime:367===
-===currentTime:368===
-===currentTime:369===
-===currentTime:370===
-===currentTime:371===
-===currentTime:372===
-===currentTime:373===
-===currentTime:374===
-===currentTime:375===
-===currentTime:376===
-===currentTime:377===
-===currentTime:378===
-===currentTime:379===
-===currentTime:380===
-===currentTime:381===
-===currentTime:382===
-===currentTime:383===
-===currentTime:384===
-===currentTime:385===
-CMP-Index:0
-Allocate:VM26 to PM17
-Resource is updated(dec)
-===currentTime:386===
-CMP-Index:0
-VM is rejected
-===currentTime:387===
-===currentTime:388===
-===currentTime:389===
-===currentTime:390===
-===currentTime:391===
-===currentTime:392===
-CMP-Index:0
-Allocate:VM29 to PM18
-Resource is updated(dec)
-===currentTime:393===
-Remove:VM29 from PM18
-Resource is updated(inc)
-CMP-Index:0
-VM is rejected
-===currentTime:394===
-===currentTime:395===
-===currentTime:396===
-===currentTime:397===
-Remove:VM2 from PM2
-Resource is updated(inc)
-===currentTime:398===
-CMP-Index:0
-Allocate:VM3 to PM19
-Resource is updated(dec)
-===currentTime:399===
-===currentTime:400===
-===currentTime:401===
-===currentTime:402===
-===currentTime:403===
-===currentTime:404===
-===currentTime:405===
-===currentTime:406===
-===currentTime:407===
-===currentTime:408===
-===currentTime:409===
-===currentTime:410===
-===currentTime:411===
-===currentTime:412===
-===currentTime:413===
-===currentTime:414===
-===currentTime:415===
-===currentTime:416===
-===currentTime:417===
-===currentTime:418===
-===currentTime:419===
-===currentTime:420===
-===currentTime:421===
-===currentTime:422===
-===currentTime:423===
-===currentTime:424===
-===currentTime:425===
-===currentTime:426===
-===currentTime:427===
-===currentTime:428===
-===currentTime:429===
-===currentTime:430===
-===currentTime:431===
-===currentTime:432===
-===currentTime:433===
-===currentTime:434===
-CMP-Index:0
-Allocate:VM31 to PM20
-Resource is updated(dec)
-===currentTime:435===
-===currentTime:436===
-===currentTime:437===
-===currentTime:438===
-===currentTime:439===
-===currentTime:440===
-===currentTime:441===
-===currentTime:442===
-===currentTime:443===
-===currentTime:444===
-===currentTime:445===
-===currentTime:446===
-===currentTime:447===
-===currentTime:448===
-===currentTime:449===
-===currentTime:450===
-===currentTime:451===
-===currentTime:452===
-===currentTime:453===
-===currentTime:454===
-===currentTime:455===
-===currentTime:456===
-===currentTime:457===
-===currentTime:458===
-===currentTime:459===
-===currentTime:460===
-===currentTime:461===
-===currentTime:462===
-===currentTime:463===
-===currentTime:464===
-===currentTime:465===
-===currentTime:466===
-===currentTime:467===
-===currentTime:468===
-CMP-Index:0
-Allocate:VM32 to PM21
-Resource is updated(dec)
-===currentTime:469===
-===currentTime:470===
-===currentTime:471===
-===currentTime:472===
-===currentTime:473===
-===currentTime:474===
-Remove:VM31 from PM20
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM33 to PM22
-Resource is updated(dec)
-===currentTime:475===
-===currentTime:476===
-===currentTime:477===
-===currentTime:478===
-===currentTime:479===
-===currentTime:480===
-===currentTime:481===
-===currentTime:482===
-===currentTime:483===
-===currentTime:484===
-CMP-Index:0
-Allocate:VM34 to PM23
-Resource is updated(dec)
-===currentTime:485===
-===currentTime:486===
-===currentTime:487===
-===currentTime:488===
-===currentTime:489===
-===currentTime:490===
-===currentTime:491===
-===currentTime:492===
-===currentTime:493===
-===currentTime:494===
-===currentTime:495===
-===currentTime:496===
-===currentTime:497===
-===currentTime:498===
-===currentTime:499===
-Remove:VM8 from PM9
-Resource is updated(inc)
-Remove:VM32 from PM21
-Resource is updated(inc)
-===currentTime:500===
-===currentTime:501===
-===currentTime:502===
-===currentTime:503===
-CMP-Index:0
-Allocate:VM35 to PM24
-Resource is updated(dec)
-CMP-Index:0
-Allocate:VM37 to PM25
-Resource is updated(dec)
-CMP-Index:0
-Allocate:VM39 to PM26
-Resource is updated(dec)
-===currentTime:504===
-CMP-Index:0
-Allocate:VM36 to PM27
-Resource is updated(dec)
-===currentTime:505===
-CMP-Index:0
-Allocate:VM38 to PM28
-Resource is updated(dec)
-===currentTime:506===
-===currentTime:507===
-===currentTime:508===
-===currentTime:509===
-===currentTime:510===
-===currentTime:511===
-CMP-Index:0
-VM is rejected
-CMP-Index:0
-Allocate:VM42 to PM29
-Resource is updated(dec)
-===currentTime:512===
-Remove:VM33 from PM22
-Resource is updated(inc)
-CMP-Index:0
-VM is rejected
-===currentTime:513===
-===currentTime:514===
-===currentTime:515===
-===currentTime:516===
-===currentTime:517===
-===currentTime:518===
-===currentTime:519===
-===currentTime:520===
-===currentTime:521===
-===currentTime:522===
-===currentTime:523===
-===currentTime:524===
-CMP-Index:0
-Allocate:VM45 to PM30
-Resource is updated(dec)
-===currentTime:525===
-CMP-Index:0
-Allocate:VM46 to PM31
-Resource is updated(dec)
-===currentTime:526===
-===currentTime:527===
-CMP-Index:0
-Allocate:VM48 to PM32
-Resource is updated(dec)
-===currentTime:528===
-===currentTime:529===
-===currentTime:530===
-===currentTime:531===
-===currentTime:532===
-===currentTime:533===
-===currentTime:534===
-===currentTime:535===
-===currentTime:536===
-===currentTime:537===
-===currentTime:538===
-===currentTime:539===
-===currentTime:540===
-===currentTime:541===
-===currentTime:542===
-===currentTime:543===
-===currentTime:544===
-===currentTime:545===
-===currentTime:546===
-===currentTime:547===
-===currentTime:548===
-===currentTime:549===
-===currentTime:550===
-Remove:VM42 from PM29
-Resource is updated(inc)
-===currentTime:551===
-===currentTime:552===
-===currentTime:553===
-===currentTime:554===
-===currentTime:555===
-===currentTime:556===
-===currentTime:557===
-===currentTime:558===
-===currentTime:559===
-===currentTime:560===
-===currentTime:561===
-===currentTime:562===
-Remove:VM34 from PM23
-Resource is updated(inc)
-===currentTime:563===
-===currentTime:564===
-===currentTime:565===
-===currentTime:566===
-===currentTime:567===
-===currentTime:568===
-===currentTime:569===
-===currentTime:570===
-===currentTime:571===
-===currentTime:572===
-===currentTime:573===
-CMP-Index:0
-VM is rejected
-===currentTime:574===
-===currentTime:575===
-===currentTime:576===
-===currentTime:577===
-===currentTime:578===
-===currentTime:579===
-===currentTime:580===
-===currentTime:581===
-===currentTime:582===
-Remove:VM37 from PM25
-Resource is updated(inc)
-===currentTime:583===
-===currentTime:584===
-===currentTime:585===
-Remove:VM12 from PM13
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM49 to PM33
-Resource is updated(dec)
-===currentTime:586===
-===currentTime:587===
-===currentTime:588===
-===currentTime:589===
-===currentTime:590===
-===currentTime:591===
-===currentTime:592===
-===currentTime:593===
-===currentTime:594===
-===currentTime:595===
-Remove:VM18 from PM11
-Resource is updated(inc)
-===currentTime:596===
-===currentTime:597===
-===currentTime:598===
-===currentTime:599===
-===currentTime:600===
-===currentTime:601===
-===currentTime:602===
-CMP-Index:0
-Allocate:VM51 to PM34
-Resource is updated(dec)
-===currentTime:603===
-===currentTime:604===
-===currentTime:605===
-===currentTime:606===
-===currentTime:607===
-===currentTime:608===
-===currentTime:609===
-===currentTime:610===
-===currentTime:611===
-===currentTime:612===
-===currentTime:613===
-===currentTime:614===
-===currentTime:615===
-===currentTime:616===
-===currentTime:617===
-===currentTime:618===
-===currentTime:619===
-===currentTime:620===
-===currentTime:621===
-===currentTime:622===
-===currentTime:623===
-===currentTime:624===
-===currentTime:625===
-Remove:VM36 from PM27
-Resource is updated(inc)
-===currentTime:626===
-===currentTime:627===
-===currentTime:628===
-===currentTime:629===
-===currentTime:630===
-===currentTime:631===
-===currentTime:632===
-===currentTime:633===
-===currentTime:634===
-===currentTime:635===
-===currentTime:636===
-===currentTime:637===
-===currentTime:638===
-===currentTime:639===
-===currentTime:640===
-===currentTime:641===
-===currentTime:642===
-===currentTime:643===
-===currentTime:644===
-===currentTime:645===
-Remove:VM22 from PM15
-Resource is updated(inc)
-===currentTime:646===
-===currentTime:647===
-===currentTime:648===
-===currentTime:649===
-===currentTime:650===
-===currentTime:651===
-CMP-Index:0
-VM is rejected
-===currentTime:652===
-===currentTime:653===
-Remove:VM35 from PM24
-Resource is updated(inc)
-===currentTime:654===
-===currentTime:655===
-===currentTime:656===
-===currentTime:657===
-===currentTime:658===
-===currentTime:659===
-===currentTime:660===
-CMP-Index:0
-Allocate:VM53 to PM35
-Resource is updated(dec)
-===currentTime:661===
-===currentTime:662===
-Remove:VM48 from PM32
-Resource is updated(inc)
-===currentTime:663===
-===currentTime:664===
-===currentTime:665===
-===currentTime:666===
-===currentTime:667===
-===currentTime:668===
-===currentTime:669===
-===currentTime:670===
-===currentTime:671===
-===currentTime:672===
-===currentTime:673===
-===currentTime:674===
-===currentTime:675===
-===currentTime:676===
-===currentTime:677===
-Remove:VM38 from PM28
-Resource is updated(inc)
-===currentTime:678===
-CMP-Index:0
-Allocate:VM54 to PM36
-Resource is updated(dec)
-===currentTime:679===
-Remove:VM25 from PM16
-Resource is updated(inc)
-===currentTime:680===
-===currentTime:681===
-===currentTime:682===
-===currentTime:683===
-Remove:VM49 from PM33
-Resource is updated(inc)
-===currentTime:684===
-CMP-Index:0
-Allocate:VM50 to PM37
-Resource is updated(dec)
-===currentTime:685===
-===currentTime:686===
-===currentTime:687===
-===currentTime:688===
-===currentTime:689===
-===currentTime:690===
-===currentTime:691===
-===currentTime:692===
-===currentTime:693===
-===currentTime:694===
-===currentTime:695===
-===currentTime:696===
-===currentTime:697===
-===currentTime:698===
-===currentTime:699===
-===currentTime:700===
-===currentTime:701===
-===currentTime:702===
-===currentTime:703===
-===currentTime:704===
-===currentTime:705===
-===currentTime:706===
-===currentTime:707===
-===currentTime:708===
-===currentTime:709===
-===currentTime:710===
-===currentTime:711===
-===currentTime:712===
-===currentTime:713===
-===currentTime:714===
-===currentTime:715===
-===currentTime:716===
-===currentTime:717===
-===currentTime:718===
-===currentTime:719===
-===currentTime:720===
-===currentTime:721===
-===currentTime:722===
-===currentTime:723===
-===currentTime:724===
-CMP-Index:0
-Allocate:VM55 to PM38
-Resource is updated(dec)
-CMP-Index:0
-Allocate:VM57 to PM39
-Resource is updated(dec)
-===currentTime:725===
-===currentTime:726===
-CMP-Index:0
-VM is rejected
-===currentTime:727===
-===currentTime:728===
-CMP-Index:0
-Allocate:VM58 to PM40
-Resource is updated(dec)
-===currentTime:729===
-Remove:VM0 from PM0
-Resource is updated(inc)
-===currentTime:730===
-===currentTime:731===
-===currentTime:732===
-===currentTime:733===
-===currentTime:734===
-===currentTime:735===
-===currentTime:736===
-===currentTime:737===
-===currentTime:738===
-CMP-Index:0
-Allocate:VM59 to PM41
-Resource is updated(dec)
-===currentTime:739===
-===currentTime:740===
-===currentTime:741===
-===currentTime:742===
-===currentTime:743===
-===currentTime:744===
-===currentTime:745===
-===currentTime:746===
-CMP-Index:0
-Allocate:VM60 to PM42
-Resource is updated(dec)
-===currentTime:747===
-===currentTime:748===
-Remove:VM53 from PM35
-Resource is updated(inc)
-===currentTime:749===
-CMP-Index:0
-Allocate:VM61 to PM43
-Resource is updated(dec)
-===currentTime:750===
-===currentTime:751===
-===currentTime:752===
-===currentTime:753===
-CMP-Index:0
-VM is rejected
-===currentTime:754===
-===currentTime:755===
-===currentTime:756===
-===currentTime:757===
-===currentTime:758===
-Remove:VM3 from PM19
-Resource is updated(inc)
-===currentTime:759===
-===currentTime:760===
-===currentTime:761===
-===currentTime:762===
-===currentTime:763===
-===currentTime:764===
-===currentTime:765===
-===currentTime:766===
-===currentTime:767===
-===currentTime:768===
-CMP-Index:0
-Allocate:VM64 to PM44
-Resource is updated(dec)
-===currentTime:769===
-Remove:VM51 from PM34
-Resource is updated(inc)
-===currentTime:770===
-===currentTime:771===
-===currentTime:772===
-Remove:VM57 from PM39
-Resource is updated(inc)
-===currentTime:773===
-===currentTime:774===
-===currentTime:775===
-===currentTime:776===
-===currentTime:777===
-===currentTime:778===
-===currentTime:779===
-===currentTime:780===
-===currentTime:781===
-===currentTime:782===
-===currentTime:783===
-===currentTime:784===
-===currentTime:785===
-===currentTime:786===
-===currentTime:787===
-===currentTime:788===
-===currentTime:789===
-===currentTime:790===
-Remove:VM39 from PM26
-Resource is updated(inc)
-===currentTime:791===
-===currentTime:792===
-===currentTime:793===
-Remove:VM58 from PM40
-Resource is updated(inc)
-===currentTime:794===
-===currentTime:795===
-===currentTime:796===
-===currentTime:797===
-===currentTime:798===
-===currentTime:799===
-===currentTime:800===
-===currentTime:801===
-===currentTime:802===
-===currentTime:803===
-===currentTime:804===
-===currentTime:805===
-===currentTime:806===
-===currentTime:807===
-===currentTime:808===
-===currentTime:809===
-===currentTime:810===
-===currentTime:811===
-===currentTime:812===
-CMP-Index:0
-Allocate:VM65 to PM45
-Resource is updated(dec)
-===currentTime:813===
-===currentTime:814===
-===currentTime:815===
-===currentTime:816===
-===currentTime:817===
-===currentTime:818===
-===currentTime:819===
-===currentTime:820===
-===currentTime:821===
-===currentTime:822===
-===currentTime:823===
-===currentTime:824===
-===currentTime:825===
-===currentTime:826===
-===currentTime:827===
-===currentTime:828===
-===currentTime:829===
-===currentTime:830===
-===currentTime:831===
-===currentTime:832===
-===currentTime:833===
-===currentTime:834===
-===currentTime:835===
-===currentTime:836===
-Remove:VM61 from PM43
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM66 to PM46
-Resource is updated(dec)
-===currentTime:837===
-===currentTime:838===
-===currentTime:839===
-===currentTime:840===
-===currentTime:841===
-===currentTime:842===
-Remove:VM59 from PM41
-Resource is updated(inc)
-===currentTime:843===
-Remove:VM65 from PM45
-Resource is updated(inc)
-===currentTime:844===
-CMP-Index:0
-Allocate:VM67 to PM47
-Resource is updated(dec)
-===currentTime:845===
-===currentTime:846===
-===currentTime:847===
-===currentTime:848===
-===currentTime:849===
-===currentTime:850===
-===currentTime:851===
-===currentTime:852===
-===currentTime:853===
-Remove:VM54 from PM36
-Resource is updated(inc)
-===currentTime:854===
-===currentTime:855===
-===currentTime:856===
-===currentTime:857===
-===currentTime:858===
-===currentTime:859===
-===currentTime:860===
-===currentTime:861===
-===currentTime:862===
-===currentTime:863===
-===currentTime:864===
-===currentTime:865===
-===currentTime:866===
-===currentTime:867===
-===currentTime:868===
-===currentTime:869===
-===currentTime:870===
-===currentTime:871===
-===currentTime:872===
-===currentTime:873===
-===currentTime:874===
-CMP-Index:0
-VM is rejected
-===currentTime:875===
-Remove:VM67 from PM47
-Resource is updated(inc)
-===currentTime:876===
-===currentTime:877===
-===currentTime:878===
-===currentTime:879===
-===currentTime:880===
-===currentTime:881===
-===currentTime:882===
-===currentTime:883===
-===currentTime:884===
-Remove:VM46 from PM31
-Resource is updated(inc)
-===currentTime:885===
-CMP-Index:0
-Allocate:VM47 to PM48
-Resource is updated(dec)
-===currentTime:886===
-===currentTime:887===
-===currentTime:888===
-===currentTime:889===
-===currentTime:890===
-===currentTime:891===
-===currentTime:892===
-===currentTime:893===
-===currentTime:894===
-===currentTime:895===
-===currentTime:896===
-===currentTime:897===
-===currentTime:898===
-===currentTime:899===
-===currentTime:900===
-===currentTime:901===
-===currentTime:902===
-===currentTime:903===
-===currentTime:904===
-===currentTime:905===
-===currentTime:906===
-===currentTime:907===
-===currentTime:908===
-===currentTime:909===
-===currentTime:910===
-===currentTime:911===
-===currentTime:912===
-===currentTime:913===
-===currentTime:914===
-===currentTime:915===
-===currentTime:916===
-===currentTime:917===
-===currentTime:918===
-===currentTime:919===
-===currentTime:920===
-===currentTime:921===
-===currentTime:922===
-===currentTime:923===
-Remove:VM66 from PM46
-Resource is updated(inc)
-===currentTime:924===
-===currentTime:925===
-===currentTime:926===
-===currentTime:927===
-===currentTime:928===
-===currentTime:929===
-===currentTime:930===
-===currentTime:931===
-===currentTime:932===
-===currentTime:933===
-===currentTime:934===
-Remove:VM64 from PM44
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM68 to PM49
-Resource is updated(dec)
-===currentTime:935===
-===currentTime:936===
-CMP-Index:0
-Allocate:VM69 to PM3
-Resource is updated(dec)
-===currentTime:937===
-===currentTime:938===
-===currentTime:939===
-===currentTime:940===
-===currentTime:941===
-===currentTime:942===
-===currentTime:943===
-===currentTime:944===
-===currentTime:945===
-===currentTime:946===
-===currentTime:947===
-===currentTime:948===
-===currentTime:949===
-===currentTime:950===
-===currentTime:951===
-===currentTime:952===
-===currentTime:953===
-===currentTime:954===
-===currentTime:955===
-===currentTime:956===
-===currentTime:957===
-===currentTime:958===
-===currentTime:959===
-===currentTime:960===
-===currentTime:961===
-===currentTime:962===
-===currentTime:963===
-Remove:VM55 from PM38
-Resource is updated(inc)
-===currentTime:964===
-CMP-Index:0
-Allocate:VM56 to PM1
-Resource is updated(dec)
-===currentTime:965===
-===currentTime:966===
-===currentTime:967===
-===currentTime:968===
-===currentTime:969===
-===currentTime:970===
-===currentTime:971===
-===currentTime:972===
-===currentTime:973===
-===currentTime:974===
-===currentTime:975===
-===currentTime:976===
-===currentTime:977===
-===currentTime:978===
-===currentTime:979===
-===currentTime:980===
-===currentTime:981===
-===currentTime:982===
-===currentTime:983===
-===currentTime:984===
-===currentTime:985===
-===currentTime:986===
-===currentTime:987===
-===currentTime:988===
-===currentTime:989===
-===currentTime:990===
-===currentTime:991===
-===currentTime:992===
-===currentTime:993===
-===currentTime:994===
-===currentTime:995===
-===currentTime:996===
-===currentTime:997===
-Remove:VM69 from PM3
-Resource is updated(inc)
-===currentTime:998===
-===currentTime:999===
-===currentTime:1000===
-CMP-Index:0
-Allocate:VM70 to PM5
-Resource is updated(dec)
-===currentTime:1001===
-===currentTime:1002===
-===currentTime:1003===
-===currentTime:1004===
-===currentTime:1005===
-===currentTime:1006===
-===currentTime:1007===
-===currentTime:1008===
-===currentTime:1009===
-===currentTime:1010===
-===currentTime:1011===
-===currentTime:1012===
-===currentTime:1013===
-===currentTime:1014===
-===currentTime:1015===
-===currentTime:1016===
-===currentTime:1017===
-===currentTime:1018===
-===currentTime:1019===
-===currentTime:1020===
-===currentTime:1021===
-===currentTime:1022===
-===currentTime:1023===
-===currentTime:1024===
-===currentTime:1025===
-===currentTime:1026===
-===currentTime:1027===
-===currentTime:1028===
-===currentTime:1029===
-===currentTime:1030===
-===currentTime:1031===
-===currentTime:1032===
-===currentTime:1033===
-===currentTime:1034===
-===currentTime:1035===
-===currentTime:1036===
-===currentTime:1037===
-===currentTime:1038===
-===currentTime:1039===
-===currentTime:1040===
-===currentTime:1041===
-===currentTime:1042===
-===currentTime:1043===
-CMP-Index:0
-Allocate:VM71 to PM4
-Resource is updated(dec)
-===currentTime:1044===
-Remove:VM50 from PM37
-Resource is updated(inc)
-===currentTime:1045===
-===currentTime:1046===
-===currentTime:1047===
-===currentTime:1048===
-===currentTime:1049===
-Remove:VM70 from PM5
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM73 to PM8
-Resource is updated(dec)
-===currentTime:1050===
-===currentTime:1051===
-===currentTime:1052===
-CMP-Index:0
-VM is rejected
-===currentTime:1053===
-===currentTime:1054===
-===currentTime:1055===
-===currentTime:1056===
-===currentTime:1057===
-===currentTime:1058===
-===currentTime:1059===
-===currentTime:1060===
-===currentTime:1061===
-===currentTime:1062===
-===currentTime:1063===
-CMP-Index:0
-Allocate:VM74 to PM7
-Resource is updated(dec)
-===currentTime:1064===
-===currentTime:1065===
-===currentTime:1066===
-===currentTime:1067===
-===currentTime:1068===
-===currentTime:1069===
-===currentTime:1070===
-===currentTime:1071===
-===currentTime:1072===
-===currentTime:1073===
-===currentTime:1074===
-===currentTime:1075===
-===currentTime:1076===
-===currentTime:1077===
-===currentTime:1078===
-===currentTime:1079===
-===currentTime:1080===
-===currentTime:1081===
-===currentTime:1082===
-===currentTime:1083===
-===currentTime:1084===
-===currentTime:1085===
-===currentTime:1086===
-===currentTime:1087===
-===currentTime:1088===
-===currentTime:1089===
-CMP-Index:0
-Allocate:VM75 to PM10
-Resource is updated(dec)
-===currentTime:1090===
-===currentTime:1091===
-CMP-Index:0
-Allocate:VM76 to PM6
-Resource is updated(dec)
-===currentTime:1092===
-===currentTime:1093===
-===currentTime:1094===
-===currentTime:1095===
-===currentTime:1096===
-===currentTime:1097===
-===currentTime:1098===
-===currentTime:1099===
-Remove:VM68 from PM49
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM77 to PM12
-Resource is updated(dec)
-===currentTime:1100===
-===currentTime:1101===
-===currentTime:1102===
-===currentTime:1103===
-===currentTime:1104===
-===currentTime:1105===
-===currentTime:1106===
-Remove:VM26 from PM17
-Resource is updated(inc)
-===currentTime:1107===
-===currentTime:1108===
-===currentTime:1109===
-===currentTime:1110===
-===currentTime:1111===
-===currentTime:1112===
-===currentTime:1113===
-===currentTime:1114===
-===currentTime:1115===
-===currentTime:1116===
-===currentTime:1117===
-===currentTime:1118===
-===currentTime:1119===
-===currentTime:1120===
-===currentTime:1121===
-===currentTime:1122===
-===currentTime:1123===
-===currentTime:1124===
-===currentTime:1125===
-CMP-Index:0
-Allocate:VM79 to PM14
-Resource is updated(dec)
-===currentTime:1126===
-Remove:VM76 from PM6
-Resource is updated(inc)
-===currentTime:1127===
-===currentTime:1128===
-===currentTime:1129===
-===currentTime:1130===
-===currentTime:1131===
-===currentTime:1132===
-===currentTime:1133===
-===currentTime:1134===
-Remove:VM60 from PM42
-Resource is updated(inc)
-===currentTime:1135===
-===currentTime:1136===
-===currentTime:1137===
-===currentTime:1138===
-===currentTime:1139===
-===currentTime:1140===
-===currentTime:1141===
-===currentTime:1142===
-CMP-Index:0
-VM is rejected
-===currentTime:1143===
-CMP-Index:0
-VM is rejected
-===currentTime:1144===
-===currentTime:1145===
-===currentTime:1146===
-===currentTime:1147===
-===currentTime:1148===
-Remove:VM74 from PM7
-Resource is updated(inc)
-===currentTime:1149===
-===currentTime:1150===
-===currentTime:1151===
-===currentTime:1152===
-===currentTime:1153===
-===currentTime:1154===
-===currentTime:1155===
-===currentTime:1156===
-===currentTime:1157===
-===currentTime:1158===
-===currentTime:1159===
-===currentTime:1160===
-Remove:VM79 from PM14
-Resource is updated(inc)
-===currentTime:1161===
-Remove:VM71 from PM4
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM82 to PM2
-Resource is updated(dec)
-===currentTime:1162===
-CMP-Index:0
-Allocate:VM72 to PM18
-Resource is updated(dec)
-===currentTime:1163===
-===currentTime:1164===
-===currentTime:1165===
-===currentTime:1166===
-===currentTime:1167===
-===currentTime:1168===
-===currentTime:1169===
-===currentTime:1170===
-===currentTime:1171===
-CMP-Index:0
-VM is rejected
-===currentTime:1172===
-===currentTime:1173===
-===currentTime:1174===
-===currentTime:1175===
-===currentTime:1176===
-===currentTime:1177===
-===currentTime:1178===
-===currentTime:1179===
-===currentTime:1180===
-===currentTime:1181===
-Remove:VM75 from PM10
-Resource is updated(inc)
-===currentTime:1182===
-===currentTime:1183===
-===currentTime:1184===
-===currentTime:1185===
-===currentTime:1186===
-CMP-Index:0
-Allocate:VM85 to PM20
-Resource is updated(dec)
-===currentTime:1187===
-===currentTime:1188===
-===currentTime:1189===
-===currentTime:1190===
-===currentTime:1191===
-===currentTime:1192===
-===currentTime:1193===
-===currentTime:1194===
-===currentTime:1195===
-===currentTime:1196===
-===currentTime:1197===
-===currentTime:1198===
-===currentTime:1199===
-===currentTime:1200===
-===currentTime:1201===
-CMP-Index:0
-Allocate:VM86 to PM21
-Resource is updated(dec)
-===currentTime:1202===
-CMP-Index:0
-Allocate:VM87 to PM9
-Resource is updated(dec)
-===currentTime:1203===
-===currentTime:1204===
-===currentTime:1205===
-===currentTime:1206===
-===currentTime:1207===
-===currentTime:1208===
-===currentTime:1209===
-===currentTime:1210===
-===currentTime:1211===
-===currentTime:1212===
-===currentTime:1213===
-===currentTime:1214===
-===currentTime:1215===
-===currentTime:1216===
-===currentTime:1217===
-===currentTime:1218===
-===currentTime:1219===
-===currentTime:1220===
-===currentTime:1221===
-===currentTime:1222===
-===currentTime:1223===
-===currentTime:1224===
-===currentTime:1225===
-===currentTime:1226===
-Remove:VM73 from PM8
-Resource is updated(inc)
-===currentTime:1227===
-===currentTime:1228===
-===currentTime:1229===
-===currentTime:1230===
-===currentTime:1231===
-CMP-Index:0
-Allocate:VM88 to PM22
-Resource is updated(dec)
-CMP-Index:0
-Allocate:VM90 to PM25
-Resource is updated(dec)
-===currentTime:1232===
-CMP-Index:0
-Allocate:VM89 to PM23
-Resource is updated(dec)
-===currentTime:1233===
-Remove:VM87 from PM9
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM91 to PM29
-Resource is updated(dec)
-===currentTime:1234===
-===currentTime:1235===
-===currentTime:1236===
-===currentTime:1237===
-CMP-Index:0
-Allocate:VM92 to PM11
-Resource is updated(dec)
-===currentTime:1238===
-===currentTime:1239===
-===currentTime:1240===
-===currentTime:1241===
-===currentTime:1242===
-===currentTime:1243===
-===currentTime:1244===
-CMP-Index:0
-Allocate:VM93 to PM13
-Resource is updated(dec)
-===currentTime:1245===
-Remove:VM45 from PM30
-Resource is updated(inc)
-===currentTime:1246===
-Remove:VM47 from PM48
-Resource is updated(inc)
-Remove:VM82 from PM2
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM94 to PM27
-Resource is updated(dec)
-===currentTime:1247===
-===currentTime:1248===
-===currentTime:1249===
-===currentTime:1250===
-===currentTime:1251===
-===currentTime:1252===
-===currentTime:1253===
-===currentTime:1254===
-===currentTime:1255===
-===currentTime:1256===
-===currentTime:1257===
-===currentTime:1258===
-===currentTime:1259===
-===currentTime:1260===
-===currentTime:1261===
-===currentTime:1262===
-===currentTime:1263===
-===currentTime:1264===
-===currentTime:1265===
-===currentTime:1266===
-CMP-Index:0
-Allocate:VM95 to PM24
-Resource is updated(dec)
-===currentTime:1267===
-Remove:VM85 from PM20
-Resource is updated(inc)
-===currentTime:1268===
-Remove:VM92 from PM11
-Resource is updated(inc)
-===currentTime:1269===
-===currentTime:1270===
-===currentTime:1271===
-CMP-Index:0
-Allocate:VM96 to PM15
-Resource is updated(dec)
-===currentTime:1272===
-CMP-Index:0
-Allocate:VM97 to PM32
-Resource is updated(dec)
-===currentTime:1273===
-CMP-Index:0
-VM is rejected
-===currentTime:1274===
-===currentTime:1275===
-===currentTime:1276===
-===currentTime:1277===
-===currentTime:1278===
-===currentTime:1279===
-===currentTime:1280===
-===currentTime:1281===
-===currentTime:1282===
-===currentTime:1283===
-===currentTime:1284===
-===currentTime:1285===
-===currentTime:1286===
-===currentTime:1287===
-===currentTime:1288===
-===currentTime:1289===
-===currentTime:1290===
-CMP-Index:0
-Allocate:VM100 to PM28
-Resource is updated(dec)
-===currentTime:1291===
-===currentTime:1292===
-===currentTime:1293===
-===currentTime:1294===
-===currentTime:1295===
-===currentTime:1296===
-===currentTime:1297===
-===currentTime:1298===
-===currentTime:1299===
-===currentTime:1300===
-===currentTime:1301===
-===currentTime:1302===
-===currentTime:1303===
-===currentTime:1304===
-CMP-Index:0
-Allocate:VM101 to PM16
-Resource is updated(dec)
-===currentTime:1305===
-CMP-Index:0
-Allocate:VM102 to PM33
-Resource is updated(dec)
-===currentTime:1306===
-===currentTime:1307===
-===currentTime:1308===
-===currentTime:1309===
-===currentTime:1310===
-===currentTime:1311===
-===currentTime:1312===
-===currentTime:1313===
-===currentTime:1314===
-===currentTime:1315===
-===currentTime:1316===
-===currentTime:1317===
-===currentTime:1318===
-===currentTime:1319===
-===currentTime:1320===
-===currentTime:1321===
-Remove:VM100 from PM28
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM103 to PM0
-Resource is updated(dec)
-===currentTime:1322===
-Remove:VM94 from PM27
-Resource is updated(inc)
-===currentTime:1323===
-===currentTime:1324===
-Remove:VM56 from PM1
-Resource is updated(inc)
-===currentTime:1325===
-===currentTime:1326===
-===currentTime:1327===
-===currentTime:1328===
-CMP-Index:0
-VM is rejected
-===currentTime:1329===
-CMP-Index:0
-Allocate:VM105 to PM35
-Resource is updated(dec)
-===currentTime:1330===
-===currentTime:1331===
-CMP-Index:0
-Allocate:VM106 to PM19
-Resource is updated(dec)
-===currentTime:1332===
-===currentTime:1333===
-===currentTime:1334===
-===currentTime:1335===
-Remove:VM101 from PM16
-Resource is updated(inc)
-===currentTime:1336===
-Remove:VM102 from PM33
-Resource is updated(inc)
-===currentTime:1337===
-===currentTime:1338===
-===currentTime:1339===
-===currentTime:1340===
-===currentTime:1341===
-===currentTime:1342===
-CMP-Index:0
-VM is rejected
-===currentTime:1343===
-===currentTime:1344===
-===currentTime:1345===
-===currentTime:1346===
-===currentTime:1347===
-===currentTime:1348===
-===currentTime:1349===
-===currentTime:1350===
-===currentTime:1351===
-===currentTime:1352===
-Remove:VM90 from PM25
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM107 to PM39
-Resource is updated(dec)
-CMP-Index:0
-Allocate:VM109 to PM40
-Resource is updated(dec)
-===currentTime:1353===
-CMP-Index:0
-Allocate:VM108 to PM34
-Resource is updated(dec)
-===currentTime:1354===
-Remove:VM95 from PM24
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM110 to PM26
-Resource is updated(dec)
-===currentTime:1355===
-===currentTime:1356===
-===currentTime:1357===
-===currentTime:1358===
-===currentTime:1359===
-===currentTime:1360===
-===currentTime:1361===
-Remove:VM96 from PM15
-Resource is updated(inc)
-===currentTime:1362===
-===currentTime:1363===
-===currentTime:1364===
-===currentTime:1365===
-===currentTime:1366===
-===currentTime:1367===
-===currentTime:1368===
-===currentTime:1369===
-===currentTime:1370===
-===currentTime:1371===
-===currentTime:1372===
-===currentTime:1373===
-===currentTime:1374===
-===currentTime:1375===
-===currentTime:1376===
-===currentTime:1377===
-===currentTime:1378===
-Remove:VM91 from PM29
-Resource is updated(inc)
-===currentTime:1379===
-===currentTime:1380===
-===currentTime:1381===
-===currentTime:1382===
-===currentTime:1383===
-===currentTime:1384===
-===currentTime:1385===
-===currentTime:1386===
-===currentTime:1387===
-===currentTime:1388===
-===currentTime:1389===
-===currentTime:1390===
-===currentTime:1391===
-===currentTime:1392===
-Remove:VM106 from PM19
-Resource is updated(inc)
-===currentTime:1393===
-Remove:VM103 from PM0
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM111 to PM45
-Resource is updated(dec)
-===currentTime:1394===
-===currentTime:1395===
-===currentTime:1396===
-===currentTime:1397===
-===currentTime:1398===
-CMP-Index:0
-VM is rejected
-===currentTime:1399===
-Remove:VM109 from PM40
-Resource is updated(inc)
-===currentTime:1400===
-===currentTime:1401===
-===currentTime:1402===
-===currentTime:1403===
-===currentTime:1404===
-===currentTime:1405===
-===currentTime:1406===
-===currentTime:1407===
-===currentTime:1408===
-CMP-Index:0
-Allocate:VM113 to PM43
-Resource is updated(dec)
-===currentTime:1409===
-Remove:VM105 from PM35
-Resource is updated(inc)
-CMP-Index:0
-Allocate:VM114 to PM41
-Resource is updated(dec)
-===currentTime:1410===
-===currentTime:1411===
-===currentTime:1412===
-===currentTime:1413===
-===currentTime:1414===
-===currentTime:1415===
-===currentTime:1416===
-===currentTime:1417===
-===currentTime:1418===
-===currentTime:1419===
-===currentTime:1420===
-===currentTime:1421===
-===currentTime:1422===
-===currentTime:1423===
-===currentTime:1424===
-===currentTime:1425===
-===currentTime:1426===
-===currentTime:1427===
-===currentTime:1428===
-===currentTime:1429===
-===currentTime:1430===
-===currentTime:1431===
-===currentTime:1432===
-===currentTime:1433===
-===currentTime:1434===
-===currentTime:1435===
-===currentTime:1436===
-===currentTime:1437===
-===currentTime:1438===
-===currentTime:1439===
-===currentTime:1440===
-Remove:VM114 from PM41
-Resource is updated(inc)
-===currentTime:1441===
-===currentTime:1442===
-===currentTime:1443===
-===currentTime:1444===
-===currentTime:1445===
-===currentTime:1446===
-===currentTime:1447===
-===currentTime:1448===
-===currentTime:1449===
-Remove:VM93 from PM13
-Resource is updated(inc)
-===currentTime:1450===
-Remove:VM88 from PM22
-Resource is updated(inc)
-Remove:VM97 from PM32
-Resource is updated(inc)
-Remove:VM110 from PM26
-Resource is updated(inc)
-===currentTime:1451===
-===currentTime:1452===
-===currentTime:1453===
-===currentTime:1454===
-===currentTime:1455===
-===currentTime:1456===
-===currentTime:1457===
-===currentTime:1458===
-===currentTime:1459===
-Remove:VM77 from PM12
-Resource is updated(inc)
-===currentTime:1460===
-CMP-Index:0
-Allocate:VM78 to PM47
-Resource is updated(dec)
-===currentTime:1461===
-===currentTime:1462===
-Remove:VM89 from PM23
-Resource is updated(inc)
-===currentTime:1463===
-===currentTime:1464===
-===currentTime:1465===
-===currentTime:1466===
-===currentTime:1467===
-===currentTime:1468===
-===currentTime:1469===
-===currentTime:1470===
-===currentTime:1471===
-===currentTime:1472===
-===currentTime:1473===
-Remove:VM108 from PM34
-Resource is updated(inc)
-===currentTime:1474===
-===currentTime:1475===
-===currentTime:1476===
-===currentTime:1477===
-===currentTime:1478===
-===currentTime:1479===
-===currentTime:1480===
-===currentTime:1481===
-===currentTime:1482===
-===currentTime:1483===
-===currentTime:1484===
-===currentTime:1485===
-===currentTime:1486===
-===currentTime:1487===
-===currentTime:1488===
-===currentTime:1489===
-===currentTime:1490===
-===currentTime:1491===
-Remove:VM107 from PM39
-Resource is updated(inc)
-===currentTime:1492===
-===currentTime:1493===
-===currentTime:1494===
-===currentTime:1495===
-===currentTime:1496===
-===currentTime:1497===
-===currentTime:1498===
-===currentTime:1499===
-Remove:VM113 from PM43
-Resource is updated(inc)
-===currentTime:1500===
-===currentTime:1501===
-===currentTime:1502===
-===currentTime:1503===
-===currentTime:1504===
-===currentTime:1505===
-===currentTime:1506===
-===currentTime:1507===
-===currentTime:1508===
-===currentTime:1509===
-===currentTime:1510===
-===currentTime:1511===
-===currentTime:1512===
-===currentTime:1513===
-===currentTime:1514===
-===currentTime:1515===
-===currentTime:1516===
-===currentTime:1517===
-===currentTime:1518===
-===currentTime:1519===
-===currentTime:1520===
-===currentTime:1521===
-===currentTime:1522===
-Remove:VM72 from PM18
-Resource is updated(inc)
-===currentTime:1523===
-===currentTime:1524===
-===currentTime:1525===
-===currentTime:1526===
-===currentTime:1527===
-===currentTime:1528===
-===currentTime:1529===
-===currentTime:1530===
-===currentTime:1531===
-===currentTime:1532===
-===currentTime:1533===
-===currentTime:1534===
-===currentTime:1535===
-===currentTime:1536===
-===currentTime:1537===
-===currentTime:1538===
-===currentTime:1539===
-===currentTime:1540===
-===currentTime:1541===
-===currentTime:1542===
-===currentTime:1543===
-===currentTime:1544===
-===currentTime:1545===
-===currentTime:1546===
-===currentTime:1547===
-===currentTime:1548===
-Remove:VM111 from PM45
-Resource is updated(inc)
-===currentTime:1549===
-===currentTime:1550===
-===currentTime:1551===
-===currentTime:1552===
-===currentTime:1553===
-===currentTime:1554===
-===currentTime:1555===
-===currentTime:1556===
+Remove:VM21 from DataCenter1 Rack1 PM12
+Resource is updated(inc)
+---Allocation Finished---
+Allocation finished......
+###DataCenter0###
+###Rack0###
+PM0 0.0625 0.05666667 0.04733728 0.055501316
+PM1 0.5 0.5 0.5 0.5
+PM2 0.5 0.5 0.5 0.5
+PM3 0.25 0.25 0.2514793 0.25049308
+PM4 0.0625 0.056666672 0.04733728 0.055501316
+PM5 0.5 0.5 0.5 0.5
+PM6 0.25 0.25 0.2514793 0.25049308
+PM7 0.25 0.25 0.2514793 0.25049308
+PM8 0.0625 0.05666667 0.04733728 0.055501316
+PM9 0.0625 0.05666667 0.04733728 0.055501316
+PM10 0.5 0.5 0.5 0.5
+PM11 0.25 0.25 0.2514793 0.25049308
+PM12 0.5 0.5 0.5 0.5
+PM13 0.25 0.25 0.2514793 0.25049308
+PM14 0.0625 0.05666667 0.04733728 0.055501316
+PM15 0.25 0.25 0.2514793 0.25049308
+PM16 0.0625 0.056666672 0.04733728 0.055501316
+PM17 0.25 0.25 0.2514793 0.25049308
+PM18 0.0625 0.05666667 0.04733728 0.055501316
+PM19 0.5 0.5 0.5 0.5
+PM20 0.25 0.25 0.2514793 0.25049308
+PM21 0.0625 0.05666667 0.04733728 0.055501316
+PM22 0.25 0.25 0.2514793 0.25049308
+PM23 0.25 0.25 0.2514793 0.25049308
+PM24 0.5 0.5 0.5 0.5
+PM25 0.25 0.25 0.2514793 0.25049308
+PM26 0.5 0.5 0.5 0.5
+PM27 0.5 0.5 0.5 0.5
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+###Rack1###
+PM0 0.5 0.5 0.5 0.5
+PM1 0.5 0.5 0.5 0.5
+PM2 0.25 0.25 0.2514793 0.25049308
+PM3 0.5 0.5 0.5 0.5
+PM4 0.25 0.25 0.2514793 0.25049308
+PM5 0.0625 0.05666667 0.04733728 0.055501316
+PM6 0.25 0.25 0.2514793 0.25049308
+PM7 0.5 0.5 0.5 0.5
+PM8 0.0625 0.056666672 0.04733728 0.055501316
+PM9 0.5 0.5 0.5 0.5
+PM10 0.0625 0.05666667 0.04733728 0.055501316
+PM11 0.5 0.5 0.5 0.5
+PM12 0.25 0.25 0.2514793 0.25049308
+PM13 0.25 0.25 0.2514793 0.25049308
+PM14 0.25 0.25 0.2514793 0.25049308
+PM15 0.0625 0.056666672 0.04733728 0.055501316
+PM16 0.0625 0.05666667 0.04733728 0.055501316
+PM17 0.5 0.5 0.5 0.5
+PM18 0.0625 0.05666667 0.04733728 0.055501316
+PM19 0.5 0.5 0.5 0.5
+PM20 0.25 0.25 0.2514793 0.25049308
+PM21 0.5 0.5 0.5 0.5
+PM22 0.5 0.5 0.5 0.5
+PM23 0.25 0.25 0.2514793 0.25049308
+PM24 0.5 0.5 0.5 0.5
+PM25 0.25 0.25 0.2514793 0.25049308
+PM26 0.25 0.25 0.2514793 0.25049308
+PM27 0.25 0.25 0.2514793 0.25049308
+PM28 0.0625 0.05666667 0.04733728 0.055501316
+PM29 0.5 0.5 0.5 0.5
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+dataCenterAverageUtility0.24542801
+###DataCenter1###
+###Rack0###
+PM0 0.25 0.25 0.2514793 0.25049308
+PM1 0.5 0.5 0.5 0.5
+PM2 0.5 0.5 0.5 0.5
+PM3 0.25 0.25 0.2514793 0.25049308
+PM4 0.5 0.5 0.5 0.5
+PM5 0.5 0.5 0.5 0.5
+PM6 0.5 0.5 0.5 0.5
+PM7 0.5 0.5 0.5 0.5
+PM8 0.0625 0.056666672 0.04733728 0.055501316
+PM9 0.0625 0.05666667 0.04733728 0.055501316
+PM10 0.5 0.5 0.5 0.5
+PM11 0.0 0.0 0.0 0.0
+PM12 0.0 0.0 0.0 0.0
+PM13 0.0 0.0 0.0 0.0
+PM14 0.0 0.0 0.0 0.0
+PM15 0.0 0.0 0.0 0.0
+PM16 0.0 0.0 0.0 0.0
+PM17 0.0 0.0 0.0 0.0
+PM18 0.0 0.0 0.0 0.0
+PM19 0.0 0.0 0.0 0.0
+PM20 0.0 0.0 0.0 0.0
+PM21 0.0 0.0 0.0 0.0
+PM22 0.0 0.0 0.0 0.0
+PM23 0.0 0.0 0.0 0.0
+PM24 0.0 0.0 0.0 0.0
+PM25 0.0 0.0 0.0 0.0
+PM26 0.0 0.0 0.0 0.0
+PM27 0.0 0.0 0.0 0.0
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+###Rack1###
+PM0 0.25 0.25 0.2514793 0.25049308
+PM1 0.25 0.25 0.2514793 0.25049308
+PM2 0.3069853 0.30441177 0.30029586 0.30389762
+PM3 0.25 0.25 0.2514793 0.25049308
+PM4 0.22819768 0.22751938 0.22774185 0.22781964
+PM5 0.5 0.5 0.5 0.5
+PM6 0.24696602 0.24113268 0.23234905 0.24014924
+PM7 0.25 0.25 0.2514793 0.25049308
+PM8 0.25 0.25 0.2514793 0.25049308
+PM9 0.25 0.25 0.2514793 0.25049308
+PM10 0.25 0.25 0.2514793 0.25049308
+PM11 0.25 0.25 0.2514793 0.25049308
+PM12 0.5 0.5 0.5 0.5
+PM13 0.25 0.25 0.2514793 0.25049308
+PM14 0.25 0.25 0.2514793 0.25049308
+PM15 0.25 0.25 0.2514793 0.25049308
+PM16 0.25 0.25 0.2514793 0.25049308
+PM17 0.5 0.5 0.5 0.5
+PM18 0.5 0.5 0.5 0.5
+PM19 0.5 0.5 0.5 0.5
+PM20 0.29140624 0.286375 0.2783284 0.28536987
+PM21 0.25 0.25 0.2514793 0.25049308
+PM22 0.23260309 0.22917527 0.22427256 0.22868364
+PM23 0.25 0.25 0.2514793 0.25049308
+PM24 0.5 0.5 0.5 0.5
+PM25 0.26902175 0.26318842 0.25447002 0.26222673
+PM26 0.26867816 0.26398468 0.2577705 0.2634778
+PM27 0.25 0.25 0.2514793 0.25049308
+PM28 0.5 0.5 0.5 0.5
+PM29 0.25 0.25 0.2514793 0.25049308
+PM30 0.25 0.25 0.2514793 0.25049308
+PM31 0.296875 0.29133332 0.28387573 0.29069468
+PM32 0.25 0.25 0.2514793 0.25049308
+PM33 0.25 0.25 0.2514793 0.25049308
+PM34 0.34423077 0.33938462 0.33249888 0.33870474
+PM35 0.5 0.5 0.5 0.5
+PM36 0.5 0.5 0.5 0.5
+PM37 0.5 0.5 0.5 0.5
+PM38 0.25 0.25 0.2514793 0.25049308
+PM39 0.25 0.25 0.2514793 0.25049308
+PM40 0.25 0.25 0.2514793 0.25049308
+PM41 0.25 0.25 0.2514793 0.25049308
+PM42 0.5 0.5 0.5 0.5
+PM43 0.25 0.25 0.2514793 0.25049308
+PM44 0.25 0.25 0.2514793 0.25049308
+PM45 0.25 0.25 0.2514793 0.25049308
+PM46 0.25 0.25 0.2514793 0.25049308
+PM47 0.25 0.25 0.2514793 0.25049308
+PM48 0.5 0.5 0.5 0.5
+PM49 0.25 0.25 0.2514793 0.25049308
+dataCenterAverageUtility0.6988745
+wholeSystemAverageUtility=0.47215125
+---Outputs:---
+Collecting comparison indices and algorithms results......
+Average Utility: 0.47215125
+Imbalance Degree: 0.041848965
+Makespan: 0.5
+Skew(Makespan): 0.45563927
+---Offline-RoundRobin Algorithm---
+Now generating requests......
+Requests have been generated......
+Starting offline allocating requests......
+---Offline-RoundRobin Algorithm---
+===currentTime:1===
+===currentTime:2===
+===currentTime:3===
+===currentTime:4===
+Allocate:VM80 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+===currentTime:5===
+Allocate:VM90 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+===currentTime:6===
+===currentTime:7===
+===currentTime:8===
+Allocate:VM34 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:9===
+Remove:VM34 from DataCenter0 Rack1 PM0
+Resource is updated(inc)
+Allocate:VM8 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:10===
+Allocate:VM54 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+===currentTime:11===
+===currentTime:12===
+===currentTime:13===
+Allocate:VM24 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM93 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+===currentTime:14===
+Allocate:VM21 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+===currentTime:15===
+Allocate:VM0 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM28 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+===currentTime:16===
+Allocate:VM19 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM82 to DataCenter1 Rack0 PM1
+Resource is updated(dec)
+Allocate:VM85 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+===currentTime:17===
+Allocate:VM6 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM31 to DataCenter1 Rack1 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM46 to DataCenter1 Rack1 PM1
+Resource is updated(dec)
+Allocate:VM75 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+===currentTime:18===
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM1 to DataCenter1 Rack0 PM2
+Resource is updated(dec)
+Allocate:VM12 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM40 to DataCenter1 Rack1 PM2
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM88 to DataCenter1 Rack1 PM2
+Resource is updated(dec)
+===currentTime:19===
+Remove:VM46 from DataCenter1 Rack1 PM1
+Resource is updated(inc)
+Remove:VM40 from DataCenter1 Rack1 PM2
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM2 to DataCenter1 Rack1 PM3
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM38 to DataCenter1 Rack0 PM3
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM78 to DataCenter1 Rack0 PM1
+Resource is updated(dec)
+Allocate:VM92 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+===currentTime:20===
+Remove:VM28 from DataCenter0 Rack0 PM0
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM89 to DataCenter1 Rack0 PM4
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM96 to DataCenter1 Rack0 PM2
+Resource is updated(dec)
+===currentTime:21===
+Remove:VM6 from DataCenter1 Rack0 PM0
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM43 to DataCenter1 Rack0 PM3
+Resource is updated(dec)
+Allocate:VM58 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM63 to DataCenter1 Rack0 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM71 to DataCenter1 Rack0 PM5
+Resource is updated(dec)
+===currentTime:22===
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM17 to DataCenter1 Rack0 PM4
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM25 to DataCenter1 Rack0 PM6
+Resource is updated(dec)
+===currentTime:23===
+Remove:VM75 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM9 to DataCenter1 Rack0 PM5
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM26 to DataCenter1 Rack1 PM1
+Resource is updated(dec)
+Allocate:VM35 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM39 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM45 to DataCenter1 Rack1 PM2
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM50 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM76 to DataCenter0 Rack1 PM2
+Resource is updated(dec)
+Allocate:VM83 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM91 to DataCenter0 Rack1 PM3
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM99 to DataCenter0 Rack1 PM4
+Resource is updated(dec)
+===currentTime:24===
+Remove:VM54 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+Remove:VM31 from DataCenter1 Rack1 PM1
+Resource is updated(inc)
+Remove:VM78 from DataCenter1 Rack0 PM1
+Resource is updated(inc)
+Remove:VM89 from DataCenter1 Rack0 PM4
+Resource is updated(inc)
+Remove:VM50 from DataCenter0 Rack1 PM1
+Resource is updated(inc)
+---Resource not enough, try another PM---
+Allocate:VM10 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM33 to DataCenter0 Rack1 PM5
+Resource is updated(dec)
+Allocate:VM49 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM94 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:25===
+Remove:VM90 from DataCenter1 Rack0 PM0
+Resource is updated(inc)
+Remove:VM24 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+Remove:VM85 from DataCenter1 Rack0 PM0
+Resource is updated(inc)
+Remove:VM92 from DataCenter1 Rack0 PM0
+Resource is updated(inc)
+Remove:VM71 from DataCenter1 Rack0 PM5
+Resource is updated(inc)
+Remove:VM99 from DataCenter0 Rack1 PM4
+Resource is updated(inc)
+Remove:VM33 from DataCenter0 Rack1 PM5
+Resource is updated(inc)
+Remove:VM94 from DataCenter0 Rack1 PM0
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM3 to DataCenter0 Rack1 PM4
+Resource is updated(dec)
+Allocate:VM11 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+Allocate:VM30 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+Allocate:VM41 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM48 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM57 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM61 to DataCenter1 Rack1 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM69 to DataCenter1 Rack1 PM3
+Resource is updated(dec)
+Allocate:VM73 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM95 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+===currentTime:26===
+Remove:VM35 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+Remove:VM10 from DataCenter0 Rack1 PM1
+Resource is updated(inc)
+---Resource not enough, try another PM---
+Allocate:VM44 to DataCenter0 Rack0 PM1
+Resource is updated(dec)
+Allocate:VM59 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM86 to DataCenter0 Rack0 PM2
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM97 to DataCenter0 Rack0 PM1
+Resource is updated(dec)
+===currentTime:27===
+Remove:VM12 from DataCenter1 Rack0 PM0
+Resource is updated(inc)
+Remove:VM96 from DataCenter1 Rack0 PM2
+Resource is updated(inc)
+Remove:VM17 from DataCenter1 Rack0 PM4
+Resource is updated(inc)
+Remove:VM49 from DataCenter0 Rack1 PM0
+Resource is updated(inc)
+Remove:VM57 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+Remove:VM44 from DataCenter0 Rack0 PM1
+Resource is updated(inc)
+Remove:VM97 from DataCenter0 Rack0 PM1
+Resource is updated(inc)
+---Resource not enough, try another PM---
+Allocate:VM23 to DataCenter0 Rack0 PM1
+Resource is updated(dec)
+Allocate:VM42 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM55 to DataCenter0 Rack0 PM3
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM62 to DataCenter0 Rack0 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+Allocate:VM81 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM87 to DataCenter0 Rack1 PM5
+Resource is updated(dec)
+===currentTime:28===
+Remove:VM82 from DataCenter1 Rack0 PM1
+Resource is updated(inc)
+Remove:VM88 from DataCenter1 Rack1 PM2
+Resource is updated(inc)
+---Resource not enough, try another PM---
+Allocate:VM60 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM72 to DataCenter0 Rack1 PM6
+Resource is updated(dec)
+===currentTime:29===
+Remove:VM80 from DataCenter0 Rack0 PM0
+Resource is updated(inc)
+Remove:VM21 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+Remove:VM72 from DataCenter0 Rack1 PM6
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM13 to DataCenter0 Rack1 PM2
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM18 to DataCenter0 Rack1 PM3
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM51 to DataCenter0 Rack1 PM4
+Resource is updated(dec)
+Allocate:VM64 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM67 to DataCenter1 Rack1 PM4
+Resource is updated(dec)
+Allocate:VM84 to DataCenter1 Rack1 PM0
+Resource is updated(dec)
+===currentTime:30===
+Remove:VM8 from DataCenter0 Rack1 PM0
+Resource is updated(inc)
+Remove:VM91 from DataCenter0 Rack1 PM3
+Resource is updated(inc)
+Remove:VM11 from DataCenter1 Rack0 PM0
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM14 to DataCenter1 Rack1 PM2
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM27 to DataCenter1 Rack1 PM3
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM56 to DataCenter1 Rack1 PM4
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM79 to DataCenter1 Rack1 PM5
+Resource is updated(dec)
+===currentTime:31===
+Remove:VM41 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM4 to DataCenter1 Rack1 PM5
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM66 to DataCenter1 Rack1 PM6
+Resource is updated(dec)
+===currentTime:32===
+Remove:VM93 from DataCenter1 Rack0 PM0
+Resource is updated(inc)
+Remove:VM76 from DataCenter0 Rack1 PM2
+Resource is updated(inc)
+Remove:VM81 from DataCenter0 Rack1 PM1
+Resource is updated(inc)
+Remove:VM18 from DataCenter0 Rack1 PM3
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM32 to DataCenter1 Rack1 PM5
+Resource is updated(dec)
+Allocate:VM37 to DataCenter1 Rack0 PM0
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM68 to DataCenter0 Rack0 PM2
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM98 to DataCenter0 Rack0 PM4
+Resource is updated(dec)
+===currentTime:33===
+Remove:VM38 from DataCenter1 Rack0 PM3
+Resource is updated(inc)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM5 to DataCenter0 Rack0 PM5
+Resource is updated(dec)
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM70 to DataCenter0 Rack0 PM6
+Resource is updated(dec)
+Allocate:VM77 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+===currentTime:34===
+Remove:VM0 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+Remove:VM59 from DataCenter0 Rack0 PM0
+Resource is updated(inc)
+Remove:VM27 from DataCenter1 Rack1 PM3
+Resource is updated(inc)
+Allocate:VM74 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+===currentTime:35===
+Remove:VM1 from DataCenter1 Rack0 PM2
+Resource is updated(inc)
+Remove:VM61 from DataCenter1 Rack1 PM1
+Resource is updated(inc)
+Remove:VM86 from DataCenter0 Rack0 PM2
+Resource is updated(inc)
+Allocate:VM7 to DataCenter0 Rack0 PM0
+Resource is updated(dec)
+Allocate:VM53 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:36===
+Allocate:VM16 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+Allocate:VM47 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:37===
+Remove:VM25 from DataCenter1 Rack0 PM6
+Resource is updated(inc)
+Remove:VM55 from DataCenter0 Rack0 PM3
+Resource is updated(inc)
+Remove:VM98 from DataCenter0 Rack0 PM4
+Resource is updated(inc)
+===currentTime:38===
+Remove:VM66 from DataCenter1 Rack1 PM6
+Resource is updated(inc)
+---Resource not enough, try another PM---
+Allocate:VM52 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
+===currentTime:39===
+===currentTime:40===
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM36 to DataCenter0 Rack1 PM2
+Resource is updated(dec)
+===currentTime:41===
+Allocate:VM65 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:42===
+---Resource not enough, try another PM---
+Allocate:VM22 to DataCenter0 Rack1 PM1
+Resource is updated(dec)
+===currentTime:43===
+Remove:VM83 from DataCenter0 Rack1 PM0
+Resource is updated(inc)
+Allocate:VM15 to DataCenter0 Rack1 PM0
+Resource is updated(dec)
+===currentTime:44===
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM20 to DataCenter0 Rack1 PM3
+Resource is updated(dec)
+===currentTime:45===
+===currentTime:46===
+Remove:VM39 from DataCenter1 Rack1 PM0
+Resource is updated(inc)
+===currentTime:47===
+===currentTime:48===
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+---Resource not enough, try another PM---
+Allocate:VM29 to DataCenter0 Rack1 PM3
+Resource is updated(dec)
+===currentTime:49===
+---Allocation Finished---
+Allocation finished......
+###DataCenter0###
+###Rack1###
+PM0 0.53333336 0.51894444 0.4961785 0.5161521
+PM1 0.5555556 0.5555555 0.55855066 0.5565539
+PM2 0.6666667 0.6666667 0.66795635 0.6670966
+PM3 0.6677215 0.6677215 0.66878885 0.6680773
+PM4 0.63 0.63 0.6313906 0.63046354
+PM5 0.5 0.5 0.5 0.5
+PM6 0.5 0.5 0.5 0.5
+PM7 0.0 0.0 0.0 0.0
+PM8 0.0 0.0 0.0 0.0
+PM9 0.0 0.0 0.0 0.0
+PM10 0.0 0.0 0.0 0.0
+PM11 0.0 0.0 0.0 0.0
+PM12 0.0 0.0 0.0 0.0
+PM13 0.0 0.0 0.0 0.0
+PM14 0.0 0.0 0.0 0.0
+PM15 0.0 0.0 0.0 0.0
+PM16 0.0 0.0 0.0 0.0
+PM17 0.0 0.0 0.0 0.0
+PM18 0.0 0.0 0.0 0.0
+PM19 0.0 0.0 0.0 0.0
+PM20 0.0 0.0 0.0 0.0
+PM21 0.0 0.0 0.0 0.0
+PM22 0.0 0.0 0.0 0.0
+PM23 0.0 0.0 0.0 0.0
+PM24 0.0 0.0 0.0 0.0
+PM25 0.0 0.0 0.0 0.0
+PM26 0.0 0.0 0.0 0.0
+PM27 0.0 0.0 0.0 0.0
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+###Rack0###
+PM0 0.5114504 0.5012977 0.48629114 0.49967977
+PM1 0.6915584 0.6915585 0.6927303 0.69194907
+PM2 0.30327868 0.3032787 0.30463672 0.30373135
+PM3 0.5 0.5 0.5 0.5
+PM4 0.5 0.5 0.5 0.5
+PM5 0.5 0.5 0.5 0.5
+PM6 0.5 0.5 0.5 0.5
+PM7 0.0 0.0 0.0 0.0
+PM8 0.0 0.0 0.0 0.0
+PM9 0.0 0.0 0.0 0.0
+PM10 0.0 0.0 0.0 0.0
+PM11 0.0 0.0 0.0 0.0
+PM12 0.0 0.0 0.0 0.0
+PM13 0.0 0.0 0.0 0.0
+PM14 0.0 0.0 0.0 0.0
+PM15 0.0 0.0 0.0 0.0
+PM16 0.0 0.0 0.0 0.0
+PM17 0.0 0.0 0.0 0.0
+PM18 0.0 0.0 0.0 0.0
+PM19 0.0 0.0 0.0 0.0
+PM20 0.0 0.0 0.0 0.0
+PM21 0.0 0.0 0.0 0.0
+PM22 0.0 0.0 0.0 0.0
+PM23 0.0 0.0 0.0 0.0
+PM24 0.0 0.0 0.0 0.0
+PM25 0.0 0.0 0.0 0.0
+PM26 0.0 0.0 0.0 0.0
+PM27 0.0 0.0 0.0 0.0
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+dataCenterAverageUtility0.115720466
+###DataCenter1###
+###Rack0###
+PM0 0.7316919 0.72609425 0.7211165 0.7263009
+PM1 0.13958333 0.13407406 0.12534517 0.13300085
+PM2 0.60294116 0.6029412 0.6035503 0.6031442
+PM3 0.37745097 0.37745097 0.37887228 0.37792477
+PM4 0.4642857 0.46428573 0.46534237 0.46463796
+PM5 0.26546392 0.26546392 0.26691273 0.26594687
+PM6 0.5 0.5 0.5 0.5
+PM7 0.0 0.0 0.0 0.0
+PM8 0.0 0.0 0.0 0.0
+PM9 0.0 0.0 0.0 0.0
+PM10 0.0 0.0 0.0 0.0
+PM11 0.0 0.0 0.0 0.0
+PM12 0.0 0.0 0.0 0.0
+PM13 0.0 0.0 0.0 0.0
+PM14 0.0 0.0 0.0 0.0
+PM15 0.0 0.0 0.0 0.0
+PM16 0.0 0.0 0.0 0.0
+PM17 0.0 0.0 0.0 0.0
+PM18 0.0 0.0 0.0 0.0
+PM19 0.0 0.0 0.0 0.0
+PM20 0.0 0.0 0.0 0.0
+PM21 0.0 0.0 0.0 0.0
+PM22 0.0 0.0 0.0 0.0
+PM23 0.0 0.0 0.0 0.0
+PM24 0.0 0.0 0.0 0.0
+PM25 0.0 0.0 0.0 0.0
+PM26 0.0 0.0 0.0 0.0
+PM27 0.0 0.0 0.0 0.0
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+###Rack1###
+PM0 0.37858605 0.3662022 0.3478514 0.36421323
+PM1 0.32022473 0.32022473 0.32172063 0.32072338
+PM2 0.68939394 0.68939394 0.6906939 0.68982726
+PM3 0.39825583 0.39825583 0.40061238 0.39904132
+PM4 0.6550633 0.65506333 0.65598077 0.6553691
+PM5 0.6510989 0.6510989 0.6549516 0.65238315
+PM6 0.5 0.5 0.5 0.5
+PM7 0.0 0.0 0.0 0.0
+PM8 0.0 0.0 0.0 0.0
+PM9 0.0 0.0 0.0 0.0
+PM10 0.0 0.0 0.0 0.0
+PM11 0.0 0.0 0.0 0.0
+PM12 0.0 0.0 0.0 0.0
+PM13 0.0 0.0 0.0 0.0
+PM14 0.0 0.0 0.0 0.0
+PM15 0.0 0.0 0.0 0.0
+PM16 0.0 0.0 0.0 0.0
+PM17 0.0 0.0 0.0 0.0
+PM18 0.0 0.0 0.0 0.0
+PM19 0.0 0.0 0.0 0.0
+PM20 0.0 0.0 0.0 0.0
+PM21 0.0 0.0 0.0 0.0
+PM22 0.0 0.0 0.0 0.0
+PM23 0.0 0.0 0.0 0.0
+PM24 0.0 0.0 0.0 0.0
+PM25 0.0 0.0 0.0 0.0
+PM26 0.0 0.0 0.0 0.0
+PM27 0.0 0.0 0.0 0.0
+PM28 0.0 0.0 0.0 0.0
+PM29 0.0 0.0 0.0 0.0
+PM30 0.0 0.0 0.0 0.0
+PM31 0.0 0.0 0.0 0.0
+PM32 0.0 0.0 0.0 0.0
+PM33 0.0 0.0 0.0 0.0
+PM34 0.0 0.0 0.0 0.0
+PM35 0.0 0.0 0.0 0.0
+PM36 0.0 0.0 0.0 0.0
+PM37 0.0 0.0 0.0 0.0
+PM38 0.0 0.0 0.0 0.0
+PM39 0.0 0.0 0.0 0.0
+PM40 0.0 0.0 0.0 0.0
+PM41 0.0 0.0 0.0 0.0
+PM42 0.0 0.0 0.0 0.0
+PM43 0.0 0.0 0.0 0.0
+PM44 0.0 0.0 0.0 0.0
+PM45 0.0 0.0 0.0 0.0
+PM46 0.0 0.0 0.0 0.0
+PM47 0.0 0.0 0.0 0.0
+PM48 0.0 0.0 0.0 0.0
+PM49 0.0 0.0 0.0 0.0
+dataCenterAverageUtility0.30576903
+wholeSystemAverageUtility=0.21074474
+---Outputs:---
+Collecting comparison indices and algorithms results......
+Average Utility: 0.21074474
+Imbalance Degree: 0.10587845
+Makespan: 0.7263009
+Skew(Makespan): 0.4649329

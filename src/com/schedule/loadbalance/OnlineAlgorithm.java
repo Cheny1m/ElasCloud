@@ -34,7 +34,8 @@ public class OnlineAlgorithm{
 			ArrayList<PhysicalMachine> p_pmQueueThree) {
 		
 	}
-	
+
+	//重载方法，利用新的DCs折叠后三个参数
 	public void allocate(ArrayList<VirtualMachine> p_vmQueue, ArrayList<DataCenter> p_arr_dc){
 		
 	}

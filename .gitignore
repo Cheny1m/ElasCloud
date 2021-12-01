@@ -14,7 +14,7 @@ build/
 #eclipse ignore
 .settings/
 .project
-.classpatch
+.classpath
 
 #Intellij idea
 .idea/

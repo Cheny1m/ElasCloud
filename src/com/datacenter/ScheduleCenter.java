@@ -106,13 +106,13 @@ public class ScheduleCenter {
 	}
 
 	public void allocate(OnlineAlgorithm onla) {
-		print.println("Starting allocating requests......");
+		print.println("Starting online allocating requests......");
 		onla.allocate(vmQueue, arr_dc);	
 		print.println("Allocation finished......");
 	}
 
 	public void allocate(OfflineAlgorithm ofla) {
-		print.println("Starting allocating requests......");
+		print.println("Starting offline allocating requests......");
 		ofla.allocate(vmQueue, arr_dc);
 		print.println("Allocation finished......");
 	}

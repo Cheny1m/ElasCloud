@@ -28,7 +28,7 @@ import com.schedule.loadbalance.RandomAlgorithm;
  * for the instance of LoadBalanceFactory, it can produce different composition
  * for different requests creating approaches, scheduling algorithms, comparison
  * indices.
- * 
+ * 实现接口，完成各类请求、分配与结果展示
  * @author Minxian
  * 
  */
@@ -37,22 +37,30 @@ public class LoadBalanceFactory implements DataCenterImp {
 	public static int MAXTIME;
 	public static final String FINISHEDINFO = "---Allocation Finished---";
 	public static final String FAILEDINFO = "---Resource not enough, try another PM---";
+	//pm个数
 	int pmSize;
 	String description;
+	//三种物理机队列
 	ArrayList<PhysicalMachine> pmQueueOne = new ArrayList<PhysicalMachine>();
 	ArrayList<PhysicalMachine> pmQueueTwo = new ArrayList<PhysicalMachine>();
 	ArrayList<PhysicalMachine> pmQueueThree = new ArrayList<PhysicalMachine>();
+	//索引
 	IndexItem ii;
+	//比较索引
 	ComparisonIndex ci;
+	//vm请求队列
 	ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
 	public static Print print;
 	public static WriteToExcel writeToExcel = new WriteToExcel();
+	//索引名
 	ArrayList<String> indexNames = new ArrayList<String>();
+	//索引值
 	ArrayList<Float> indexValues = new ArrayList<Float>();
-	// The id of rack
+	//机架ID
 	private int r_id;
-	// The time delay of rack.
+	//机架延时，拓展需求
 	private int r_timeDelay;
+	//各类pm数量
 	private int r_pmNum1;
 	private int r_pmNum2;
 	private int r_pmNum3;
@@ -70,6 +78,7 @@ public class LoadBalanceFactory implements DataCenterImp {
 
 	/**
 	 * Another construct method special for multiple datacenters.
+	 * 另一种专门用于多个数据中心的构造方法/机架；-----与daracenter方式对比
 	 * 
 	 * @param r_id
 	 * @param r_TimeDelay
@@ -165,6 +174,7 @@ public class LoadBalanceFactory implements DataCenterImp {
 	 * @param pmNum3
 	 */
 	public void bootPM(int pmNum1, int pmNum2, int pmNum3) {
+		//产生各类各数量的pm
 		PhysicalMachine pm;
 		for (int i = 0; i < pmNum1; i++) {
 			pm = new PhysicalMachine(i, 1);
@@ -187,9 +197,11 @@ public class LoadBalanceFactory implements DataCenterImp {
 		return pmSize;
 	}
 
+	//生成任务
 	public void generateReuquest() {
 		LoadBalanceFactory.print.println("Now generating requests......");
 		RequestGenerator rg = new RequestGenerator();
+		//从配置文件中获取数据，生成请求队列
 		vmQueue = rg.generateRequest();
 		LoadBalanceFactory.print.println("Requests have been generated......");
 	}
@@ -199,7 +211,7 @@ public class LoadBalanceFactory implements DataCenterImp {
 	}
 
 	public void allocate(OnlineAlgorithm onla) {
-		LoadBalanceFactory.print.println("Starting allocating requests......");
+		LoadBalanceFactory.print.println("Starting online allocating requests......");
 		onla.allocate(vmQueue, pmQueueOne, pmQueueTwo, pmQueueThree);
 		ii = new IndexItem(pmQueueOne, pmQueueTwo, pmQueueThree);
 		LoadBalanceFactory.print.println("Allocation finished......");
@@ -207,7 +219,7 @@ public class LoadBalanceFactory implements DataCenterImp {
 
 	@Override
 	public void allocate(OfflineAlgorithm ofla) {
-		LoadBalanceFactory.print.println("Starting allocating requests......");
+		LoadBalanceFactory.print.println("Starting offline allocating requests......");
 		//System.out.println(vmQueue + "  "+pmQueueOne+"  "+pmQueueTwo+" "+pmQueueThree);
 		ofla.allocate(vmQueue, pmQueueOne, pmQueueTwo, pmQueueThree);
 		ii = new IndexItem(pmQueueOne, pmQueueTwo, pmQueueThree);
@@ -270,6 +282,7 @@ public class LoadBalanceFactory implements DataCenterImp {
 		return pmQueueThree;
 	}
 
+	//机架负载
 	public float getRackLoad() {
 
 		float rackAverageUtilization = 0.0f;

@@ -42,6 +42,7 @@ import org.w3c.dom.NodeList;
 public class MainGUI extends javax.swing.JFrame {
 
     private static final long serialVersionUID = 1L;
+    public static String s;
 
     /**
      * Creates new form MainGUI
@@ -81,6 +82,8 @@ public class MainGUI extends javax.swing.JFrame {
         arrAlgorithmCheckBoxs.add(jCheckBox16);
         arrAlgorithmCheckBoxs.add(jCheckBox17);
         arrAlgorithmCheckBoxs.add(jCheckBox18);
+        //添加离线RR算法
+        arrAlgorithmCheckBoxs.add(jCheckBox19);
         //VM request 
         arrJTextFields.add(jTextField4);
         arrJTextFields.add(jTextField7);
@@ -142,6 +145,7 @@ public class MainGUI extends javax.swing.JFrame {
         jCheckBox16 = new javax.swing.JCheckBox();
         jCheckBox17 = new javax.swing.JCheckBox();
         jCheckBox18 = new javax.swing.JCheckBox();
+        jCheckBox19 = new javax.swing.JCheckBox();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
@@ -520,7 +524,10 @@ public class MainGUI extends javax.swing.JFrame {
         jCheckBox17.setText("LPT");
         
         jCheckBox18.setFont(new java.awt.Font("宋体", 0, 14));
-        jCheckBox18.setText("MIG");
+        jCheckBox18.setText("PMG");
+
+        jCheckBox19.setFont(new java.awt.Font("宋体", 0, 14));
+        jCheckBox19.setText("R-R");
         
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -552,7 +559,9 @@ public class MainGUI extends javax.swing.JFrame {
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jCheckBox15)
                                     .addComponent(jCheckBox9)
-                                    .addComponent(jCheckBox18))))))
+                                    .addComponent(jCheckBox18))
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jCheckBox19))))))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -572,7 +581,8 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox16)
                     .addComponent(jCheckBox17)
-                    .addComponent(jCheckBox18))
+                    .addComponent(jCheckBox18)
+                    .addComponent(jCheckBox19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
@@ -1032,10 +1042,13 @@ public class MainGUI extends javax.swing.JFrame {
             confVMSpec.setProperties("MinSpan", jTextField7.getText());
             confVMSpec.setProperties("RequestNum", jTextField8.getText());
 
+
         } else {
             JOptionPane.showMessageDialog(jPanel1, error_Mes, mes_Dialog, JOptionPane.ERROR_MESSAGE);
         }
         confController.setRequestsDistribution(jComboBox1.getSelectedItem().toString());
+        s = confController.getRequestsDistribution();
+
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -1087,16 +1100,17 @@ public class MainGUI extends javax.swing.JFrame {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-        jTextArea4.setText("Compared indices has been selected");
-        jTextArea4.setBackground(new Color(204, 204, 255));
-        jButton8.setBackground(new Color(204, 204, 255));
-
         selectedIndices.removeAll(selectedIndices);
         for (int index = 0; index < arrIndexjCheckBoxs.size(); index++) {
             selectedIndices.add(arrIndexjCheckBoxs.get(index).isSelected());
         }
-
+        //confController.confSelectedIndices(selectedIndices);
         confController.setSelectedIndices(selectedIndices);
+
+        jTextArea4.setText("Compared indices has been selected");
+        jTextArea4.setBackground(new Color(204, 204, 255));
+        jButton8.setBackground(new Color(204, 204, 255));
+
 
     }//GEN-LAST:event_jButton14ActionPerformed
 
@@ -1362,6 +1376,8 @@ public class MainGUI extends javax.swing.JFrame {
             confVMSpec.setProperties("MinSpan", jTextField7.getText());
             confVMSpec.setProperties("RequestNum", jTextField8.getText());
             confController.setRequestsDistribution(jComboBox1.getSelectedItem().toString());
+            s = confController.getRequestsDistribution();
+
 
             //Load selected algorithms
             nl = doc.getElementsByTagName("ComparedAlgorithm");
@@ -1631,6 +1647,7 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox16;
     private javax.swing.JCheckBox jCheckBox17;
     private javax.swing.JCheckBox jCheckBox18;
+    private javax.swing.JCheckBox jCheckBox19;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
@@ -1696,6 +1713,9 @@ public class MainGUI extends javax.swing.JFrame {
     ConfVMSpec confVMSpec = new ConfVMSpec();
     ArrayList<Integer> arrVmSpec = new ArrayList<Integer>();
     ConfController confController = new ConfController();
+    public ConfController getConfController(){
+        return confController;
+    }
     ArrayList<Boolean> selectedAlgortihm = new ArrayList<Boolean>();
     ArrayList<Boolean> selectedIndices = new ArrayList<Boolean>();
     Pattern pattern;

@@ -2,10 +2,7 @@ package com.iterator;
 
 import java.util.ArrayList;
 
-import com.schedule.energysaving.EnergySavingCMP;
-import com.schedule.energysaving.EnergySavingEDF;
-import com.schedule.energysaving.EnergySavingLPT;
-import com.schedule.energysaving.EnergySavingMIG;
+import com.schedule.energysaving.*;
 import com.schedule.loadbalance.DRSAlgorithm;
 import com.schedule.loadbalance.IWAlgorithm;
 import com.schedule.loadbalance.LSAlgortihm;
@@ -37,6 +34,7 @@ public class AlgorithmItem {
 	private boolean edf = false;
 	private boolean cmp = false;
 	private boolean mig = false;
+	private boolean rr =false;
 
 	ArrayList<OnlineAlgorithm> aoa = new ArrayList<OnlineAlgorithm>();
 	ArrayList<OfflineAlgorithm> aofa = new ArrayList<OfflineAlgorithm>();
@@ -100,6 +98,14 @@ public class AlgorithmItem {
 		this.cmp = cmp;
 	}
 
+	public boolean isRR() {
+		return rr;
+	}
+
+	public void setRR(boolean rr) {
+		this.rr = rr;
+	}
+
 	public boolean isDRS() {
 		return drs;
 	}
@@ -133,6 +139,7 @@ public class AlgorithmItem {
 	}
 
 	public Iterator createIterator() {
+		//移除在线算法列表中的所有元素
 		aoa.removeAll(aoa);
 		if (isRandomAlgortihm()) {
 			aoa.add(new RandomAlgorithm());
@@ -180,6 +187,9 @@ public class AlgorithmItem {
 		}
 		if (isMIG()) {
 			aofa.add(new EnergySavingMIG());
+		}
+		if (isRR()){
+			aofa.add(new RoundRobin());
 		}
 		return new OfflineAlgorithmIterator(aofa);
 	}

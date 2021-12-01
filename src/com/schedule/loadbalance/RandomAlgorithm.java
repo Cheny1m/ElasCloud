@@ -17,19 +17,28 @@ import javax.swing.JOptionPane;
  */
 public class RandomAlgorithm extends OnlineAlgorithm {
 
+	//数据中心索引
 	int dataCenterIndex; // Selected data center ID
+	//机架索引
 	int rackIndex; // Selected rack ID
+	//物理机索引
 	int index; // Allocated PM ID
+	//当前时间
 	int currentTime = 0;
+	//虚拟机ID
 	int vmId = 0; // vmId is the the id in sorted in vmQueue
+	//物理机总数
 	int pmTotalNum;
 	int increase = 1;
 	int decrease = -1;
+	//
 	int triedAllocationTimes = 0;
+	//内置随机
 	Random random = new Random();
 	VirtualMachine vm;
 	ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
 	ArrayList<DataCenter> arr_dc = new ArrayList<DataCenter>();
+	//移除
 	ArrayList<VirtualMachine> deleteQueue = new ArrayList<VirtualMachine>();
 	int pmQueueOneSize;
 	int pmQueueTwoSize;
@@ -56,6 +65,7 @@ public class RandomAlgorithm extends OnlineAlgorithm {
 		DataCenterFactory.print.println(getDescription());
 		this.vmQueue = vmQueue;
 		this.arr_dc = arr_dc;
+		//获取
 		pmQueueOneSize = arr_dc.get(dataCenterIndex).getArr_lbf()
 				.get(rackIndex).getPmQueueOne().size();
 		pmQueueTwoSize = arr_dc.get(dataCenterIndex).getArr_lbf()

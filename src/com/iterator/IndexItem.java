@@ -23,16 +23,16 @@ import com.resource.PhysicalMachine;
  */
 public class IndexItem {
 
-    private boolean averageUility = true;
-    private boolean imbalanceDegree = true;
-    private boolean makespan = true;
+    private boolean averageUility = false;
+    private boolean imbalanceDegree = false;
+    private boolean makespan = false;
     private boolean skew_makespan = false;
-    private boolean capacity_makespan = true;
+    private boolean capacity_makespan = false;
     private boolean skew_capaciy_makespan = false;
     private boolean energyConsumption = false;
-    private boolean effectivePM = true;
+    private boolean effectivePM = false;
     private boolean rejectedVMNum = false;
-    private boolean processTime = true;
+    private boolean processTime = false;
     ArrayList<ComparisonIndex> aci = new ArrayList<ComparisonIndex>();
     ArrayList<PhysicalMachine> pq1 = new ArrayList<PhysicalMachine>();
     ArrayList<PhysicalMachine> pq2 = new ArrayList<PhysicalMachine>();
@@ -140,7 +140,7 @@ public class IndexItem {
 
     public Iterator createIterator() {
         CalAverageUtility cau = new CalAverageUtility(arr_dc);
-        
+
         if (isAverageUility()) {
             aci.add(cau);
         }

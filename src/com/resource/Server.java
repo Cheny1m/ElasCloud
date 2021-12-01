@@ -1,7 +1,7 @@
 package com.resource;
 /**
  * This is the base class for Physical Machine and Virtual Machine and defining 
- * common share attributes and methods like CPU, memory and bandwidth 
+ * common share attributes and methods like CPU, memory and bandwidth（带宽）
  * @author yuanliang, Minxian
  *
  */

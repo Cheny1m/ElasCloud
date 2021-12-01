@@ -33,10 +33,12 @@ public interface DataCenterImp {
 	 * booting means instances of Physical Machine have been produced.
 	 * @param pmb
 	 */
+	//引导产生虚拟环境的pm
 	public void bootPM(PMBootor pmb);
 	
 	/**
 	 * Allocate VM requests to corresponding PM
+	 * 将VM请求分配给相应的PM
 	 * @param aa
 	 */	
 	public void allocate(OnlineAlgorithm onla);

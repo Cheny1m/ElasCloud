@@ -7,6 +7,8 @@ import com.specification.VmInfo;
  * @author yuanliang, Minxian
  *
  */
+
+//继承至Server对象且实现comparable接口用于自定义vm排序
 public class VirtualMachine extends Server implements
         Comparable<VirtualMachine> {
 
@@ -18,6 +20,7 @@ public class VirtualMachine extends Server implements
     private int pmType;
     private int vmNo;
     private int dataCenterNo;
+    //某数据中心的机架ID
     private int rackNo;
     VmInfo vmInfo = new VmInfo();
 
@@ -28,6 +31,7 @@ public class VirtualMachine extends Server implements
         this.cpuTotal = vmInfo.getCpu(vmType);
         this.memTotal = vmInfo.getMem(vmType);
         this.storageTotal = vmInfo.getStorage(vmType);
+        //pm类型？
         this.pmType = (vmType - 1) / 3 + 1;
         this.vmType = vmType;
     }
@@ -112,6 +116,7 @@ public class VirtualMachine extends Server implements
         this.rackNo = rackNo;
     }
 
+    //按照vm开始时间从小到大排序
     public int compareTo(VirtualMachine vm) {
         // TODO Auto-generated method stub
         if (this.startTime > vm.startTime) {

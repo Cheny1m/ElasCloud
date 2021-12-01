@@ -15,6 +15,7 @@ public class VmInfo {
 	Document doc ;
 	Elements elements;
 	float[] arrayProba;
+
 	public VmInfo() {
 		try {
 			doc = new Builder().build("src/com/specification/vminfo.xml");

@@ -22,6 +22,8 @@ public class OfflineAlgorithm{
 		 * algorithms, the VM requests generation methods may vary.
 		 * @param lbf
 		 */
+
+		//由于知道所有的请求状态，所有可以有不同的vm生成方式
 		public void createVM(LoadBalanceFactory lbf){
 			
 		}

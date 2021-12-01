@@ -9,6 +9,9 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.Random;
+
+import cloudscheinterface.ConfController;
+import cloudscheinterface.MainGUI;
 import com.specification.*;
 import com.datacenter.*;
 /**
@@ -26,12 +29,19 @@ public class CreateVM implements RWCreateVM{
 	int startTime;
 	int minSpan;
 	float[] l_arrayPorba;
-	String distribution = "com.distribute.NormalDistri";
-        
+	//String distribution = "com.distribute.NormalDistri";
+
+	String distribution = "com.distribute." + MainGUI.s;
+
+
+
+	//用于读取配置文件?
 	Properties property;
 	InputStream is;
 	VmInfo vmInfo;
+	//随机
 	Random vmRandom = new Random();
+	//输出流
 	FileOutputStream fos = null;
 	StringBuilder sb;
 	
@@ -42,6 +52,7 @@ public class CreateVM implements RWCreateVM{
 	public void initialzeSetting(){
 		try{
 			property = new Properties();
+			//读取VM开始时间、最小间隙<持续时间？>、任务数
 			is = new BufferedInputStream(new FileInputStream(
 					"src/com/generaterequest/requestPro.pro"));
 		
@@ -60,6 +71,7 @@ public class CreateVM implements RWCreateVM{
 			vmSize = getProperties("RequestNum");
 			startTime = getProperties("StartTime");
 			minSpan = getProperties("MinSpan");
+
 			LoadBalanceFactory.MAXTIME = startTime + minSpan; 
 		}
 	
@@ -77,10 +89,16 @@ public class CreateVM implements RWCreateVM{
 		int start = 0;
 		int end = 0;
 		int vmType = 1;
-		float tempvmType = 0.0f;;
+		float tempvmType = 0.0f;
 		sb = new StringBuilder();
 		vmInfo = new VmInfo();
+		//得到各vmtype所占总任务的比例
 		l_arrayPorba = vmInfo.getVmTypeProbabilitySpan();
+
+//		for (int i=0;i<l_arrayPorba.length;i++){
+//			System.out.println(l_arrayPorba[i]);
+//		}
+
 
 		
 		/*
@@ -91,17 +109,33 @@ public class CreateVM implements RWCreateVM{
 		 */		
 		for(int i = 0;i < vmSize;i++){
 			//Using reflex methods to substitute the old methods.
+			//System.out.println("===================================:"+ distribution);
 			try {
+				   //实现类的链接、装载；然后实例化在distribute.newInstance()这里
+					//手动加载类接口，初始化distribution类，使jvm可以调用他，同时使其可以指向任意数据类型
 		           Class<?> distribute = Class.forName(distribution);
+		           //传入有一个元素的class数组
 		           Class<?> paraType[] = new Class[1];
+		           //int类对象
 		           paraType[0] = Integer.TYPE;
+		           //从distribute对象中获得nextInt方法；其中paraType=int.class，表示nextInt方法的形参类对象
 		           Method meth = distribute.getMethod("nextInt", paraType);
 
+		           //动态调用；根据分布方法产生开始时间和结束时间
 		           start =(Integer) meth.invoke(distribute.newInstance(), startTime);
+
 		           end =(Integer) meth.invoke(distribute.newInstance(), startTime);
 		           if(end <= start){
 		        	   end = startTime + (Integer) meth.invoke(distribute.newInstance(), minSpan);
 		           }
+
+		           /*
+		           结束时间的测试算法
+		           if(start<0) start = 0;
+		           end = start+(Integer) meth.invoke(distribute.newInstance(), minSpan);
+		           */
+
+		           //获得不同VM的随机值，后续产生不同的VM机
 		           tempvmType = ((Integer) meth.invoke(distribute.newInstance(), 1000))/1000f;
 		       } catch (Throwable e) {
 		           System.err.println(e);
@@ -125,7 +159,8 @@ public class CreateVM implements RWCreateVM{
 
 			sb.append(String.valueOf(i)+" "+ start+" "+end+" " +vmType+"\n");
 		}
-                DataCenterFactory.print.println(sb.toString());
+		//System.out.println("Distribution mode:"+distribution);
+		DataCenterFactory.print.println(sb.toString());
 		return sb;
 	}
 	/*
@@ -162,14 +197,16 @@ public class CreateVM implements RWCreateVM{
 		return vmSize;
 	}
 	
-        public  void setDistribution(String distribution){
-            this.distribution = "com.distribute." + distribution;
-            
-        }
+	public  void setDistribution(String distribution){
+		this.distribution = "com.distribute." + distribution;
+
+	}
+
         
-        public String getVMInfo(){
-            return "Distribution:" + distribution + " VM number: "+ vmSize;
-        }
+	public String getVMInfo(){
+		return "Distribution:" + distribution + " VM number: "+ vmSize;
+	}
+
 	public static void main(String[] args){
 		CreateVM cv = new CreateVM();
                 cv.setDistribution("NormalDistri");

@@ -57,7 +57,7 @@ public class CalAverageUtility extends ComparisonIndex {
 			wholeSystemAverageUtility += dataCenterAverageUtility;
 		}
 		wholeSystemAverageUtility = calUtilityDividedByNumbers(wholeSystemAverageUtility, arr_dc.size());
-                DataCenterFactory.print.println("wholeSystemAverageUtility" + wholeSystemAverageUtility);
+                DataCenterFactory.print.println("wholeSystemAverageUtility=" + wholeSystemAverageUtility);
 	}
 
 	@Override

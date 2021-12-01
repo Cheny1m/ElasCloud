@@ -10,10 +10,16 @@ import java.util.ArrayList;
  */
 public class DataCenter implements Comparable<DataCenter> {
 
+	//数据中心id与时延;
 	private int d_id;
 	private int d_timeDelay;
+
 	LoadBalanceFactory lbf;
+
+	//一个数据中心由多个机架组成
+	//资源list
 	ArrayList<LoadBalanceFactory> arr_lbf = new ArrayList<LoadBalanceFactory>();
+	//机架list
 	ArrayList<Rack> arr_rack = new ArrayList<Rack>();
 
 	;
@@ -30,6 +36,7 @@ public class DataCenter implements Comparable<DataCenter> {
 	 * Initialise the racks information in a datacenter, for further
 	 * implementation, the information would be gathered from user interface.
 	 */
+
 	public void initialRack() {
 		Rack rack1 = new Rack(0, 50, 0, 0, 0);
 		arr_rack.add(rack1);

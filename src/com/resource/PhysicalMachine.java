@@ -17,9 +17,11 @@ public class PhysicalMachine extends Server implements Comparable<PhysicalMachin
 	private float maxPower;
 	private int pmTurnOnTime;
 	private int pmDuration;
+	//完工时间？
 	private float capacity_makeSpan;
+	//占比
 	private float proportion = 1.0f;
-        private int rejectedNum = 0;
+	private int rejectedNum = 0;
         
 	PmInfo pmInfo = new PmInfo();
 
