@@ -7,6 +7,7 @@ import com.datacenter.DataCenter;
 import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
+import com.generaterequest.CreateVM;
 import com.generaterequest.PMBootor;
 import com.resource.PhysicalMachine;
 import com.resource.VirtualMachine;
@@ -49,8 +50,10 @@ public class RoundRobin extends OfflineAlgorithm {
     }
 
     @Override
-    public void createVM(LoadBalanceFactory lbf) {
-        lbf.createVM(new CreateLLNLRequests());
+    public void createVM(DataCenterFactory dcf) {
+
+        dcf.createVM(new CreateLLNLRequests());
+        //dcf.createVM(new CreateVM());
     }
     /**
      * Generate the random index and try to allocate VM to the PM with generated

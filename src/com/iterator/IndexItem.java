@@ -26,8 +26,8 @@ public class IndexItem {
     private boolean averageUility = false;
     private boolean imbalanceDegree = false;
     private boolean makespan = false;
-    private boolean skew_makespan = false;
     private boolean capacity_makespan = false;
+    private boolean skew_makespan = false;
     private boolean skew_capaciy_makespan = false;
     private boolean energyConsumption = false;
     private boolean effectivePM = false;
@@ -77,8 +77,14 @@ public class IndexItem {
         return makespan;
     }
 
-    public void setMakespan(boolean makespan) {
-        this.makespan = makespan;
+    public void setMakespan(boolean makespan) { this.makespan = makespan; }
+
+    public boolean isCapacity_makespan() {
+        return capacity_makespan;
+    }
+
+    public void setCapacity_makespan(boolean capacity_makespan) {
+        this.capacity_makespan = capacity_makespan;
     }
 
     public boolean isSkew_makespan() {
@@ -87,14 +93,6 @@ public class IndexItem {
 
     public void setSkew_makespan(boolean skew_makespan) {
         this.skew_makespan = skew_makespan;
-    }
-
-    public boolean isCapacity_makespan() {
-        return capacity_makespan;
-    }
-
-    public void setCapacity_makespan(boolean capacity_makespan) {
-        this.capacity_makespan = capacity_makespan;
     }
 
     public boolean isSkew_capaciy_makespan() {
@@ -150,11 +148,11 @@ public class IndexItem {
         if (isMakespan()) {
             aci.add(new CalMakespan(arr_dc));
         }
-        if (isSkew_makespan()) {
-            aci.add(new CalSkewMakespan(cau));
-        }
         if (isCapacity_makespan()) {
             aci.add(new CalCapacityMakespan(arr_dc));
+        }
+        if (isSkew_makespan()) {
+            aci.add(new CalSkewMakespan(cau));
         }
         if (isSkew_capaciy_makespan()) {
             aci.add(new CalSkewCapacityMakespan(cau));

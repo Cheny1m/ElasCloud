@@ -23,7 +23,7 @@ public class DataCenter implements Comparable<DataCenter> {
 	ArrayList<Rack> arr_rack = new ArrayList<Rack>();
 
 	;
-
+	//构造方法
 	public DataCenter(int d_id, int d_timeDelay) {
 		// TODO Auto-generated constructor stub
 		this.d_id = d_id;

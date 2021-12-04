@@ -377,10 +377,10 @@ public class MainGUI extends javax.swing.JFrame {
         jCheckBox3.setText("Makespan");
 
         jCheckBox4.setFont(new java.awt.Font("宋体", 0, 14));
-        jCheckBox4.setText("SkewOfMakespan");
+        jCheckBox4.setText("Capacity-makespan");
 
         jCheckBox5.setFont(new java.awt.Font("宋体", 0, 14));
-        jCheckBox5.setText("Capacity-makespan");
+        jCheckBox5.setText("SkewOfMakespan");
 
         jCheckBox6.setFont(new java.awt.Font("宋体", 0, 14));
         jCheckBox6.setText("SkewOfCapacity-makespan");

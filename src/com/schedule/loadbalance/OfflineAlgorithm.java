@@ -3,6 +3,7 @@ package com.schedule.loadbalance;
 import java.util.ArrayList;
 
 import com.datacenter.DataCenter;
+import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.resource.PhysicalMachine;
 import com.resource.VirtualMachine;
@@ -24,9 +25,10 @@ public class OfflineAlgorithm{
 		 */
 
 		//由于知道所有的请求状态，所有可以有不同的vm生成方式
-		public void createVM(LoadBalanceFactory lbf){
-			
-		}
+//		public void createVM(LoadBalanceFactory lbf){
+//
+//		}
+		public void createVM(DataCenterFactory dcf){}
 		
 		public void allocate(ArrayList<VirtualMachine> p_vmQueue,
 				ArrayList<PhysicalMachine> p_pmQueueOne,

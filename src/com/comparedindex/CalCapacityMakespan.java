@@ -25,11 +25,11 @@ public class CalCapacityMakespan extends ComparisonIndex{
 	ArrayList<LoadBalanceFactory> arr_lbf;
 	
 	public CalCapacityMakespan(CalAverageUtility ca){
-		
+
 		calQueueCapacityMakespan(ca.pq1);
 		calQueueCapacityMakespan(ca.pq2);
 		calQueueCapacityMakespan(ca.pq3);
-		
+
 	}
 
 	public CalCapacityMakespan(ArrayList<DataCenter> p_arr_dc) {
@@ -79,8 +79,9 @@ public class CalCapacityMakespan extends ComparisonIndex{
 
 	private void calQueueCapacityMakespan(ArrayList<PhysicalMachine> pq1){
 		for(int i = 0; i < pq1.size(); i++){
-			if(pq1.get(i).getTotalCapacityMakespan() > capacity_makespan){
+			if( pq1.get(i).getTotalCapacityMakespan() > capacity_makespan){
 				capacity_makespan = pq1.get(i).getTotalCapacityMakespan();
+				//capacity_makespan = pq1.get(i).getAvgUtility() * pq1.get(i).getTotalTime()* pq1.get(i).getCpuTotal();
 			}
 		}
 	}

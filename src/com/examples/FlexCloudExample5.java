@@ -43,7 +43,7 @@ public class FlexCloudExample5 {
                         
 			lbf = new LoadBalanceFactory();
 			new CreateLLNLRequests();
-			ofa.createVM(lbf);
+			//ofa.createVM(lbf);
 			lbf.bootPM(new PMBootor());
 			lbf.generateReuquest();
                         

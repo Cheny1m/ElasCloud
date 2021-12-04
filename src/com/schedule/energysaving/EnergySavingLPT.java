@@ -2,6 +2,7 @@ package com.schedule.energysaving;
 
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
+import com.generaterequest.CreateVM;
 import com.generaterequest.CreateVMByPorcessTime;
 import com.generaterequest.PMBootor;
 import com.resource.PhysicalMachine;
@@ -58,9 +59,15 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 		return description + "-LPT Algorithm---";
 	}
 
-	@Override
-	public void createVM(LoadBalanceFactory lbf) {
-		lbf.createVM(new CreateLLNLRequests());
+	//@Override
+//	public void createVM(LoadBalanceFactory lbf) {
+//		//lbf.createVM(new CreateLLNLRequests());
+//		lbf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
+//	}
+	public void createVM(DataCenterFactory dcf) {
+		//dcf.createVM(new CreateLLNLRequests());
+		dcf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
+		//dcf.createVM(new CreateVMByPorcessTime(new CreateVM()));
 	}
 	/**
 	 * Generate the random index and try to allocate VM to the PM with generated
@@ -81,6 +88,15 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 		pmTotalNum = pmQueueOneSize + pmQueueTwoSize + pmQueueThreeSize;
 		int allocatedDataCenterID;
 		int allocatedRackID;
+
+		//对vm进行重新编号
+		for(int i = 0 ; i < vmQueue.size() ; i++){
+			vmQueue.get(i).setVmNo(i);
+		}
+//		System.out.println("按最长处理时间排序结果：");
+//		for(int i = 0 ; i < vmQueue.size() ; i++){
+//			System.out.println(vmQueue.get(i).getVmNo()+"  "+ vmQueue.get(i).getStartTime()+"  "+vmQueue.get(i).getEndTime());
+//		}
 
 		while (!vmQueue.isEmpty()) {
 			if (currentTime >= vmQueue.get(vmId).getStartTime()) {
@@ -128,9 +144,7 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 	private void allocateVm(int dataCenterNo, int rackNo, VirtualMachine vm2, PhysicalMachine pm2) {
 		// TODO Auto-generated method stub
 		if (checkResourceAvailble(vm2, pm2)) {
-			DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " "
-					+ "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM"
-					+ pm2.getNo());
+			DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " " + "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM" + pm2.getNo());
 			deleteQueue.add(vm2);
 			vmQueue.remove(vm2);
 			pm2.vms.add(vm2);
@@ -147,8 +161,7 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 			index = 0;
 		} else {
 			if (triedAllocationTimes == pmTotalNum) {
-				System.out
-						.println("VM number is too large, PM number is not enough");
+				System.out.println("VM number is too large, PM number is not enough");
 				JOptionPane.showMessageDialog(null,
 						"VM number is too large, PM number is not enough",
 						"Error", JOptionPane.OK_OPTION);
@@ -169,8 +182,7 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 			currentTime++;
 			vmId = 0;
 			triedAllocationTimes = 0;
-			DataCenterFactory.print.println("===currentTime:" + currentTime
-					+ "===");
+			DataCenterFactory.print.println("===currentTime:" + currentTime + "===");
 			processDeleteQueue(currentTime, deleteQueue);
 		}
 	}

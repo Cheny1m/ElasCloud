@@ -11,7 +11,6 @@ package com.datacenter;
 public class Rack {
 
 	private int r_id;
-
 	private int r_timeDelay;
 	private int r_pmNum1;
 	private int r_pmNum2;

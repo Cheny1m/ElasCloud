@@ -1,8 +1,7 @@
 package com.datacenter;
 
 import cloudscheinterface.DataCenterADDJFrame;
-import com.generaterequest.CreateVM;
-import com.generaterequest.RequestGenerator;
+import com.generaterequest.*;
 import com.iterator.ComparisonIndex;
 import com.iterator.IndexItem;
 import com.iterator.Iterator;
@@ -35,7 +34,7 @@ public class DataCenterFactory {
     public static int MAXTIME;
     public static final String FINISHEDINFO = "---Allocation Finished---";
     public static final String FAILEDINFO = "---Resource not enough, try another PM---";
-    ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
+    public static ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
     //数据中心list  3个pm列表的合成
     ArrayList<DataCenter> arr_dc = new ArrayList<DataCenter>();
     IndexItem ii;
@@ -49,9 +48,27 @@ public class DataCenterFactory {
      * @param cv
      */
     public void createVM(CreateVM cv) {
-        DataCenterFactory.print.println("Now Generating VMs......");
+        DataCenterFactory.print.println("Now Generating VMs by synthetic data......");
         StringBuilder sb = cv.generaterequest();
         cv.writeToTxt(sb);
+    }
+
+    public void createVM(CreateVMByEndTime cvbe) {
+        DataCenterFactory.print.println("Now Generating VMs......");
+        StringBuilder sb1 = cvbe.generaterequest();
+        cvbe.writeToTxt(sb1);
+    }
+
+    public void createVM(CreateVMByPorcessTime cvbpt) {
+        DataCenterFactory.print.println("Now Generating VMs......");
+        StringBuilder sb2 = cvbpt.generaterequest();
+        cvbpt.writeToTxt(sb2);
+    }
+
+    public void createVM(CreateLLNLRequests clr) {
+        DataCenterFactory.print.println("Now Generating VMs by LLNL data......");
+        StringBuilder sb = clr.generaterequest();
+        clr.writeToTxt(sb);
     }
 
     public void iniPrinter() {
@@ -73,22 +90,24 @@ public class DataCenterFactory {
     	arr_dc.clear();
 //    	/**Test Case #2
         System.out.println("Start initializing data center...");
-        DataCenter dc1 = new DataCenter(0, 1000);
+        //DataCenter dc1 = new DataCenter(0, 1000);
+        //暂定延时0；
+        DataCenter dc1 = new DataCenter(0, 0);
         ArrayList<Rack> arr_rack = new ArrayList<Rack>();
         //机架未与GUI实现对接
-        arr_rack.add(new Rack(0, 50, 0, 0, 0));
-        arr_rack.add(new Rack(1, 50, 0, 0, 100));
+        arr_rack.add(new Rack(0, 60, 0, 0, 0));
+        //arr_rack.add(new Rack(1, 60, 0, 0, 100));
         dc1.setArr_rack(arr_rack);
         dc1.initalAllResourse();
         arr_dc.add(dc1);
         
-        DataCenter dc2 = new DataCenter(1, 200);
-        ArrayList<Rack> arr_rack1 = new ArrayList<Rack>();
-        arr_rack1.add(new Rack(0, 50, 0, 0, 0));
-        arr_rack1.add(new Rack(1, 50, 0, 0, 100));
-        dc2.setArr_rack(arr_rack1);
-        dc2.initalAllResourse();
-        arr_dc.add(dc2);
+//        DataCenter dc2 = new DataCenter(1, 200);
+//        ArrayList<Rack> arr_rack1 = new ArrayList<Rack>();
+//        arr_rack1.add(new Rack(0, 60, 0, 0, 0));
+//        arr_rack1.add(new Rack(1, 60, 0, 0, 100));
+//        dc2.setArr_rack(arr_rack1);
+//        dc2.initalAllResourse();
+//        arr_dc.add(dc2);
         System.out.println(arr_dc.size() +" Center racks have been generated......");
 //      */  
     	

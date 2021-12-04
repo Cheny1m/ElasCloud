@@ -8,6 +8,7 @@ import com.datacenter.DataCenter;
 import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
+import com.generaterequest.CreateVM;
 import com.generaterequest.PMBootor;
 import com.resource.PhysicalMachine;
 import com.resource.VirtualMachine;
@@ -59,12 +60,13 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return description + "-CMP Algorithm---";
+		return description + "-Prepartition(k=4) Algorithm---";
 	}
 
 	@Override
-	public void createVM(LoadBalanceFactory lbf) {
-		lbf.createVM(new CreateLLNLRequests());
+	public void createVM(DataCenterFactory dcf) {
+		dcf.createVM(new CreateLLNLRequests());
+		//dcf.createVM(new CreateVM());
 	}
 
 	/**
@@ -95,6 +97,14 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 
 		//完成预分割的所有动作；
 		this.vmQueue = processCMP(p_vmQueue, pmTotalNum);
+		Collections.sort(vmQueue,new SortByStartTime());
+		for(int i = 0 ; i < vmQueue.size() ; i++){
+			vmQueue.get(i).setVmNo(i);
+		}
+//		System.out.println("新分区排序结果：");
+//		for(int i = 0 ; i < vmQueue.size() ; i++){
+//			System.out.println(vmQueue.get(i).getVmNo()+"  "+ vmQueue.get(i).getStartTime()+"  "+vmQueue.get(i).getEndTime());
+//		}
 
 		while (!vmQueue.isEmpty()) {
 			if (currentTime >= vmQueue.get(vmId).getStartTime()) {
@@ -210,6 +220,7 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 			DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " "
 					+ "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM"
 					+ pm2.getNo());
+			//将已分配任务添加至待删除队列
 			deleteQueue.add(vm2);
 			vmQueue.remove(vm2);
 			pm2.vms.add(vm2);
@@ -274,8 +285,7 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 			currentTime++;
 			vmId = 0;
 			triedAllocationTimes = 0;
-			DataCenterFactory.print.println("===currentTime:" + currentTime
-					+ "===");
+			DataCenterFactory.print.println("===currentTime:" + currentTime + "===");
 			processDeleteQueue(currentTime, deleteQueue);
 		}
 	}
@@ -292,11 +302,10 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 		boolean allocateSuccess = true;
 		boolean oneSlotAllocation;
 		for (int t = vm3.getStartTime(); t < vm3.getEndTime(); t++) {
-			oneSlotAllocation = (pm3.resource.get(t).getCpuUtility() > vm3
-					.getCpuTotal())
+			//在那一时刻资源够用的话
+			oneSlotAllocation = (pm3.resource.get(t).getCpuUtility() > vm3.getCpuTotal())
 					&& (pm3.resource.get(t).getMemUtility() > vm3.getMemTotal())
-					&& (pm3.resource.get(t).getStoUtility() > vm3
-					.getStorageTotal());
+					&& (pm3.resource.get(t).getStoUtility() > vm3.getStorageTotal());
 			allocateSuccess = allocateSuccess && oneSlotAllocation;
 
 			if (false == allocateSuccess) {
@@ -427,7 +436,7 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 		/*
 		 * Calculate 0.25 * max(L1, L2)；计算分割之后的CM长度
 		 */
-		for (int i = 0; i < pmTotalNum; i++) {
+		for (int i = 0; i < p_vmQueue.size(); i++) {
 			vm2 = p_vmQueue.get(i);
 			//计算单个VM的最大CM值
 			capacity_makespan = (int) ((vm2.getEndTime() - vm2.getStartTime()) * vm2.getCpuTotal());
@@ -438,12 +447,13 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 		}
 		//根据pm个数，计算平均的cm
 		averageCapacity_makespan /= m;
-		//计算分割之后的CM值，k值选1/4;
-		partitionCapacity_makespan = maxCapacity_makespan > averageCapacity_makespan ?
-				maxCapacity_makespan : averageCapacity_makespan;
-		partitionCapacity_makespan /= 4;
+		//计算分割之后的CM值，k值选4;
+		int k = 4;
+		partitionCapacity_makespan = maxCapacity_makespan > averageCapacity_makespan ? maxCapacity_makespan : averageCapacity_makespan;
+		//定义vm可以在pm上连续运行的最大时间长度
+		partitionCapacity_makespan =(int) Math.ceil(partitionCapacity_makespan*1.0 / k );
 
-		DataCenterFactory.print.println("PCM:" + partitionCapacity_makespan);
+		DataCenterFactory.print.println("CMP(p0/k)=" + partitionCapacity_makespan);
 
 		/*
 		 * Recombine the requests;重新组合请求
@@ -452,8 +462,13 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 			vm2 = p_vmQueue.get(i);
 			regenVM(vm2, partitionCapacity_makespan, cmp_vmQueue);
 		}
-		DataCenterFactory.print.println("Partition Times:" +
-				(cmp_vmQueue.size() - p_vmQueue.size()));
+		//DataCenterFactory.print.println("Partition Times:" + (cmp_vmQueue.size() - p_vmQueue.size()));
+		//输出新vm结果
+		System.out.println("新分区结果为：");
+		for( int i =0 ; i<cmp_vmQueue.size() ; i++ ){
+			System.out.println(cmp_vmQueue.get(i).getVmNo()+" "+ cmp_vmQueue.get(i).getStartTime()+" "+cmp_vmQueue.get(i).getEndTime()+ " " + cmp_vmQueue.get(i).getVmType());
+		}
+		System.out.println("——————————————");
 		//Results have been tested to be right
 		//System.out.println(cmp_vmQueue.size());
 		return cmp_vmQueue;
@@ -465,28 +480,44 @@ public class EnergySavingCMP extends OfflineAlgorithm {
 	 * than the partitionCapacity_makespan, add the VM to new queue. If not, divide
 	 * the vm into more than one vms and put them to the new queue.
 	 */
-	public void regenVM(VirtualMachine vm2,
-						int partitionCapacity_makespan, ArrayList<VirtualMachine> cmp_vmQueue) {
+	public void regenVM(VirtualMachine vm2, int partitionCapacity_makespan, ArrayList<VirtualMachine> cmp_vmQueue) {
 
 		int capacity_makespan = 0;
 		VirtualMachine vm3, vm4;
 		int duration;
+		int durNum;
+		//double duration;
 		capacity_makespan = (int) ((vm2.getEndTime() - vm2.getStartTime()) * vm2.getCpuTotal());
 		if (capacity_makespan <= partitionCapacity_makespan) {
 			vm3 = new VirtualMachine(
 					vmID++, vm2.getStartTime(), vm2.getEndTime(), vm2.getVmType());
 			cmp_vmQueue.add(vm3);
 		} else {
-			duration = (int) ((capacity_makespan - partitionCapacity_makespan) / vm2.getCpuTotal());
-			vm3 = new VirtualMachine(vmID++, vm2.getStartTime(),
-					vm2.getStartTime() + duration, vm2.getVmType());
-			cmp_vmQueue.add(vm3);
-			vm4 = new VirtualMachine(vmID, vm3.getEndTime() + 1, vm2.getEndTime(), vm2.getVmType());
-			//recursive method
-			regenVM(vm4, partitionCapacity_makespan, cmp_vmQueue);
-
+			//如果CM > p0/k,那么将其划分为若干个p0/k的子区间
+			durNum =(int) Math.ceil(capacity_makespan*1.0 / partitionCapacity_makespan);
+			duration = (int) Math.ceil(capacity_makespan*1.0 / vm2.getCpuTotal() / durNum);
+			for(int i =0 ;i < durNum ; i++ ){
+				if(i == 0){
+					vm3 = new VirtualMachine(vmID++ , vm2.getStartTime()+i*duration,vm2.getStartTime()+(i+1)*duration,vm2.getVmType());
+				}
+				else if(i == durNum -1){
+					vm3 = new VirtualMachine(vmID++ , vm2.getStartTime()+i*duration+1,vm2.getEndTime(),vm2.getVmType());
+				}
+				else{
+					vm3 = new VirtualMachine(vmID++ , vm2.getStartTime()+i*duration+1,vm2.getStartTime()+(i+1)*duration,vm2.getVmType());
+				}
+				cmp_vmQueue.add(vm3);
+			}
+			//算法问题
+//			duration = (int) ((capacity_makespan - partitionCapacity_makespan) / vm2.getCpuTotal());
+//			//duration = Math.ceil((capacity_makespan - partitionCapacity_makespan) / vm2.getCpuTotal());
+//			vm3 = new VirtualMachine(vmID++, vm2.getStartTime(),
+//					vm2.getStartTime() + duration, vm2.getVmType());
+//			cmp_vmQueue.add(vm3);
+//			vm4 = new VirtualMachine(vmID, vm3.getEndTime() + 1, vm2.getEndTime(), vm2.getVmType());
+//			//recursive method
+//			regenVM(vm4, partitionCapacity_makespan, cmp_vmQueue);
 		}
-
 	}
 
 	public void sortAllPMsInOrder(ArrayList<DataCenter> p_arr_dc) {
@@ -582,5 +613,18 @@ class SortByPMUtility implements Comparator<PhysicalMachine> {
 	}
 }
 
+
+class SortByStartTime implements Comparator<VirtualMachine> {
+
+	@Override
+	public int compare(VirtualMachine p_vm1, VirtualMachine p_vm2) {
+		VirtualMachine vm1 = p_vm1;
+		VirtualMachine vm2 = p_vm2;
+		if (vm1.getStartTime() > vm2.getStartTime()) {
+			return 1;
+		}
+		return 0;
+	}
+}
 
 

@@ -7,6 +7,7 @@ import com.datacenter.DataCenter;
 import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
+import com.generaterequest.CreateVM;
 import com.generaterequest.PMBootor;
 import com.resource.PhysicalMachine;
 import com.resource.VirtualMachine;
@@ -45,7 +46,7 @@ public class EnergySavingMIG extends OfflineAlgorithm {
     int increase = 1;
     int decrease = -1;
     int rejectedVM;
-    float threshold = 0.2f;
+    double threshold = 0.9;
     Random random = new Random();
     VirtualMachine vm;
     ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
@@ -53,6 +54,7 @@ public class EnergySavingMIG extends OfflineAlgorithm {
     ArrayList<VirtualMachine> deleteQueue = new ArrayList<VirtualMachine>();
     int triedAllocationTimes = 0;
     CalAverageUtility cal;
+    //ArrayList<DataCenter> cal = new ArrayList<DataCenter>();
 
     int pmQueueOneSize;
     int pmQueueTwoSize;
@@ -65,13 +67,14 @@ public class EnergySavingMIG extends OfflineAlgorithm {
     @Override
     public String getDescription() {
         // TODO Auto-generated method stub
-        return description + "-MIG Algorithm---";
+        return description + "-PMG Algorithm---";
     }
 
     @Override
-    public void createVM(LoadBalanceFactory lbf) {
+    public void createVM(DataCenterFactory dcf) {
         //	lbf.createVM(new CreateVMByPorcessTime(new CreateVM()));
-        lbf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
+        dcf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
+        //dcf.createVM(new CreateVMByPorcessTime(new CreateVM()));
     }
 
     /**
@@ -92,6 +95,10 @@ public class EnergySavingMIG extends OfflineAlgorithm {
         pmTotalNum = pmQueueOneSize + pmQueueTwoSize + pmQueueThreeSize;
         int allocatedDataCenterID;
         int allocatedRackID;
+
+        for(int i = 0 ; i < vmQueue.size() ; i++){
+            vmQueue.get(i).setVmNo(i);
+        }
 
         while (!vmQueue.isEmpty()) {
             if (currentTime >= vmQueue.get(vmId).getStartTime()) {
@@ -125,13 +132,29 @@ public class EnergySavingMIG extends OfflineAlgorithm {
                 allocateVm(allocatedDataCenterID,allocatedRackID,vm,arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree().get(index));
             }
         }
+
         //迁移
         DataCenterFactory.print.println("Start Re-allocation......");
         //Max total capacitymakespan multiply the threshold factor
-        threshold *= getThreshold();
-        reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne());
-        reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo());
-        reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree());
+        //threshold *= getThreshold();
+        threshold = threshold * (cm / pmTotalNum);
+        System.out.println("threshold的值为=" + threshold);
+
+        if(vm.getVmType() > 0 && vm.getVmType() < 4){
+            //Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne(), new SortByCapacityMakespan());
+            reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne());
+        }
+        else if (vm.getVmType() >= 4 && vm.getVmType() < 7){
+            //Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo(), new SortByCapacityMakespan());
+            reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo());
+        }
+        else{
+            //Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree(), new SortByCapacityMakespan());
+            reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree());
+        }
+        //reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne());
+        //reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo());
+        //reallocateVm(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree());
         DataCenterFactory.print.println(LoadBalanceFactory.FINISHEDINFO);
     }
 
@@ -144,15 +167,15 @@ public class EnergySavingMIG extends OfflineAlgorithm {
      * @param vm2
      * @param pm2
      */
+    double cm = 0;
     private void allocateVm(int dataCenterNo, int rackNo, VirtualMachine vm2, PhysicalMachine pm2) {
         // TODO Auto-generated method stub
         if (checkResourceAvailble(vm2, pm2)) {
-            DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " "
-                    + "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM"
-                    + pm2.getNo());
+            DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " " + "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM" + pm2.getNo());
             deleteQueue.add(vm2);
             vmQueue.remove(vm2);
             pm2.vms.add(vm2);
+            cm += vm2.getCpuTotal()*(vm2.getEndTime()-vm2.getStartTime());
             vm2.setPmNo(pm2.getNo());
             vm2.setRackNo(rackNo);
             vm2.setDataCenterNo(dataCenterNo);
@@ -327,38 +350,58 @@ public class EnergySavingMIG extends OfflineAlgorithm {
      * @return 
      */
     public float getThreshold(){
-        cal = new CalAverageUtility(new ArrayList<DataCenter>());
-        System.out.println("cal的值为："+cal);
+        cal = new CalAverageUtility(arr_dc);
         return new CalCapacityMakespan(cal).getIndexValue();
+        //cal = new CalAverageUtility(arr_dc);
+        //System.out.println("cal的值为："+cal);
+        //return new CalCapacityMakespan(arr_dc).getIndexValue();
     }
     /**
-     * Migrate the vms from the PM with highest CM value to PM with lowest CM 
-     * value
-     * @param pmQueue 
+     * Migrate the vms from the PM with highest CM value to PM with lowest CM value
      */
     private void reallocateVm(ArrayList<PhysicalMachine> pmQueue){
         int size = pmQueue.size();
         PhysicalMachine pm1, pm2;
         VirtualMachine vm1;
-        Collections.sort(pmQueue, new SortByCapacityMakespan());
-        pm1 = pmQueue.get(0);
-        pm2 = pmQueue.get(size - 1);
-        if(pm1.getTotalCapacityMakespan() 
-                - pm2.getTotalCapacityMakespan() > threshold){
-           vm1 = pm1.vms.get(0);
-           if(checkResourceAvailble(vm1, pm2)){
-               pm1.vms.remove(vm1);
-               updateResource(vm1, pm1, increase);
-               pm2.vms.add(vm1);
-               vm1.setPmNo(pm2.getNo());
-               updateResource(vm1, pm2, decrease);
-               reallocateVm(pmQueue);
-           }else{
-               LoadBalanceFactory.print.println("Migration Failed!");
-           }
-        }else{
-            LoadBalanceFactory.print.println("Migartion Finished......");
+        //Collections.sort(pmQueue, new SortByCapacityMakespan());
+        for (int i = 0 ; i < pmQueue.size(); i++) {
+            Collections.sort(pmQueue, new SortByCapacityMakespan());
+            if (pmQueue.get(0).getTotalCapacityMakespan() > threshold) {
+                pm1 = pmQueue.get(0);
+                pm2 = pmQueue.get(size - 1);
+                vm1 = pm1.vms.get(0);
+                if (checkResourceAvailble(vm1, pm2)) {
+                    pm1.vms.remove(vm1);
+                    updateResource(vm1, pm1, increase);
+                    pm2.vms.add(vm1);
+                    vm1.setPmNo(pm2.getNo());
+                    updateResource(vm1, pm2, decrease);
+                } else {
+                    DataCenterFactory.print.println("Migration Failed!");
+                }
+            } else {
+                DataCenterFactory.print.println("Migartion Finished......");
+                break;
+            }
         }
+
+//        pm1 = pmQueue.get(0);
+//        pm2 = pmQueue.get(size - 1);
+//        if(pm1.getTotalCapacityMakespan() - pm2.getTotalCapacityMakespan() > threshold){
+//            vm1 = pm1.vms.get(0);
+//            if(checkResourceAvailble(vm1, pm2)){
+//                pm1.vms.remove(vm1);
+//                updateResource(vm1, pm1, increase);
+//                pm2.vms.add(vm1);
+//                vm1.setPmNo(pm2.getNo());
+//                updateResource(vm1, pm2, decrease);
+//                reallocateVm(pmQueue);
+//            }else{
+//                DataCenterFactory.print.println("Migration Failed!");
+//            }
+//        }else{
+//            DataCenterFactory.print.println("Migartion Finished......");
+//        }
     }
 }
 

@@ -99,8 +99,6 @@ public class CreateVM implements RWCreateVM{
 //			System.out.println(l_arrayPorba[i]);
 //		}
 
-
-		
 		/*
 		 * Producing VM requests
 		 * Producing VM type, start time, end time in order,

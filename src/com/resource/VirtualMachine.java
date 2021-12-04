@@ -9,8 +9,7 @@ import com.specification.VmInfo;
  */
 
 //继承至Server对象且实现comparable接口用于自定义vm排序
-public class VirtualMachine extends Server implements
-        Comparable<VirtualMachine> {
+public class VirtualMachine extends Server implements Comparable<VirtualMachine> {
 
     private int startTime;
     private int endTime;
@@ -36,9 +35,7 @@ public class VirtualMachine extends Server implements
         this.vmType = vmType;
     }
 
-    public int getStartTime() {
-        return startTime;
-    }
+    public int getStartTime() { return startTime; }
 
     public void setStartTime(int startTime) {
         this.startTime = startTime;
@@ -52,9 +49,8 @@ public class VirtualMachine extends Server implements
         this.endTime = endTime;
     }
 
-    public int getVmDuration() {
-        return endTime - startTime;
-    }
+    //任务时长
+    public int getVmDuration() { return endTime - startTime; }
 
     public float getPowerConsumption() {
         return powerConsumption;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
+import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateVM;
 import com.generaterequest.CreateVMByEndTime;
@@ -51,7 +52,7 @@ public class EnergySavingEDF extends OfflineAlgorithm{
 	}
     
 	@Override
-    public void createVM(LoadBalanceFactory lbf) {
+    public void createVM(DataCenterFactory lbf) {
 		lbf.createVM(new CreateVMByEndTime(new CreateVM()));
     }
 	/**

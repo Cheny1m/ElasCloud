@@ -77,9 +77,18 @@ public class CalMakespan extends ComparisonIndex{
 
 	private void calQueueMakespan(ArrayList<PhysicalMachine> pq1){
 		for(int i = 0; i < pq1.size(); i++){
-			if(pq1.get(i).getAvgUtility() > makespan){
-				makespan = pq1.get(i).getAvgUtility();
-			}
+//		if(pq1.get(i).getAvgUtility() > makespan){
+//			makespan = pq1.get(i).getAvgUtility();
+//		}
+
+		if(pq1.get(i).getTotalMakespan() > makespan){
+			makespan = pq1.get(i).getTotalMakespan();
+		}
+
+//			if(pq1.get(i).getAvgUtility() * pq1.get(i).getTotalTime() > makespan){
+//				//makespan = pq1.get(i).getTotalMakespan();
+//				makespan = pq1.get(i).getAvgUtility() * pq1.get(i).getTotalTime();
+//			}
 		}
 	}
 	

@@ -1,4 +1,4 @@
-#Wed Dec 01 20:44:06 CST 2021
-StartTime=50
-MinSpan=100
+#Sat Dec 04 11:42:02 CST 2021
+StartTime=288
+MinSpan=96
 RequestNum=100

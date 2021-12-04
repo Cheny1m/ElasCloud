@@ -55,10 +55,12 @@ public class CreateVMByPorcessTime{
 		//!!!!!!!!!!!!!Never forget that again!!!!!!!!!!!!!!
 		StringBuilder sb1 = new StringBuilder();
 		for(VmRequest vr: vmRequest){
-			sb1.append(vr.getNo() + " " + vr.getStartTime() 
-					+" " + vr.getEndTime() + " " + vr.getVmType() + "\n");
+			sb1.append(vr.getNo() + " " + vr.getStartTime() +" " + vr.getEndTime() + " " + vr.getVmType() + "\n");
+//			sb1.append(vr.getNo() + " " + vr.getStartTime()
+//					+" " + vr.getEndTime() + " " + vr.getVmType() + "\n");
 		}
-		//System.out.println(sb1);
+		System.out.println("按最长CM排序后的任务如下：");
+		System.out.println(sb1);
 		return sb1;
 	}
 	public void writeToTxt(StringBuilder sb){

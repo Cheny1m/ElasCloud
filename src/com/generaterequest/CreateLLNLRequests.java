@@ -77,7 +77,7 @@ public class CreateLLNLRequests implements RWCreateVM{
 										//as you want, but should be less than 
 										//128662 according to the LLNL original log file
 		
-		final long timeSlots = 60;   //In the LLNL original log file, the start time is in
+		final long timeSlots = 300;   //In the LLNL original log file, the start time is in
 									 //seconds, the time should be divided by this value to 
 									// get the time slots as we defined, here assumed 300sec(5 mins) a slot  
 		
@@ -87,9 +87,12 @@ public class CreateLLNLRequests implements RWCreateVM{
 									//percentage of resource it needs
 		long requestID = 0;
 		long startTime, endTime;
+		//处理器数量（容量需求）
 		float resourcePercent;
 		int pmType;
-		long benchmark = 201800/timeSlots + 7000;;
+		//基准值？
+		//long benchmark = 201800/timeSlots + 7000;
+		long benchmark = 690; //第一个vm的请求时间除以定义的时间间隙300   ；207147/300;
 		
 		try{
 			BufferedReader in = new BufferedReader(new FileReader(
@@ -97,11 +100,10 @@ public class CreateLLNLRequests implements RWCreateVM{
 			try{
 				
 				String s;
-				//Eliminate the influence of ineffective first 20 lines
-				for(int i = 0; i <2522 ; i++){
+				//Eliminate the influence of ineffective first 22 lines； 源程序是2522
+				for(int i = 0; i <22 ; i++){
 					in.readLine();
 				}
-				
 				while((s = in.readLine()) != null && lines < requestNumber){
 					//lineContent[1] is ID, positive number start from 1,
 					//lineContent[2] is start time in seconds
@@ -109,34 +111,34 @@ public class CreateLLNLRequests implements RWCreateVM{
 					//lineContent[9] is number of processors needed about 0~
 					String lineContent[] =  s.split("\\s++");
 					//sb.append(line[0]+" "+ line[1]+" "+line[2]+" "+line[4]);
-					startTime = Long.parseLong(lineContent[2])/timeSlots ; //Convert type and 
-																		//divide time slots as defined
-					endTime = startTime + Long.parseLong(lineContent[4])/timeSlots+1; //In the original file, this parameter
-																				 //represents duration
-																					//Since duration maybe less than 300s,
-					if(endTime - startTime >= 30 && Long.parseLong(lineContent[2]) != -1) {														//end time should +1 at end
+					//保证starttime不是非法时间
+					if(Long.parseLong(lineContent[2]) > 0  ) {	//end time should +1 at end
+						startTime = Long.parseLong(lineContent[2])/timeSlots ; //Convert type and divide time slots as defined
+						endTime = startTime + Long.parseLong(lineContent[4])/timeSlots +1; //In the original file, this parameter represents duration Since duration maybe less than 300s,
 						lines++;
 						resourcePercent = Float.parseFloat(lineContent[8]);
 					
-					if(resourcePercent <= 0)  resourcePercent = 0; //Avoid some bad requests in log file like -1 resourcePercetage
-					if(resourcePercent >=0 && resourcePercent < 8) pmType = 1; //pmType should be defined earlier 
-					else if (resourcePercent >= 8 && resourcePercent < 16) pmType =2; 
-					else if (resourcePercent >= 16 && resourcePercent < 24) pmType =3; 
-					else if (resourcePercent >= 24 && resourcePercent < 100) pmType =1; 
-					else if (resourcePercent >= 100 && resourcePercent < 200) pmType =2;  
-					else if (resourcePercent >= 200 && resourcePercent < 300) pmType =3; 
-					else if  (resourcePercent >= 300 && resourcePercent < 400) pmType = 1;
-					 else pmType = 2;
-					 sb.append(requestID++ +" "+ (startTime-benchmark)+" "+(endTime-benchmark)+" "+pmType+"\n");
+						if(resourcePercent <= 0)  resourcePercent = 0; //Avoid some bad requests in log file like -1 resourcePercetage
+						if(resourcePercent >=0 && resourcePercent < 8) pmType = 1; //pmType should be defined earlier
+						else if (resourcePercent >= 8 && resourcePercent < 16) pmType =2;
+						else if (resourcePercent >= 16 && resourcePercent < 24) pmType =3;
+						else if (resourcePercent >= 24 && resourcePercent < 100) pmType =1;
+						else if (resourcePercent >= 100 && resourcePercent < 200) pmType =2;
+						else if (resourcePercent >= 200 && resourcePercent < 300) pmType =3;
+						else if  (resourcePercent >= 300 && resourcePercent < 400) pmType = 1;
+						else pmType = 2;
+						sb.append(requestID++ +" "+ (startTime-benchmark)+" "+(endTime-benchmark)+" "+pmType+"\n");
 					 
-					 sb1.append(pmType+" "+(startTime-benchmark)+" "+(endTime-benchmark)+"\n");
+						sb1.append(pmType+" "+(startTime-benchmark)+" "+(endTime-benchmark)+"\n");
 					 
 					}
 				}
 			}finally{
+				System.out.println("VMID/StartTime/EndTime/PMType");
 				 System.out.println(sb);
-				 System.out.println("------------------");
-				 System.out.println(sb1);
+				 System.out.println("-----------------------------");
+				//System.out.println("PMType/StartTime/EndTime");
+				 //System.out.println(sb1);
 					in.close();
 				}
 			}catch(IOException e){

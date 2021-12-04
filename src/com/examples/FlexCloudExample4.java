@@ -31,7 +31,7 @@ public class FlexCloudExample4 {
 			ofa = (OfflineAlgorithm)algorithmIterator.next();
 			LoadBalanceFactory.print.println(ofa.getDescription());
 			lbf = new LoadBalanceFactory();
-			ofa.createVM(lbf);
+			//ofa.createVM(lbf);
 			lbf.bootPM(new PMBootor());
 			lbf.generateReuquest();
 			lbf.allocate(ofa);//Allocated PM ID

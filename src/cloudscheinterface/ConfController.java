@@ -8,6 +8,7 @@ import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
 import com.generaterequest.CreateVM;
+import com.generaterequest.CreateVMByPorcessTime;
 import com.generaterequest.PMBootor;
 import com.iterator.AlgorithmItem;
 import com.iterator.ComparisonIndex;
@@ -54,7 +55,9 @@ public class ConfController {
         //Part of excel operation are coded in CalAverageUtility.java
 
         dcf.iniPrinter();
-        dcf.createVM(new CreateVM());
+        //dcf.createVM(new CreateVM());
+        dcf.createVM(new CreateLLNLRequests());
+
         //当在在线算法的迭代器中存有在线算法时
         while (algorithmIterator.hasNext()) {
             oa = (OnlineAlgorithm) algorithmIterator.next();
@@ -72,13 +75,16 @@ public class ConfController {
             setDataSet(dcf.getIndexValues(), oa.getDescription(), dcf.getIndexNames());
             DataCenterADDJFrame.algorithmDataCenterMap.put(oa.getDescription(), dcf.getArr_dc());
         }
-        
-        dcf.iniPrinter();
+
         while (algorithmIterator2.hasNext()) {
             //May add reflective method in the future.
             ofa = (OfflineAlgorithm) algorithmIterator2.next();
             DataCenterFactory.print.println(ofa.getDescription());
             selectedAlgorithms.add(ofa.getDescription());
+
+            //不同于在线算法
+            //dcf = new DataCenterFactory();
+            ofa.createVM(dcf);
 
             dcf.iniDataCenters();
             dcf.generateReuquest();
