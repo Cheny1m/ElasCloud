@@ -157,8 +157,7 @@ public class LoadBalanceFactory implements DataCenterImp {
 			pmQueueTwo.add(pm);
 		}
 
-		for (int i = PMNum.get(0) + PMNum.get(1); i < PMNum.get(0)
-				+ PMNum.get(1) + PMNum.get(2); i++) {
+		for (int i = PMNum.get(0) + PMNum.get(1); i < PMNum.get(0) + PMNum.get(1) + PMNum.get(2); i++) {
 			pm = new PhysicalMachine(i, 3);
 			pmQueueThree.add(pm);
 		}

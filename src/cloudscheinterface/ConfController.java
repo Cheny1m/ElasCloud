@@ -4,6 +4,7 @@
  */
 package cloudscheinterface;
 
+import com.comparedindex.*;
 import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
@@ -13,9 +14,12 @@ import com.generaterequest.PMBootor;
 import com.iterator.AlgorithmItem;
 import com.iterator.ComparisonIndex;
 import com.iterator.Iterator;
+import com.resource.VirtualMachine;
 import com.schedule.loadbalance.OfflineAlgorithm;
 import com.schedule.loadbalance.OnlineAlgorithm;
 import java.util.ArrayList;
+import java.util.Comparator;
+
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
@@ -26,8 +30,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
  */
 public class ConfController {
 
-	
-    DataCenterFactory dcf = new DataCenterFactory();
+    public static DataCenterFactory  dcf = new DataCenterFactory();
     ArrayList<Boolean> selectedIndices = new ArrayList<Boolean>();
     ArrayList<String> selectedAlgorithms = new ArrayList<String>();
     
@@ -43,61 +46,87 @@ public class ConfController {
     DefaultCategoryDataset dataset1 = new DefaultCategoryDataset(); //Show the ratio of some indices with large values
     String distribution;
 
-    public ConfController() {
-    }
+    //记录每个算法每次的每个指标的值
+    float[][] Result = new float[5][6];
+
+    public ConfController() { }
 
     public void run() {
 
-        //生成两个迭代器类型
-        algorithmIterator = ai.createIterator();
-        algorithmIterator2 = ai.createOfflineIterator();
-        clearPreviousData();
-        //Part of excel operation are coded in CalAverageUtility.java
+        for(int i = 0;i < 1 ; i++){
 
-        dcf.iniPrinter();
-        //dcf.createVM(new CreateVM());
-        dcf.createVM(new CreateLLNLRequests());
+            //生成两个迭代器类型
+            algorithmIterator = ai.createIterator();
+            algorithmIterator2 = ai.createOfflineIterator();
+            clearPreviousData();
+            //Part of excel operation are coded in CalAverageUtility.java
 
-        //当在在线算法的迭代器中存有在线算法时
-        while (algorithmIterator.hasNext()) {
-            oa = (OnlineAlgorithm) algorithmIterator.next();
-            DataCenterFactory.print.println(oa.getDescription());
-            selectedAlgorithms.add(oa.getDescription());
+            dcf.iniPrinter();
 
-            dcf.iniDataCenters();
-            dcf.generateReuquest();
-            //分配
-            dcf.allocate(oa);
-            //获取对比条件
-            confSelectedIndices(selectedIndices);
+            //dcf.createVM(new CreateVM());
+            dcf.createVM(new CreateLLNLRequests());
 
-            dcf.showIndex();
-            setDataSet(dcf.getIndexValues(), oa.getDescription(), dcf.getIndexNames());
-            DataCenterADDJFrame.algorithmDataCenterMap.put(oa.getDescription(), dcf.getArr_dc());
-        }
+            //当在在线算法的迭代器中存有在线算法时
+            int j = 0;
+            while (algorithmIterator.hasNext()) {
+                oa = (OnlineAlgorithm) algorithmIterator.next();
+                DataCenterFactory.print.println(oa.getDescription());
+                selectedAlgorithms.add(oa.getDescription());
 
-        while (algorithmIterator2.hasNext()) {
-            //May add reflective method in the future.
-            ofa = (OfflineAlgorithm) algorithmIterator2.next();
-            DataCenterFactory.print.println(ofa.getDescription());
-            selectedAlgorithms.add(ofa.getDescription());
+                dcf.iniDataCenters();
+                dcf.generateReuquest();
+                //分配
+                dcf.allocate(oa);
+                //获取对比条件
+                confSelectedIndices(selectedIndices);
 
-            //不同于在线算法
-            //dcf = new DataCenterFactory();
-            ofa.createVM(dcf);
+                dcf.showIndex();
+                setDataSet(dcf.getIndexValues(), oa.getDescription(), dcf.getIndexNames());
+                DataCenterADDJFrame.algorithmDataCenterMap.put(oa.getDescription(), dcf.getArr_dc());
 
-            dcf.iniDataCenters();
-            dcf.generateReuquest();
+                //获取本次指标值
+                Result[j][0] += CalAverageUtility.wholeSystemAverageUtility;
+                Result[j][1] += CalImbalanceDegree.wholeSystemImbalanceDegree;
+                Result[j][2] += CalMakespan.wholeSystemMakespan;
+                Result[j][3] += CalCapacityMakespan.wholeSystemCapacityMakespan;
+                Result[j][4] += CalTotalTurnTime.wholeSystemTurnonTime;
+                Result[j][5] += CalCombined.CombinedResults;
+                CalAverageUtility.wholeSystemAverageUtility = 0;
+                CalImbalanceDegree.wholeSystemImbalanceDegree = 0;
+                CalMakespan.wholeSystemMakespan = 0 ;
+                CalCapacityMakespan.wholeSystemCapacityMakespan = 0;
+                CalTotalTurnTime.wholeSystemTurnonTime = 0;
+                CalCombined.CombinedResults = 0;
+                j++;
+            }
 
-            //分配
-            dcf.allocate(ofa);
-            //获取对比条件
-            confSelectedIndices(selectedIndices);
+            while (algorithmIterator2.hasNext()) {
+                //May add reflective method in the future.
+                ofa = (OfflineAlgorithm) algorithmIterator2.next();
+                DataCenterFactory.print.println(ofa.getDescription());
+                selectedAlgorithms.add(ofa.getDescription());
 
-            dcf.showIndex();
-            setDataSet(dcf.getIndexValues(), ofa.getDescription(), dcf.getIndexNames());
-            DataCenterADDJFrame.algorithmDataCenterMap.put(oa.getDescription(), dcf.getArr_dc());
-            
+                //不同于在线算法
+                //dcf = new DataCenterFactory();
+
+                //ofa.createVM(dcf);
+                dcf.createVM((new CreateLLNLRequests()));
+                //dcf.createVM(new CreateVM());
+
+                dcf.iniDataCenters();
+                dcf.generateReuquest();
+
+                //分配
+                dcf.allocate(ofa);
+                //获取对比条件
+                confSelectedIndices(selectedIndices);
+
+                CalMakespan.makespanSum = 0;
+                dcf.showIndex();
+                setDataSet(dcf.getIndexValues(), ofa.getDescription(), dcf.getIndexNames());
+                DataCenterADDJFrame.algorithmDataCenterMap.put(ofa.getDescription(), dcf.getArr_dc());
+                //System.out.println("总开机时间："+ CalMakespan.makespanSum);
+
 //            lbf = new LoadBalanceFactory();
 //            new CreateLLNLRequests();
 //            ofa.createVM(lbf); //Different with online iterator
@@ -110,14 +139,41 @@ public class ConfController {
 //            confSelectedIndices(selectedIndices);
 //            lbf.showIndex();
 //            setDataSet(lbf.getIndexValues(), ofa.getDescription(), lbf.getIndexNames());
-            
-			
+
+                //获取本次指标值
+                Result[j][0] += CalAverageUtility.wholeSystemAverageUtility;
+                Result[j][1] += CalImbalanceDegree.wholeSystemImbalanceDegree;
+                Result[j][2] += CalMakespan.wholeSystemMakespan;
+                Result[j][3] += CalCapacityMakespan.wholeSystemCapacityMakespan;
+                Result[j][4] += CalTotalTurnTime.wholeSystemTurnonTime;
+                Result[j][5] += CalCombined.CombinedResults;
+                CalAverageUtility.wholeSystemAverageUtility = 0;
+                CalImbalanceDegree.wholeSystemImbalanceDegree = 0;
+                CalMakespan.wholeSystemMakespan = 0 ;
+                CalCapacityMakespan.wholeSystemCapacityMakespan = 0;
+                CalTotalTurnTime.wholeSystemTurnonTime = 0;
+                CalCombined.CombinedResults = 0;
+                j++;
+
+
+            }
+
+            DataCenterFactory.print.closeFile();
+
+            //new DrawResults(getDataSet());
+            //new DrawResults(getDataset1(), "LargeValue");
+
+
         }
 
-        DataCenterFactory.print.closeFile();
-
-        new DrawResults(getDataSet());
-        new DrawResults(getDataset1(), "LargeValue");
+        for(int i = 0;i < 5;i++){
+            System.out.println("算法" + i +":");
+            for(int j = 0; j < 6 ; j++){
+                System.out.println(Result[i][j]/1);
+                //归0
+                Result[i][j] = 0;
+            }
+        }
     }
 
     public void confSelectedAlgorithm(ArrayList<Boolean> selectedAlgortihm) {
@@ -134,6 +190,10 @@ public class ConfController {
         ai.setLPT(selectedAlgortihm.get(index++));
         ai.setMIG(selectedAlgortihm.get(index++));
         ai.setRR(selectedAlgortihm.get(index++));
+        ai.setLey(selectedAlgortihm.get(index++));
+        ai.setFFD(selectedAlgortihm.get(index++));
+        ai.setLeynom(selectedAlgortihm.get(index++));
+        ai.setNewley(selectedAlgortihm.get(index++));
     }
 
     public void confSelectedIndices(ArrayList<Boolean> selectedIndices) {
@@ -153,6 +213,8 @@ public class ConfController {
         dcf.getIndexItem().setEffectivePM(selectedIndices.get(index++));
         dcf.getIndexItem().setEnergyConsumption(selectedIndices.get(index++));
         dcf.getIndexItem().setRejectedVMNum(selectedIndices.get(index++));
+        dcf.getIndexItem().setTotalTurnTime(selectedIndices.get(index++));
+        dcf.getIndexItem().setCombined(selectedIndices.get(index++));
 
             //lbf.getIndexItem().setSkew_capaciy_makespan(selectedIndices.get(index++));
 //        lbf.getIndexItem().setEffectivePM(selectedIndices.get(index++));
@@ -246,3 +308,4 @@ public class ConfController {
         return distribution;
     }
 }
+

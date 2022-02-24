@@ -1,84 +1,81 @@
 package com.schedule.loadbalance;
 
-import com.datacenter.DataCenter;
-import com.datacenter.DataCenterFactory;
-import com.datacenter.LoadBalanceFactory;
-import com.resource.PhysicalMachine;
-import com.resource.VirtualMachine;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Random;
-import javax.swing.JOptionPane;
 
-/**
- * IW algorithm is Integrated Weights for priority best nodes algorithm. The
- * goal function is P = w1*(LeftCPU - ReqCpu) + w2*(LeftMem - ReqMem) +
- * w3*(LeftSto - ReqSto) Based on the goal function P, algorithm would find the
- * PM with the lowest P value, and according to the function, PM numbers can be
- * restricted. Since for IW algorithm, a load threshold would be set for PMs. If
- * the threshold is surpassed, more PMs would be put into use.
- * 
- * @author Minxian
- * 
+import com.datacenter.DataCenter;
+import com.datacenter.DataCenterFactory;
+import com.datacenter.LoadBalanceFactory;
+import com.generaterequest.CreateLLNLRequests;
+import com.generaterequest.CreateVM;
+import com.generaterequest.CreateVMByPorcessTime;
+import com.generaterequest.PMBootor;
+import com.resource.PhysicalMachine;
+import com.resource.VirtualMachine;
+import com.schedule.loadbalance.*;
+import javax.swing.*;
+/*
+@author Yueming Chen
  */
-public class IWAlgorithm extends OnlineAlgorithm {
 
+public class IWAlgorithm extends OnlineAlgorithm {
 	int dataCenterIndex; // Selected data center ID
 	int rackIndex; // Selected rack ID
-	int index; // Allocated PM ID
+	int index; 	//Allocated PM ID
 	int currentTime = 0;
-	int vmId = 0; // vmId is the the id in sorted in vmQueue
+	int vmId = 0;  	//vmId is the id in sorted in vmQueue
 	int pmTotalNum;
 	int increase = 1;
 	int decrease = -1;
 	int triedAllocationTimes = 0;
-	Random random = new Random();
 	VirtualMachine vm;
+
+	float lowbound = 0.3f;
+	int NumbofMigration;
+	//利用数据中心的方式
 	ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
 	ArrayList<DataCenter> arr_dc = new ArrayList<DataCenter>();
+
 	ArrayList<VirtualMachine> deleteQueue = new ArrayList<VirtualMachine>();
+
 	int pmQueueOneSize;
 	int pmQueueTwoSize;
 	int pmQueueThreeSize;
 
-	static final float CPUWEIGHT = 0.4f;
-	static final float MEMWEIGHT = 0.3f;
-	static final float STORAGEWEIGHT = 0.3f;
-	static final float PMTHRESHOLD = 1.0f;
-
-	public IWAlgorithm() {
-
+	public IWAlgorithm(){
+		//	System.out.println(getDescription());
 	}
 
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return description + "-IW Algorithm-----";
+		return description + "-GreedyBucketMigration Algorithm---";
 	}
 
 	/**
 	 * Generate the random index and try to allocate VM to the PM with generated
 	 * index.
 	 */
+
 	@Override
-	public void allocate(ArrayList<VirtualMachine> vmQueue,
-			ArrayList<DataCenter> p_arr_dc) {
+	public void allocate(ArrayList<VirtualMachine> p_vmQueue, ArrayList<DataCenter> p_arr_dc) {
+		// TODO Auto-generated method stub
 		DataCenterFactory.print.println(getDescription());
-		this.vmQueue = vmQueue;
+
+
+		this.vmQueue = p_vmQueue;
 		this.arr_dc = p_arr_dc;
-		pmQueueOneSize = arr_dc.get(dataCenterIndex).getArr_lbf()
-				.get(rackIndex).getPmQueueOne().size();
-		pmQueueTwoSize = arr_dc.get(dataCenterIndex).getArr_lbf()
-				.get(rackIndex).getPmQueueTwo().size();
-		pmQueueThreeSize = arr_dc.get(dataCenterIndex).getArr_lbf()
-				.get(rackIndex).getPmQueueThree().size();
-		// Dangerous codes
+
+		pmQueueOneSize = arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne().size();
+		pmQueueTwoSize = arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo().size();
+		pmQueueThreeSize = arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree().size();
+
 		pmTotalNum = pmQueueOneSize + pmQueueTwoSize + pmQueueThreeSize;
 		int allocatedDataCenterID;
 		int allocatedRackID;
 
+		DataCenterFactory.print.println("===currentTime:" + currentTime + "===");
 		while (!vmQueue.isEmpty()) {
 			if (currentTime >= vmQueue.get(vmId).getStartTime()) {
 				vm = vmQueue.get(vmId);
@@ -89,61 +86,43 @@ public class IWAlgorithm extends OnlineAlgorithm {
 				continue;
 			}
 
-			Collections.sort(arr_dc, new SortByDataCenterWeight());
+			//随机寻找pm分配
+			//对数据中心按CM排序
+			Collections.sort(arr_dc, new SortByDataCenterCapacityMakespan());
 			dataCenterIndex = 0;
 			allocatedDataCenterID = arr_dc.get(dataCenterIndex).getD_id();
 
-			Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf(),
-					new SortByRackWeight());
+			//机架级别的排序
+			Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf(), new SortByRackCapacityMakespan());
 			rackIndex = 0;
-			allocatedRackID = arr_dc.get(dataCenterIndex).getArr_lbf()
-					.get(rackIndex).getLbf_ID();
+			allocatedRackID = arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getLbf_ID();
 
+			index %= pmTotalNum;
 			if (vm.getVmType() > 0 && vm.getVmType() < 4) {
-				Collections.sort(
-						arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex)
-								.getPmQueueOne(), new SortByPMWeight(vm));
-				allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc
-						.get(dataCenterIndex).getArr_lbf().get(rackIndex)
-						.getPmQueueOne().get(index));
+				Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne(),new SortByPMID());
+				allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne().get(index));
 			} else if (vm.getVmType() >= 4 && vm.getVmType() < 7) {
-				Collections.sort(
-						arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex)
-								.getPmQueueTwo(), new SortByPMWeight(vm));
-				allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc
-						.get(dataCenterIndex).getArr_lbf().get(rackIndex)
-						.getPmQueueTwo().get(index));
+				allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo().get(index));
 			} else {
-				Collections.sort(
-						arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex)
-								.getPmQueueThree(), new SortByPMWeight(vm));
-				allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc
-						.get(dataCenterIndex).getArr_lbf().get(rackIndex)
-						.getPmQueueThree().get(index));
+				allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree().get(index));
 			}
 		}
-		sortAllPMsInOrder(p_arr_dc);
 		DataCenterFactory.print.println(DataCenterFactory.FINISHEDINFO);
-		DataCenterFactory.print.println("The number of used PM is: "
-				+ getEffectivePMsNumber(p_arr_dc));
 	}
 
 	/**
-	 * Key scheduling procedure for algorithm. Main procedures are as below: 1.
-	 * Check whether resource of a PM is available. 2. If resource available,
-	 * output success information. Put the VM to deleteQueue, and remove that VM
-	 * from vmQueue. 3. Update available resource of PM.
-	 * 
+	 * Key scheduling procedure for algorithm. Main procedures are as below:
+	 * 1. Check whether resource of a PM is available.
+	 * 2. If resource available, output success information. Put the VM to deleteQueue, and remove that VM from vmQueue.
+	 * 3. Update available resource of PM.
+	 *
 	 * @param vm2
 	 * @param pm2
 	 */
-	private void allocateVm(int dataCenterNo, int rackNo, VirtualMachine vm2,
-			PhysicalMachine pm2) {
+	private void allocateVm(int dataCenterNo, int rackNo, VirtualMachine vm2, PhysicalMachine pm2) {
 		// TODO Auto-generated method stub
 		if (checkResourceAvailble(vm2, pm2)) {
-			DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " "
-					+ "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM"
-					+ pm2.getNo());
+			DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " " + "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM" + pm2.getNo());
 			deleteQueue.add(vm2);
 			vmQueue.remove(vm2);
 			pm2.vms.add(vm2);
@@ -153,14 +132,13 @@ public class IWAlgorithm extends OnlineAlgorithm {
 
 			updateResource(vm2, pm2, decrease);
 
-			vmId++;
+			vmId = 0;
 			triedAllocationTimes = 0;
 			checkVmIdAvailable();
 			index = 0;
 		} else {
 			if (triedAllocationTimes == pmTotalNum) {
-				System.out
-						.println("VM number is too large, PM number is not enough");
+				System.out.println("VM number is too large, PM number is not enough");
 				JOptionPane.showMessageDialog(null,
 						"VM number is too large, PM number is not enough",
 						"Error", JOptionPane.OK_OPTION);
@@ -181,30 +159,29 @@ public class IWAlgorithm extends OnlineAlgorithm {
 			currentTime++;
 			vmId = 0;
 			triedAllocationTimes = 0;
-			DataCenterFactory.print.println("===currentTime:" + currentTime
-					+ "===");
+			DataCenterFactory.print.println("===currentTime:" + currentTime + "===");
+			//先对已经分配的再分配
+			DataCenterFactory.print.println("Re-allocationlowUtilPM......");
+			MiglowUtilPM(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne(),currentTime);
+			//在删除到期VM
 			processDeleteQueue(currentTime, deleteQueue);
 		}
 	}
 
 	/**
 	 * Check whether the left resource are available
-	 * 
 	 * @param vm3
 	 * @param pm3
 	 * @return
 	 */
 	private boolean checkResourceAvailble(VirtualMachine vm3,
-			PhysicalMachine pm3) {
+										  PhysicalMachine pm3) {
 		boolean allocateSuccess = true;
 		boolean oneSlotAllocation;
 		for (int t = vm3.getStartTime(); t < vm3.getEndTime(); t++) {
-			oneSlotAllocation = (pm3.resource.get(t).getCpuUtility()
-					* PMTHRESHOLD > vm3.getCpuTotal())
-					&& (pm3.resource.get(t).getMemUtility() * PMTHRESHOLD > vm3
-							.getMemTotal())
-					&& (pm3.resource.get(t).getStoUtility() * PMTHRESHOLD > vm3
-							.getStorageTotal());
+			oneSlotAllocation = (pm3.resource.get(t).getCpuUtility() > vm3.getCpuTotal())
+					&& (pm3.resource.get(t).getMemUtility() > vm3.getMemTotal())
+					&& (pm3.resource.get(t).getStoUtility() > vm3.getStorageTotal());
 			allocateSuccess = allocateSuccess && oneSlotAllocation;
 
 			if (false == allocateSuccess) {
@@ -216,15 +193,13 @@ public class IWAlgorithm extends OnlineAlgorithm {
 	}
 
 	/**
-	 * Update the available resource. When parameter 3 equals to increase,
-	 * available resource would increased, else resource would be decreased.
-	 * 
-	 * @param vm4s
+	 * Update the available resource. When parameter 3 equals to increase, available resource would increased, else resource would be decreased.
+	 * @param vm4
 	 * @param pm4
 	 * @param incOrDec
 	 */
 	private void updateResource(VirtualMachine vm4, PhysicalMachine pm4,
-			int incOrDec) {
+								int incOrDec) {
 		if (incOrDec == decrease) {
 			for (int t = vm4.getStartTime(); t < vm4.getEndTime(); t++) {
 				pm4.resource.get(t)
@@ -264,15 +239,13 @@ public class IWAlgorithm extends OnlineAlgorithm {
 	}
 
 	/**
-	 * After the VM has been added to deleteQueue, if end time comes, that VM
-	 * should be removed from deleteQueue. Available resource should also be
-	 * updated.
-	 * 
+	 * After the VM has been added to deleteQueue, if end time comes, that VM should
+	 * be removed from deleteQueue. Available resource should also be updated.
 	 * @param p_currentTime
 	 * @param p_deleteQueue
 	 */
 	private void processDeleteQueue(int p_currentTime,
-			ArrayList<VirtualMachine> p_deleteQueue) {
+									ArrayList<VirtualMachine> p_deleteQueue) {
 		// TODO Auto-generated method stub
 		VirtualMachine vm5;
 		int pmNo;
@@ -304,216 +277,79 @@ public class IWAlgorithm extends OnlineAlgorithm {
 									.get(rackNo)
 									.getPmQueueThree()
 									.get(pmNo - pmQueueOneSize
-											- pmQueueThreeSize), increase);
+											- pmQueueTwoSize), increase);
 				}
 				p_deleteQueue.remove(vm5);
 			}
 		}
 	}
 
-	/**
-	 * Sorting the PM sequences to be the initial sequence.
-	 * 
-	 * @param p_arr_dc
-	 */
-	public void sortAllPMsInOrder(ArrayList<DataCenter> p_arr_dc) {
-		Collections.sort(p_arr_dc, new SortByDataCenterID());
-		for (DataCenter dc : p_arr_dc) {
-			Collections.sort(dc.getArr_lbf(), new SortByRackID());
-			for (LoadBalanceFactory lbf : dc.getArr_lbf()) {
-				Collections.sort(lbf.getPmQueueOne(), new SortByPMID());
-				Collections.sort(lbf.getPmQueueTwo(), new SortByPMID());
-				Collections.sort(lbf.getPmQueueThree(), new SortByPMID());
-			}
-		}
-	}
+	public void MiglowUtilPM(ArrayList<PhysicalMachine> pmQueue,int time){
+		PhysicalMachine pm1, pm2;
+		VirtualMachine vm1;
+		boolean MigTorF = false;
+		for (int i = 0 ; i < pmQueue.size(); i++) {
+			//当前利用率从小到大
+			Collections.sort(pmQueue, new SortByCurrentUtility(time));
+			if (pmQueue.get(i).getCurrentUtility(time) > 0 && pmQueue.get(i).getCurrentUtility(time) <= lowbound) {
+				//如果有利用率小的
+				for (int j = pmTotalNum - 1; j > i; j--) {
+					if (arr_dc.get(0).getArr_lbf().get(0).getPmQueueOne().get(j).getCurrentUtility(time) <= 1 - lowbound) {
+						pm1 = pmQueue.get(i);
+						pm2 = pmQueue.get(j);
+						for(int k =0 ;k<pm1.vms.size();k++){
+							vm1 = pm1.vms.get(k);
+							if(vm1.getStartTime()<=time && vm1.getEndTime()>time){
+								//将剩下的区间迁移
+								VirtualMachine vm2 = new VirtualMachine(vm1.getVmNo(),time,vm1.getEndTime(),vm1.getVmType());
+								//原来的部分
+								VirtualMachine vm3= new VirtualMachine(vm1.getVmNo(),vm1.getStartTime(),time,vm1.getVmType());
+								if (checkResourceAvailble(vm2, pm2)) {
+									NumbofMigration++;
+									//指针更新
+									k--;
+									//移除原来的VM
+									pm1.vms.remove(vm1);
+									updateResource(vm1, pm1, increase);
+									deleteQueue.remove(vm1);
+									//添加
+									pm1.vms.add(vm3);
+									//deleteQueue.add(vm3);
+									vm3.setPmNo(pm1.getNo());
+									vm3.setRackNo(0);
+									vm3.setDataCenterNo(0);
+									//updateResource(vm3, pm1, decrease);
+									pm2.vms.add(vm2);
+									deleteQueue.add(vm2);
+									vm2.setPmNo(pm2.getNo());
+									vm2.setRackNo(0);
+									vm2.setDataCenterNo(0);
+									updateResource(vm2, pm2, decrease);
 
-	public int getEffectivePMsNumber(ArrayList<DataCenter> p_arr_dc) {
-		int effectivePMsNumber = 0;
-		for (DataCenter dc : p_arr_dc) {
-			for (LoadBalanceFactory lbf : dc.getArr_lbf()) {
-				for (PhysicalMachine pm : lbf.getPmQueueOne()) {
-					if (pm.getAvgUtility() != 0) {
-						effectivePMsNumber++;
+									vmId = 0;
+									triedAllocationTimes = 0;
+									checkVmIdAvailable();
+									index = 0;
+								} else {
+									DataCenterFactory.print.println("Migration Failed!");
+								}
+							}
+						}
+						DataCenterFactory.print.println("This PM " + arr_dc.get(0).getArr_lbf().get(0).getPmQueueOne().get(j).getNo() + "Migration Finish!");
+						MigTorF = true;
+						break;
 					}
 				}
-				for (PhysicalMachine pm : lbf.getPmQueueTwo()) {
-					if (pm.getAvgUtility() != 0) {
-						effectivePMsNumber++;
-					}
-				}
-				for (PhysicalMachine pm : lbf.getPmQueueThree()) {
-					if (pm.getAvgUtility() != 0) {
-						effectivePMsNumber++;
-					}
-				}
-
 			}
+//			else{
+//				if(pmQueue.get(i).getCurrentUtility(time) != 0){
+//					DataCenterFactory.print.println("Migration Finish!");
+//					break;
+//				}
+//			}
 		}
-		return effectivePMsNumber;
-
+		if(MigTorF == true) DataCenterFactory.print.println("Migration Finish! 当前迁移总数为： " + NumbofMigration);
+		else DataCenterFactory.print.println("No PM need to be Migration!");
 	}
 
-	class SortByPMWeight implements Comparator<PhysicalMachine> {
-
-		VirtualMachine vm;
-
-		float pm1Weight = 0.0f;
-		float pm2Weight = 0.0f;
-
-		public SortByPMWeight(VirtualMachine vm) {
-			// TODO Auto-generated constructor stub
-			this.vm = vm;
-		}
-
-		@Override
-		public int compare(PhysicalMachine p_pm1, PhysicalMachine p_pm2) {
-			PhysicalMachine pm1 = p_pm1;
-			PhysicalMachine pm2 = p_pm2;
-			pm1Weight = IWAlgorithm.CPUWEIGHT
-					* (pm1.getCpuTotal() - vm.getCpuTotal())
-					+ IWAlgorithm.MEMWEIGHT
-					* (pm1.getMemTotal() - vm.getMemTotal())
-					+ IWAlgorithm.STORAGEWEIGHT
-					* (pm1.getStorageTotal() - vm.getStorage());
-			pm2Weight = IWAlgorithm.CPUWEIGHT
-					* (pm2.getCpuTotal() - vm.getCpuTotal())
-					+ IWAlgorithm.MEMWEIGHT
-					* (pm2.getMemTotal() - vm.getMemTotal())
-					+ IWAlgorithm.STORAGEWEIGHT
-					* (pm2.getStorageTotal() - vm.getStorage());
-
-			if (pm1Weight > pm2Weight) {
-				return 1;
-			}
-			return 0;
-		}
-	}
-
-	/**
-	 * Sort the data centers based on the weights, the PMs with lower weight
-	 * would be put in the back of arraylist.
-	 * 
-	 * @author Minxian
-	 * 
-	 */
-	class SortByDataCenterWeight implements Comparator<DataCenter> {
-
-		private float dc1Weight = 0.0f;
-		private float dc2Weight = 0.0f;
-
-		public SortByDataCenterWeight() {
-			// TODO Auto-generated constructor stub
-
-		}
-
-		@Override
-		public int compare(DataCenter p_dc1, DataCenter p_dc2) {
-			dc1Weight = 0.0f;
-			dc2Weight = 0.0f;
-
-			for (LoadBalanceFactory lbf : p_dc1.getArr_lbf()) {
-				for (PhysicalMachine pm : lbf.getPmQueueOne()) {
-					dc1Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-							+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-							+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-				}
-				for (PhysicalMachine pm : lbf.getPmQueueTwo()) {
-					dc1Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-							+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-							+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-				}
-				for (PhysicalMachine pm : lbf.getPmQueueThree()) {
-					dc1Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-							+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-							+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-				}
-			}
-
-			for (LoadBalanceFactory lbf : p_dc2.getArr_lbf()) {
-				for (PhysicalMachine pm : lbf.getPmQueueOne()) {
-					dc2Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-							+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-							+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-				}
-				for (PhysicalMachine pm : lbf.getPmQueueTwo()) {
-					dc2Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-							+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-							+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-				}
-				for (PhysicalMachine pm : lbf.getPmQueueThree()) {
-					dc2Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-							+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-							+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-				}
-			}
-
-			if (dc1Weight > dc2Weight) {
-				return 1;
-			}
-			return 0;
-		}
-	}
-
-	/**
-	 * Sort the data centers based on the weights, the PMs with lower weight
-	 * would be put in the back of arraylist.
-	 * 
-	 * @author Minxian
-	 * 
-	 */
-	class SortByRackWeight implements Comparator<LoadBalanceFactory> {
-
-		private float rack1Weight = 0.0f;
-		private float rack2Weight = 0.0f;
-
-		public SortByRackWeight() {
-			// TODO Auto-generated constructor stub
-
-		}
-
-		@Override
-		public int compare(LoadBalanceFactory p_lbf1, LoadBalanceFactory p_lbf2) {
-			rack1Weight = 0.0f;
-			rack2Weight = 0.0f;
-
-			for (PhysicalMachine pm : p_lbf1.getPmQueueOne()) {
-				rack1Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-						+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-						+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-			}
-			for (PhysicalMachine pm : p_lbf1.getPmQueueTwo()) {
-				rack1Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-						+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-						+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-			}
-			for (PhysicalMachine pm : p_lbf1.getPmQueueThree()) {
-				rack1Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-						+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-						+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-			}
-
-			for (PhysicalMachine pm : p_lbf2.getPmQueueOne()) {
-				rack2Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-						+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-						+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-			}
-			for (PhysicalMachine pm : p_lbf2.getPmQueueTwo()) {
-				rack2Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-						+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-						+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-			}
-			for (PhysicalMachine pm : p_lbf2.getPmQueueThree()) {
-				rack2Weight += IWAlgorithm.CPUWEIGHT * pm.getCpuTotal()
-						+ IWAlgorithm.MEMWEIGHT * pm.getMemTotal()
-						+ IWAlgorithm.STORAGEWEIGHT * pm.getStorageTotal();
-			}
-
-			if (rack1Weight > rack2Weight) {
-				return 1;
-			}
-			return 0;
-
-		}
-	}
 }

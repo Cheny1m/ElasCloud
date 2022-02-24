@@ -34,6 +34,7 @@ class VmRequest{
 	public int getVmType(){
 		return vmType;
 	}
+
 	
 	public int getProcessTime(){
 		return endTime - startTime;

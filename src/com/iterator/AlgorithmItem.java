@@ -3,15 +3,7 @@ package com.iterator;
 import java.util.ArrayList;
 
 import com.schedule.energysaving.*;
-import com.schedule.loadbalance.DRSAlgorithm;
-import com.schedule.loadbalance.IWAlgorithm;
-import com.schedule.loadbalance.LSAlgortihm;
-import com.schedule.loadbalance.OLRSAAlgorithm;
-import com.schedule.loadbalance.OfflineAlgorithm;
-import com.schedule.loadbalance.OnlineAlgorithm;
-import com.schedule.loadbalance.RandomAlgorithm;
-import com.schedule.loadbalance.RoundRobinAlgorithm;
-import com.schedule.loadbalance.SAEAlgorithm;
+import com.schedule.loadbalance.*;
 
 /**
  * Comparison algorithms aggregation, which would add all comparison algorithms
@@ -35,6 +27,12 @@ public class AlgorithmItem {
 	private boolean cmp = false;
 	private boolean mig = false;
 	private boolean rr =false;
+	private boolean ley=false;
+	private boolean ffd = false;
+	private boolean leynom = false;
+	private boolean newley = false;
+	private boolean mbfd = false;
+	private boolean save = false;
 
 	ArrayList<OnlineAlgorithm> aoa = new ArrayList<OnlineAlgorithm>();
 	ArrayList<OfflineAlgorithm> aofa = new ArrayList<OfflineAlgorithm>();
@@ -106,6 +104,14 @@ public class AlgorithmItem {
 		this.rr = rr;
 	}
 
+	public boolean isLey() {
+		return ley;
+	}
+
+	public void setLey(boolean ley) {
+		this.ley = ley;
+	}
+
 	public boolean isDRS() {
 		return drs;
 	}
@@ -130,13 +136,39 @@ public class AlgorithmItem {
 		this.mig = mig;
 	}
 
-	public boolean isIW() {
-		return iw;
+	public boolean isIW() { return iw; }
+
+	public void setIW(boolean iw) { this.iw = iw; }
+
+	public boolean isFFD() {
+		return ffd;
 	}
 
-	public void setIW(boolean iw) {
-		this.iw = iw;
+	public void setFFD(boolean ffd) {
+		this.ffd = ffd;
 	}
+
+	public boolean isLeynom() {
+		return leynom;
+	}
+
+	public void setLeynom(boolean leynom) {this.leynom = leynom;}
+
+	public boolean isNewley() {
+		return newley;
+	}
+
+	public void setNewley(boolean newley) {this.newley = newley;}
+
+	public boolean isMbfd() {
+		return mbfd;
+	}
+
+	public void setMbfd(boolean mbfd) {this.mbfd = mbfd;}
+
+	public boolean isSave() {return save;}
+
+	public void setSave(boolean save) {this.save = save;}
 
 	public Iterator createIterator() {
 		//移除在线算法列表中的所有元素
@@ -161,6 +193,9 @@ public class AlgorithmItem {
 		}
 		if (isIW()) {
 			aoa.add(new IWAlgorithm());
+		}
+		if (isSave()) {
+			aoa.add(new Save());
 		}
 		return new OnlineAlgorithmIterator(aoa);
 	}
@@ -190,6 +225,21 @@ public class AlgorithmItem {
 		}
 		if (isRR()){
 			aofa.add(new RoundRobin());
+		}
+		if (isLey()){
+			aofa.add(new LoadEnergy());
+		}
+		if(isFFD()){
+			aofa.add(new FirstFitDecreasing());
+		}
+		if (isLeynom()){
+			aofa.add(new LoadEnergyNoMigration());
+		}
+		if (isNewley()){
+			aofa.add(new NewLoadEnergy());
+		}
+		if(isMbfd()){
+			aofa.add(new MBFD());
 		}
 		return new OfflineAlgorithmIterator(aofa);
 	}

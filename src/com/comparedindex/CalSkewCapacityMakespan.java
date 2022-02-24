@@ -14,7 +14,7 @@ import com.resource.PhysicalMachine;
 public class CalSkewCapacityMakespan extends ComparisonIndex{
 	private float capacity_makespan = 0.0f;
 	private float lowerBound = Float.MAX_VALUE;
-	private float skew_capacity_makespan = 0.0f;
+	public static float skew_capacity_makespan = 0.0f;
 	public CalSkewCapacityMakespan(CalAverageUtility ca){
 		
 		calQueueSkewMakespan(ca.pq1);
@@ -41,8 +41,7 @@ public class CalSkewCapacityMakespan extends ComparisonIndex{
 			if(pq1.get(i).getTotalCapacityMakespan() > capacity_makespan){
 				capacity_makespan = pq1.get(i).getTotalCapacityMakespan();
 			}
-			if(pq1.get(i).getTotalCapacityMakespan() < lowerBound
-					&& pq1.get(i).getTotalCapacityMakespan() != 0){
+			if(pq1.get(i).getTotalCapacityMakespan() < lowerBound && pq1.get(i).getTotalCapacityMakespan() != 0){
 				lowerBound = pq1.get(i).getTotalCapacityMakespan();
 			}
 		}

@@ -70,6 +70,8 @@ public class MainGUI extends javax.swing.JFrame {
         arrIndexjCheckBoxs.add(jCheckBox11);
         arrIndexjCheckBoxs.add(jCheckBox12);
         arrIndexjCheckBoxs.add(jCheckBox13);
+        arrIndexjCheckBoxs.add(jCheckBox21);
+        arrIndexjCheckBoxs.add(jCheckBox22);
 
         //Algorithm
         arrAlgorithmCheckBoxs.add(jCheckBox7);
@@ -84,6 +86,8 @@ public class MainGUI extends javax.swing.JFrame {
         arrAlgorithmCheckBoxs.add(jCheckBox18);
         //添加离线RR算法
         arrAlgorithmCheckBoxs.add(jCheckBox19);
+        arrAlgorithmCheckBoxs.add(jCheckBox20);
+        arrAlgorithmCheckBoxs.add(jCheckBox23);
         //VM request 
         arrJTextFields.add(jTextField4);
         arrJTextFields.add(jTextField7);
@@ -132,6 +136,9 @@ public class MainGUI extends javax.swing.JFrame {
         jCheckBox11 = new javax.swing.JCheckBox();
         jCheckBox12 = new javax.swing.JCheckBox();
         jCheckBox13 = new javax.swing.JCheckBox();
+        jCheckBox21 = new javax.swing.JCheckBox();
+        jCheckBox22 = new javax.swing.JCheckBox();
+        jCheckBox16 = new javax.swing.JCheckBox();
         jButton11 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jCheckBox7 = new javax.swing.JCheckBox();
@@ -146,6 +153,8 @@ public class MainGUI extends javax.swing.JFrame {
         jCheckBox17 = new javax.swing.JCheckBox();
         jCheckBox18 = new javax.swing.JCheckBox();
         jCheckBox19 = new javax.swing.JCheckBox();
+        jCheckBox20 = new javax.swing.JCheckBox();
+        jCheckBox23 = new javax.swing.JCheckBox();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
@@ -410,6 +419,12 @@ public class MainGUI extends javax.swing.JFrame {
         jCheckBox13.setFont(new java.awt.Font("宋体", 0, 14));
         jCheckBox13.setText("RejectedNumber");
 
+        jCheckBox21.setFont(new java.awt.Font("宋体", 0, 14));
+        jCheckBox21.setText("TotalTurnOnTime");
+
+        jCheckBox22.setFont(new java.awt.Font("宋体", 0, 14));
+        jCheckBox22.setText("Combined");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -418,6 +433,9 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox13)
+                    //.addComponent(jCheckBox21)
+                    //.addComponent(jCheckBox22)
+                        //.addGap(22, 22, 22)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox1)
@@ -435,10 +453,17 @@ public class MainGUI extends javax.swing.JFrame {
                             .addComponent(jCheckBox12)
                             .addComponent(jCheckBox6)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
+                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addComponent(jCheckBox21))
+                         .addGap(22,22,22)
+                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addComponent(jCheckBox22)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(jButton14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton15)))
+                //.addGap(0, 6, Short.MAX_VALUE))
                 .addGap(0, 6, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -456,12 +481,18 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox4)
                     .addComponent(jCheckBox6))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox11)
-                    .addComponent(jCheckBox12))
+                //.addGap(6, 6, 6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox13)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                      .addComponent(jCheckBox11)
+                      .addComponent(jCheckBox12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox21)
+                    .addComponent(jCheckBox22))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton14)
@@ -528,6 +559,12 @@ public class MainGUI extends javax.swing.JFrame {
 
         jCheckBox19.setFont(new java.awt.Font("宋体", 0, 14));
         jCheckBox19.setText("R-R");
+
+        jCheckBox20.setFont(new java.awt.Font("宋体", 0, 14));
+        jCheckBox20.setText("New ALG");
+
+        jCheckBox23.setFont(new java.awt.Font("宋体", 0, 14));
+        jCheckBox23.setText("FFD");
         
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -561,7 +598,9 @@ public class MainGUI extends javax.swing.JFrame {
                                     .addComponent(jCheckBox9)
                                     .addComponent(jCheckBox18))
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jCheckBox19))))))
+                                        .addComponent(jCheckBox19)
+                                        .addComponent(jCheckBox20)
+                                        .addComponent(jCheckBox23))))))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -571,18 +610,20 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox7)
                     .addComponent(jCheckBox8)
-                    .addComponent(jCheckBox9))
+                    .addComponent(jCheckBox9)
+                    .addComponent(jCheckBox23))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox10)
                     .addComponent(jCheckBox14)
-                    .addComponent(jCheckBox15))
+                    .addComponent(jCheckBox15)
+                    .addComponent(jCheckBox19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox16)
                     .addComponent(jCheckBox17)
                     .addComponent(jCheckBox18)
-                    .addComponent(jCheckBox19))
+                    .addComponent(jCheckBox20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
@@ -1590,7 +1631,7 @@ public class MainGUI extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -1618,6 +1659,7 @@ public class MainGUI extends javax.swing.JFrame {
                 new MainGUI().setVisible(true);
             }
         });
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
@@ -1648,6 +1690,10 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox17;
     private javax.swing.JCheckBox jCheckBox18;
     private javax.swing.JCheckBox jCheckBox19;
+    private javax.swing.JCheckBox jCheckBox20;
+    private javax.swing.JCheckBox jCheckBox21;
+    private javax.swing.JCheckBox jCheckBox22;
+    private javax.swing.JCheckBox jCheckBox23;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;

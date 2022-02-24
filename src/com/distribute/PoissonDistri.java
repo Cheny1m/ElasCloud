@@ -9,7 +9,7 @@ package com.distribute;
 
 public class PoissonDistri {
 
-	int lamda;//lamda, the average value of a sequence numbers
+	int lamda;//lamda, the average value of a sequence numbers；
 	double poissonProbability;
 	int k;
 	public int nextInt(int number){
@@ -35,8 +35,30 @@ public class PoissonDistri {
 		return k;
 	}
 
-     public static void main(String[] args){
-    	PoissonDistri pd =  new PoissonDistri();
-    	pd.nextInt(100);
-     }
+	public static void main(String[] args){
+		ExponentialServiceTime nd = new ExponentialServiceTime();
+		//输入值
+		int number = 5;
+		double y=0;
+		int count = 0;
+		int Totalcount = 100000;
+		double[] sum = new double[Totalcount+5];
+
+		double MeanValue;
+		double StandardDeviation = 0;
+		//验证均值
+		for(int i = 0; i < Totalcount; i++){
+			System.out.println(nd.nextInt(number));
+			sum[i] = nd.nextInt(number);
+			y=y+sum[i];
+		}
+		MeanValue = y / Totalcount;
+		//验证标准差
+		for(int i = 0 ; i < Totalcount ; i++){
+			StandardDeviation += (sum[i] - MeanValue)*(sum[i] - MeanValue);
+		}
+		StandardDeviation = Math.sqrt(StandardDeviation/Totalcount);
+		System.out.println("平均值为:" + MeanValue);
+		System.out.println("标准差为:"+ StandardDeviation);
+	}
 }

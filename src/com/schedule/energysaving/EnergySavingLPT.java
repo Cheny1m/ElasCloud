@@ -1,5 +1,8 @@
+
+
 package com.schedule.energysaving;
 
+import cloudscheinterface.ConfController;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
 import com.generaterequest.CreateVM;
@@ -18,10 +21,10 @@ import javax.swing.*;
 
 
 /**
- * The energy saving series algorithm,based on LPT(Long Processing Time First). Requests would 
+ * The energy saving series algorithm,based on LPT(Long Processing Time First). Requests would
  * be sequenced with decreasing order by processing time  and be allocated to PM with lowest utility.
  * Different from the online series algorithm, indices are quite different. Some requests may be rejected
- * int this scheduling process. More methods would be added into class PhysicalMachine. 
+ * int this scheduling process. More methods would be added into class PhysicalMachine.
  * @author Yueming Chen
  *
  */
@@ -49,6 +52,8 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 	int pmQueueTwoSize;
 	int pmQueueThreeSize;
 
+	int Saq = 0;
+
 	public EnergySavingLPT(){
 		//	System.out.println(getDescription());
 	}
@@ -66,7 +71,7 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 //	}
 	public void createVM(DataCenterFactory dcf) {
 		//dcf.createVM(new CreateLLNLRequests());
-		dcf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
+		//dcf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
 		//dcf.createVM(new CreateVMByPorcessTime(new CreateVM()));
 	}
 	/**
@@ -78,6 +83,9 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 	public void allocate(ArrayList<VirtualMachine> p_vmQueue, ArrayList<DataCenter> p_arr_dc) {
 		// TODO Auto-generated method stub
 		DataCenterFactory.print.println(getDescription());
+		//对VM按照最长处理时长排序
+		Collections.sort(p_vmQueue,new SortByProcessingTime());
+
 		this.vmQueue = p_vmQueue;
 		this.arr_dc = p_arr_dc;
 
@@ -89,15 +97,17 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 		int allocatedDataCenterID;
 		int allocatedRackID;
 
-		//对vm进行重新编号
-		for(int i = 0 ; i < vmQueue.size() ; i++){
-			vmQueue.get(i).setVmNo(i);
-		}
+//		//对vm进行重新编号
+//		for(int i = 0 ; i < vmQueue.size() ; i++){
+//			vmQueue.get(i).setVmNo(i);
+//		}
+
 //		System.out.println("按最长处理时间排序结果：");
 //		for(int i = 0 ; i < vmQueue.size() ; i++){
 //			System.out.println(vmQueue.get(i).getVmNo()+"  "+ vmQueue.get(i).getStartTime()+"  "+vmQueue.get(i).getEndTime());
 //		}
 
+		DataCenterFactory.print.println("===currentTime:" + currentTime + "===");
 		while (!vmQueue.isEmpty()) {
 			if (currentTime >= vmQueue.get(vmId).getStartTime()) {
 				vm = vmQueue.get(vmId);
@@ -119,16 +129,21 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 			allocatedRackID = arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getLbf_ID();
 
 			//这里将所有的请求都用pm1模拟；后期需要拓展
+			index %= pmTotalNum;
 			if(vm.getVmType() > 0 && vm.getVmType() < 4){
+				Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne(), new SortByCapacityMakespan());
 				allocateVm(allocatedDataCenterID,allocatedRackID,vm,arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne().get(index));
 			}
 			else if (vm.getVmType() >= 4 && vm.getVmType() < 7){
+				Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo(), new SortByCapacityMakespan());
 				allocateVm(allocatedDataCenterID,allocatedRackID,vm,arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo().get(index));
 			}
 			else{
+				Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree(), new SortByCapacityMakespan());
 				allocateVm(allocatedDataCenterID,allocatedRackID,vm,arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree().get(index));
 			}
 		}
+		//DataCenterFactory.print.println("拒绝个数为："+Saq+"  拒绝率为：" + Saq/pmTotalNum);
 		DataCenterFactory.print.println(DataCenterFactory.FINISHEDINFO);
 	}
 
@@ -148,20 +163,28 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 			deleteQueue.add(vm2);
 			vmQueue.remove(vm2);
 			pm2.vms.add(vm2);
-			vm2.setPmNo(pm2.getNo());
-			vm2.setRackNo(rackNo);
-			vm2.setDataCenterNo(dataCenterNo);
+
+
+//			vm2.setPmNo(pm2.getNo());
+//			vm2.setRackNo(rackNo);
+//			vm2.setDataCenterNo(dataCenterNo);
 
 			updateResource(vm2, pm2, decrease);
-			sortPM(vm2);
+			//sortPM(vm2);
 
-			vmId++;
+			vmId = 0;
 			triedAllocationTimes = 0;
 			checkVmIdAvailable();
 			index = 0;
 		} else {
 			if (triedAllocationTimes == pmTotalNum) {
 				System.out.println("VM number is too large, PM number is not enough");
+//				Saq++;
+//				vmQueue.remove(vm2);
+//				vmId = 0;
+//				triedAllocationTimes = 0;
+//				checkVmIdAvailable();
+//				index = 0;
 				JOptionPane.showMessageDialog(null,
 						"VM number is too large, PM number is not enough",
 						"Error", JOptionPane.OK_OPTION);
@@ -291,7 +314,7 @@ public class EnergySavingLPT extends OfflineAlgorithm {
 									.get(rackNo)
 									.getPmQueueThree()
 									.get(pmNo - pmQueueOneSize
-											- pmQueueThreeSize), increase);
+											- pmQueueTwoSize), increase);
 				}
 				p_deleteQueue.remove(vm5);
 			}
@@ -326,6 +349,17 @@ class SortByCurrentUtility implements Comparator<PhysicalMachine> {
     }
 }
 
+
+//按处理时间从大到小
+class SortByProcessingTime implements Comparator<VirtualMachine> {
+	public int compare(VirtualMachine o1, VirtualMachine o2){
+		VirtualMachine vr1 = o1;
+		VirtualMachine vr2 = o2;
+		if(vr1.getVmDuration() < vr2.getVmDuration())
+			return 1;
+		return 0;
+	}
+}
 
 //public class EnergySavingLPT extends OfflineAlgorithm{
 //
@@ -567,7 +601,7 @@ class SortByCurrentUtility implements Comparator<PhysicalMachine> {
 //
 //    private void sortPM(VirtualMachine vm1) {
 //        if(vm1.getVmType() > 0 && vm1.getVmType() <= 3) {
-//            Collections.sort(pmQueueThree, new SortByCurrentUtility(currentTime));
+//            Collections.sort(pmQueueOne, new SortByCurrentUtility(currentTime));
 //        }
 //        else if(vm1.getVmType() > 3 && vm1.getVmType() <= 6){
 //            Collections.sort(pmQueueTwo, new SortByCurrentUtility(currentTime));

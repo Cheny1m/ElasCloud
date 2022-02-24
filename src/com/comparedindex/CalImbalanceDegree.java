@@ -21,7 +21,7 @@ public class CalImbalanceDegree extends ComparisonIndex {
 
 	private float rackImbalaceDegree = 0.0f;
 	private float dataCenterImbalanceDegree = 0.0f;
-	private float wholeSystemImbalanceDegree = 0.0f;
+	public static float wholeSystemImbalanceDegree = 0.0f;
 
 	ArrayList<PhysicalMachine> pq1;
 	ArrayList<PhysicalMachine> pq2;
@@ -63,25 +63,24 @@ public class CalImbalanceDegree extends ComparisonIndex {
 				calQueueUtility(pq1);
 				calQueueUtility(pq2);
 				calQueueUtility(pq3);
-				averageUtility = calUtilityDividedByNumbers(averageUtility,
-						effectivePM);
+				//平均利用率
+				averageUtility = calUtilityDividedByNumbers(averageUtility, effectivePM);
 
 				calQueueImbalance(pq1);
 				calQueueImbalance(pq2);
 				calQueueImbalance(pq3);
 
 				totalPmQueueSize = pq1.size() + pq2.size() + pq3.size();
-				rackImbalaceDegree = calImbalanceDegreeDividedByNumbers(
-						rackImbalaceDegree, totalPmQueueSize);
+				//rackImbalaceDegree = calImbalanceDegreeDividedByNumbers(rackImbalaceDegree, totalPmQueueSize);
+				rackImbalaceDegree = calImbalanceDegreeDividedByNumbers(rackImbalaceDegree, (int)effectivePM);
 
 				dataCenterImbalanceDegree += rackImbalaceDegree;
 			}
-			dataCenterImbalanceDegree = calImbalanceDegreeDividedByNumbers(
-					dataCenterImbalanceDegree, arr_lbf.size());
+			dataCenterImbalanceDegree = calImbalanceDegreeDividedByNumbers(dataCenterImbalanceDegree, arr_lbf.size());
 			wholeSystemImbalanceDegree += dataCenterImbalanceDegree;
 		}
-		wholeSystemImbalanceDegree = calImbalanceDegreeDividedByNumbers(
-				wholeSystemImbalanceDegree, arr_dc.size());
+		wholeSystemImbalanceDegree = calImbalanceDegreeDividedByNumbers(wholeSystemImbalanceDegree, arr_dc.size());
+		//wholeSystemImbalanceDegree = wholeSystemImbalanceDegree * arr_dc.size() * arr_lbf.size() * effectivePM;
 	}
 
 	@Override
@@ -103,8 +102,7 @@ public class CalImbalanceDegree extends ComparisonIndex {
 			return utility / numbers;
 	}
 
-	private float calImbalanceDegreeDividedByNumbers(float imbalnceDegree,
-			int numbers) {
+	private float calImbalanceDegreeDividedByNumbers(float imbalnceDegree, int numbers) {
 		if (numbers == 0)
 			return 0.0f;
 		else
@@ -113,11 +111,10 @@ public class CalImbalanceDegree extends ComparisonIndex {
 
 	private void calQueueImbalance(ArrayList<PhysicalMachine> pq1) {
 		for (int i = 0; i < pq1.size(); i++) {
-			// if(pq1.get(i).getAvgUtility() != 0){
-			pmImbalanceDegree += Math.pow(pq1.get(i).getAvgUtility()
-					- averageUtility, 2);
+			if(pq1.get(i).getAvgUtility() != 0){
+			pmImbalanceDegree += Math.pow(pq1.get(i).getAvgUtility() - averageUtility, 2);
 			rackImbalaceDegree = pmImbalanceDegree;
-			// }
+			}
 		}
 
 	}

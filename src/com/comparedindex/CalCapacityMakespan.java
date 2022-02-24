@@ -18,7 +18,8 @@ public class CalCapacityMakespan extends ComparisonIndex{
 	
 	private float rackCapacityMakespan = 0.0f;
 	private float dataCenterCapacityMakespan = 0.0f;
-	private float wholeSystemCapacityMakespan = 0.0f;
+	public static float wholeSystemCapacityMakespan = 0.0f;
+	public static float CapacityMakespanSum = 0.0f;
 	ArrayList<PhysicalMachine> pq1, pq2, pq3;
 	
 	ArrayList<DataCenter> arr_dc;
@@ -33,6 +34,7 @@ public class CalCapacityMakespan extends ComparisonIndex{
 	}
 
 	public CalCapacityMakespan(ArrayList<DataCenter> p_arr_dc) {
+		CapacityMakespanSum = 0;
 		this.arr_dc = p_arr_dc;
 		for (DataCenter dc : arr_dc) {
 			arr_lbf = dc.getArr_lbf();
@@ -77,12 +79,15 @@ public class CalCapacityMakespan extends ComparisonIndex{
 		return wholeSystemCapacityMakespan;
 	}
 
+	public float getCapacityMakespanSum(){return CapacityMakespanSum;}
+
 	private void calQueueCapacityMakespan(ArrayList<PhysicalMachine> pq1){
 		for(int i = 0; i < pq1.size(); i++){
 			if( pq1.get(i).getTotalCapacityMakespan() > capacity_makespan){
 				capacity_makespan = pq1.get(i).getTotalCapacityMakespan();
 				//capacity_makespan = pq1.get(i).getAvgUtility() * pq1.get(i).getTotalTime()* pq1.get(i).getCpuTotal();
 			}
+			CapacityMakespanSum += pq1.get(i).getTotalCapacityMakespan();
 		}
 	}
 	

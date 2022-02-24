@@ -72,7 +72,6 @@ public class PmInfo {
 	public static void main(String[] args) throws Exception {
 		PmInfo p = new PmInfo();
 		System.out.println(p.getCpu(1));
-                
 		System.out.println(p.getMem(2));
 		System.out.println(p.getStorage(3));
 	}

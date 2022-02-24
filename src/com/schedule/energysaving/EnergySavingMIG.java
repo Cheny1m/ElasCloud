@@ -73,7 +73,7 @@ public class EnergySavingMIG extends OfflineAlgorithm {
     @Override
     public void createVM(DataCenterFactory dcf) {
         //	lbf.createVM(new CreateVMByPorcessTime(new CreateVM()));
-        dcf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
+        //dcf.createVM(new CreateVMByPorcessTime(new CreateLLNLRequests()));
         //dcf.createVM(new CreateVMByPorcessTime(new CreateVM()));
     }
 
@@ -85,6 +85,9 @@ public class EnergySavingMIG extends OfflineAlgorithm {
     public void allocate(ArrayList<VirtualMachine> p_vmQueue, ArrayList<DataCenter> p_arr_dc) {
         // TODO Auto-generated method stub
         DataCenterFactory.print.println(getDescription());
+
+        Collections.sort(p_vmQueue,new SortByProcessingTime());
+
         this.vmQueue = p_vmQueue;
         this.arr_dc = p_arr_dc;
 
@@ -100,6 +103,8 @@ public class EnergySavingMIG extends OfflineAlgorithm {
             vmQueue.get(i).setVmNo(i);
         }
 
+
+        DataCenterFactory.print.println("===currentTime:" + currentTime + "===");
         while (!vmQueue.isEmpty()) {
             if (currentTime >= vmQueue.get(vmId).getStartTime()) {
                 vm = vmQueue.get(vmId);
@@ -183,7 +188,7 @@ public class EnergySavingMIG extends OfflineAlgorithm {
             updateResource(vm2, pm2, decrease);
             sortPM(vm2);
 
-            vmId++;
+            vmId = 0;
             triedAllocationTimes = 0;
             checkVmIdAvailable();
             index = 0;
@@ -326,7 +331,7 @@ public class EnergySavingMIG extends OfflineAlgorithm {
                                     .get(rackNo)
                                     .getPmQueueThree()
                                     .get(pmNo - pmQueueOneSize
-                                            - pmQueueThreeSize), increase);
+                                            - pmQueueTwoSize), increase);
                 }
                 p_deleteQueue.remove(vm5);
             }
@@ -407,19 +412,10 @@ public class EnergySavingMIG extends OfflineAlgorithm {
 
 
 class SortByCapacityMakespan implements Comparator<PhysicalMachine> {
-    SortByCapacityMakespan() {
-    }
-    
-    /**
-     * Decreasing order
-     * @param o1
-     * @param o2
-     * @return 
-     */
     public int compare(PhysicalMachine o1, PhysicalMachine o2){
         PhysicalMachine pm1 = o1;
         PhysicalMachine pm2 = o2;
-        if(pm1.getTotalCapacityMakespan() < pm2.getTotalCapacityMakespan())
+        if(pm1.getTotalCapacityMakespan() > pm2.getTotalCapacityMakespan())
                return 1; 
         return 0;
     }

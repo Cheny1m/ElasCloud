@@ -3,7 +3,6 @@ package com.resource;
  * This is the base class for Physical Machine and Virtual Machine and defining 
  * common share attributes and methods like CPU, memory and bandwidth（带宽）
  * @author yuanliang, Minxian
- *
  */
 public class Server {
 	protected float cpu;
@@ -31,24 +30,20 @@ public class Server {
 		this.storage = storage;
 	}
 	/**
-	 * Left available resource
+	 * Left available resource；剩余可用资源
 	 * @return
 	 */
-	public float getCpuTotal() {
-		return cpuTotal;
-	}
+	public float getCpuTotal() {return cpuTotal; }
 	public void setCpuTotal(float cpuTotal) {
 		this.cpuTotal = cpuTotal;
 	}
-	public float getMemTotal() {
-		return memTotal;
-	}
+
+	public float getMemTotal() { return memTotal; }
 	public void setMemTotal(float memTotal) {
 		this.memTotal = memTotal;
 	}
-	public float getStorageTotal() {
-		return storageTotal;
-	}
+
+	public float getStorageTotal() { return storageTotal; }
 	public void setStorageTotal(float storageTotal) {
 		this.storageTotal = storageTotal;
 	}

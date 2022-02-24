@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.datacenter.DataCenter;
 import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
+import com.generaterequest.CreateVM;
 import com.iterator.ComparisonIndex;
 import com.resource.PhysicalMachine;
 
@@ -19,7 +20,7 @@ public class CalAverageUtility extends ComparisonIndex {
 	private float averageUtility = 0.0f;
 	private float rackAverageUtility = 0.0f;
 	private float dataCenterAverageUtility = 0.0f;
-	private float wholeSystemAverageUtility = 0.0f;
+	public static float wholeSystemAverageUtility = 0.0f;
 	
 	ArrayList<PhysicalMachine> pq1;
 	ArrayList<PhysicalMachine> pq2;
@@ -32,6 +33,7 @@ public class CalAverageUtility extends ComparisonIndex {
 	private int totalPmQueueSize = 0;
 
 	public CalAverageUtility(ArrayList<DataCenter> p_arr_dc) {
+		wholeSystemAverageUtility = 0;
 		this.arr_dc = p_arr_dc;
 		for(DataCenter dc : arr_dc){
 			DataCenterFactory.print.println("###DataCenter" + dc.getD_id() + "###");
@@ -53,16 +55,19 @@ public class CalAverageUtility extends ComparisonIndex {
 				dataCenterAverageUtility += rackAverageUtility;
 			}
 			dataCenterAverageUtility = calUtilityDividedByNumbers(dataCenterAverageUtility, arr_lbf.size());
-                        DataCenterFactory.print.println("dataCenterAverageUtility" + dataCenterAverageUtility);
+                        DataCenterFactory.print.println("dataCenterAverageUtility=" + dataCenterAverageUtility);
 			wholeSystemAverageUtility += dataCenterAverageUtility;
+			dataCenterAverageUtility = 0;
 		}
 		wholeSystemAverageUtility = calUtilityDividedByNumbers(wholeSystemAverageUtility, arr_dc.size());
                 DataCenterFactory.print.println("wholeSystemAverageUtility=" + wholeSystemAverageUtility);
+		wholeSystemAverageUtility = wholeSystemAverageUtility * totalPmQueueSize /effectivePM;
 	}
 
 	@Override
 	public float getIndexValue() {
 		// TODO Auto-generated method stub
+		//wholeSystemAverageUtility = wholeSystemAverageUtility * totalPmQueueSize / effectivePM;
 		return wholeSystemAverageUtility;
 	}
 
@@ -129,11 +134,13 @@ public class CalAverageUtility extends ComparisonIndex {
 //		row++;
 
 		for (int i = 0; i < pq1.size(); i++) {
-			DataCenterFactory.print.println("PM" + pq1.get(i).getNo() + " "
-					+ pq1.get(i).getAvgCpuUtility() + " "
-					+ pq1.get(i).getAvgMemUtility() + " "
-					+ pq1.get(i).getAvgStoUtility() + " "
-					+ pq1.get(i).getAvgUtility());
+//			DataCenterFactory.print.println("PM" + pq1.get(i).getNo() + " "
+//					+ pq1.get(i).getAvgCpuUtility() + " "
+//					+ pq1.get(i).getAvgMemUtility() + " "
+//					+ pq1.get(i).getAvgStoUtility() + " "
+//					//+ pq1.get(i).getAvgUtility());
+//					+ pq1.get(i).getAvgUtility(CreateVM.maxValue - CreateVM.minValue));
+			DataCenterFactory.print.println("" +pq1.get(i).getAvgUtility(CreateVM.maxValue - CreateVM.minValue));
 			// Write data to excel, (row + i) is the row number
 //			LoadBalanceFactory.writeToExcel.writeData(col, row, i);
 //			LoadBalanceFactory.writeToExcel.writeData(
@@ -148,10 +155,13 @@ public class CalAverageUtility extends ComparisonIndex {
 //			row++;
 			if (pq1.get(i).getAvgUtility() != 0) {
 				effectivePM++;
-				averageUtility += pq1.get(i).getAvgUtility();
-				rackAverageUtility = averageUtility;
+//				averageUtility += pq1.get(i).getAvgUtility();
+//				rackAverageUtility = averageUtility;
+				//rackAverageUtility += pq1.get(i).getAvgUtility();
+				rackAverageUtility += pq1.get(i).getAvgUtility(CreateVM.maxValue - CreateVM.minValue);
 			}
 		}
+		//averageUtility = 0;
 		// tab another 5 rows to sperate section
 //		row += 5;
 //		LoadBalanceFactory.writeToExcel.setRowNumber(row);

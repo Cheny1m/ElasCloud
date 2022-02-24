@@ -18,7 +18,7 @@ import com.resource.PhysicalMachine;
  * @author LukeXu
  */
 public class CalEffectivePM extends ComparisonIndex {
-	private float effectivePM;
+	public static float effectivePM;
 	ArrayList<DataCenter> arr_dc;
 	ArrayList<LoadBalanceFactory> arr_lbf;
 	ArrayList<PhysicalMachine> pq1, pq2, pq3;
@@ -44,6 +44,8 @@ public class CalEffectivePM extends ComparisonIndex {
 			}
 		}
 	}
+
+	public float getEffectivePM(){return effectivePM;}
 
 	@Override
 	public String getDescription() {

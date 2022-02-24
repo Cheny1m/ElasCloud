@@ -3,15 +3,15 @@
 	<vmInfo>
 		<vmType>1-1</vmType>
 		<cpu>1</cpu>
-		<mem>1.7</mem>
-		<storage>160</storage>
+		<mem>1.875</mem>
+		<storage>211.25</storage>
 		<proportion>0.125</proportion>
 	</vmInfo>
 	<vmInfo>
 		<vmType>1-2</vmType>
 		<cpu>4</cpu>
 		<mem>7.5</mem>
-		<storage>850</storage>
+		<storage>845</storage>
 		<proportion>0.125</proportion>
 	</vmInfo>
 	<vmInfo>
@@ -25,14 +25,14 @@
 		<vmType>2-1</vmType>
 		<cpu>6.5</cpu>
 		<mem>17.1</mem>
-		<storage>420</storage>
+		<storage>422.5</storage>
 		<proportion>0.125</proportion>
 	</vmInfo>
 	<vmInfo>
 		<vmType>2-2</vmType>
 		<cpu>13</cpu>
 		<mem>34.2</mem>
-		<storage>850</storage>
+		<storage>845</storage>
 		<proportion>0.125</proportion>
 	</vmInfo>
 	<vmInfo>
@@ -45,8 +45,8 @@
 	<vmInfo>
 		<vmType>3-1</vmType>
 		<cpu>5</cpu>
-		<mem>1.7</mem>
-		<storage>350</storage>
+		<mem>1.75</mem>
+		<storage>422.5</storage>
 		<proportion>0.125</proportion>
 	</vmInfo>
 	<vmInfo>

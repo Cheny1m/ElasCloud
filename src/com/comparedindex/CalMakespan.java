@@ -14,17 +14,17 @@ import com.resource.PhysicalMachine;
  */
 public class CalMakespan extends ComparisonIndex{
 	private float makespan = 0.0f;
+	public static float makespanSum = 0.0f;
 	
 	private float rackMakespan = 0.0f;
 	private float dataCenterMakespan = 0.0f;
-	private float wholeSystemMakespan = 0.0f;
+	public static float wholeSystemMakespan = 0.0f;
 	
 	ArrayList<PhysicalMachine> pq1, pq2, pq3;
 	
 	ArrayList<DataCenter> arr_dc;
 	ArrayList<LoadBalanceFactory> arr_lbf;
 	public CalMakespan(CalAverageUtility ca){
-		
 		calQueueMakespan(ca.pq1);
 		calQueueMakespan(ca.pq2);
 		calQueueMakespan(ca.pq3);
@@ -81,9 +81,15 @@ public class CalMakespan extends ComparisonIndex{
 //			makespan = pq1.get(i).getAvgUtility();
 //		}
 
-		if(pq1.get(i).getTotalMakespan() > makespan){
-			makespan = pq1.get(i).getTotalMakespan();
-		}
+//		if(pq1.get(i).getTotalMakespan() > makespan){
+//			makespan = pq1.get(i).getTotalMakespan();
+//		}
+
+			if(pq1.get(i).getEffectiveSlot() > makespan){
+				makespan = pq1.get(i).getEffectiveSlot();
+			}
+		makespanSum += pq1.get(i).getEffectiveSlot();
+
 
 //			if(pq1.get(i).getAvgUtility() * pq1.get(i).getTotalTime() > makespan){
 //				//makespan = pq1.get(i).getTotalMakespan();
@@ -103,5 +109,4 @@ public class CalMakespan extends ComparisonIndex{
 			dataCenterMakespan = p_rack_makespan;
 		}
 	}
-	
 }

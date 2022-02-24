@@ -1,4 +1,4 @@
-package com.schedule.energysaving;
+package com.schedule.loadbalance;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,6 +8,7 @@ import com.datacenter.DataCenterFactory;
 import com.datacenter.LoadBalanceFactory;
 import com.generaterequest.CreateLLNLRequests;
 import com.generaterequest.CreateVM;
+import com.generaterequest.CreateVMByPorcessTime;
 import com.generaterequest.PMBootor;
 import com.resource.PhysicalMachine;
 import com.resource.VirtualMachine;
@@ -17,7 +18,7 @@ import javax.swing.*;
 @author Yueming Chen
  */
 
-public class RoundRobin extends OfflineAlgorithm {
+public class FF extends OnlineAlgorithm {
     int dataCenterIndex; // Selected data center ID
     int rackIndex; // Selected rack ID
     int index; 	//Allocated PM ID
@@ -38,24 +39,17 @@ public class RoundRobin extends OfflineAlgorithm {
     int pmQueueOneSize;
     int pmQueueTwoSize;
     int pmQueueThreeSize;
-    int Saq = 0;
 
-    public RoundRobin(){
+    public FF(){
         //	System.out.println(getDescription());
     }
 
     @Override
     public String getDescription() {
         // TODO Auto-generated method stub
-        return description + "-RoundRobin Algorithm---";
+        return description + "-FirstFit Algorithm---";
     }
 
-    @Override
-    public void createVM(DataCenterFactory dcf) {
-
-        //dcf.createVM(new CreateLLNLRequests());
-        //dcf.createVM(new CreateVM());
-    }
     /**
      * Generate the random index and try to allocate VM to the PM with generated
      * index.
@@ -65,6 +59,8 @@ public class RoundRobin extends OfflineAlgorithm {
     public void allocate(ArrayList<VirtualMachine> p_vmQueue, ArrayList<DataCenter> p_arr_dc) {
         // TODO Auto-generated method stub
         DataCenterFactory.print.println(getDescription());
+
+
         this.vmQueue = p_vmQueue;
         this.arr_dc = p_arr_dc;
 
@@ -77,7 +73,6 @@ public class RoundRobin extends OfflineAlgorithm {
         int allocatedRackID;
 
         DataCenterFactory.print.println("===currentTime:" + currentTime + "===");
-
         while (!vmQueue.isEmpty()) {
             if (currentTime >= vmQueue.get(vmId).getStartTime()) {
                 vm = vmQueue.get(vmId);
@@ -98,33 +93,15 @@ public class RoundRobin extends OfflineAlgorithm {
             rackIndex = 0;
             allocatedRackID = arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getLbf_ID();
 
-//            //PM级别的索引
-//            index = index % pmTotalNum;
-//            //这里将所有的请求都用pm1模拟；后期需要拓展
-//            if(index >= 0 && index < pmQueueOneSize){
-//                allocateVm(allocatedDataCenterID,allocatedRackID,vm,arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne().get(index));
-//            }
-//            else if (index >= pmQueueOneSize && index < pmQueueOneSize+pmQueueTwoSize){
-//                allocateVm(allocatedDataCenterID,allocatedRackID,vm,arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo().get(index-pmQueueOneSize));
-//            }
-//            else{
-//                allocateVm(allocatedDataCenterID,allocatedRackID,vm,arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree().get(index-pmQueueOneSize-pmQueueTwoSize));
-//            }
             index %= pmTotalNum;
             if (vm.getVmType() > 0 && vm.getVmType() < 4) {
-                //按PM排序;此处平均利用率最大，即代表着平均的CM容量最大；因为各个PM的CM相同，总工作时间也相同
-                index %= pmQueueOneSize;
                 allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne().get(index));
             } else if (vm.getVmType() >= 4 && vm.getVmType() < 7) {
-                index %= pmQueueTwoSize;
                 allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueTwo().get(index));
             } else {
-                index %= pmQueueThreeSize;
                 allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueThree().get(index));
             }
-
         }
-        //DataCenterFactory.print.println("拒绝个数为："+Saq+"  拒绝率为：" + Saq/pmTotalNum);
         DataCenterFactory.print.println(DataCenterFactory.FINISHEDINFO);
     }
 
@@ -140,7 +117,9 @@ public class RoundRobin extends OfflineAlgorithm {
     private void allocateVm(int dataCenterNo, int rackNo, VirtualMachine vm2, PhysicalMachine pm2) {
         // TODO Auto-generated method stub
         if (checkResourceAvailble(vm2, pm2)) {
-            DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " " + "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM" + pm2.getNo());
+            DataCenterFactory.print.println("Allocate:VM" + vm2.getVmNo() + " "
+                    + "to DataCenter" + dataCenterNo + " Rack" + rackNo + " PM"
+                    + pm2.getNo());
             deleteQueue.add(vm2);
             vmQueue.remove(vm2);
             pm2.vms.add(vm2);
@@ -153,21 +132,14 @@ public class RoundRobin extends OfflineAlgorithm {
             vmId = 0;
             triedAllocationTimes = 0;
             checkVmIdAvailable();
-            //index = 0;
-            index++ ;
+            index = 0;
         } else {
             if (triedAllocationTimes == pmTotalNum) {
                 System.out.println("VM number is too large, PM number is not enough");
-//                Saq++;
-//                vmQueue.remove(vm2);
-//                vmId = 0;
-//                triedAllocationTimes = 0;
-//                checkVmIdAvailable();
-//                index = 0;
-				JOptionPane.showMessageDialog(null,
-						"VM number is too large, PM number is not enough",
-						"Error", JOptionPane.OK_OPTION);
-				throw new IllegalArgumentException("PM too less");
+                JOptionPane.showMessageDialog(null,
+                        "VM number is too large, PM number is not enough",
+                        "Error", JOptionPane.OK_OPTION);
+                throw new IllegalArgumentException("PM too less");
             } else {
                 triedAllocationTimes++;
                 DataCenterFactory.print.println(DataCenterFactory.FAILEDINFO);

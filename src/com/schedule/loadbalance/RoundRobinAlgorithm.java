@@ -116,7 +116,8 @@ public class RoundRobinAlgorithm extends OnlineAlgorithm {
 			vm2.setPmNo(pm2.getNo());
 			updateResource(vm2, pm2, decrease);
 
-			vmId++;
+			//vmId++;
+			vmId = 0;
 			triedAllocationTimes = 0;
 			checkVmIdAvailable();
 		} else {

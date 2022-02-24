@@ -33,7 +33,8 @@ public class VmInfo {
 	public String getValue(int vmType,String elementsName) {
 		String s="";
 		try {
-			int i=vmType-1; 
+			int i=vmType-1; //vmTypei从1开始，而索引从0开始
+			//取得该虚拟机类型对应配置项（如cpu,mem等)的value
 			s = elements.get(i).getFirstChildElement(elementsName).getValue();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -43,40 +44,42 @@ public class VmInfo {
 	}
 	public float getCpu(int vmType){
 		String cpu="";
-		cpu=this.getValue(vmType,"cpu");
-		
+		cpu = getValue(vmType,"cpu");
+		//返回cpu的值，string->float
 		return Float.parseFloat(cpu);
 	}
 	public float getMem(int vmType){
 		String mem="";
-		mem=this.getValue(vmType, "mem");
+		mem= getValue(vmType, "mem");
 		return Float.parseFloat(mem);
 	}
 	public float getStorage(int vmType){
 		String storage="";
-		storage=this.getValue(vmType, "storage");
+		storage = getValue(vmType, "storage");
 		return Float.parseFloat(storage);
-	}
-	public int getVmTypeNo(String VmType){
-		int i=-1;
-		if ("1-1".equals(VmType)) i=0;
-		else if("1-2".equals(VmType)) i=1;
-		else if("1-3".equals(VmType)) i=2;
-		else if("2-1".equals(VmType)) i=3;
-		else if("2-2".equals(VmType)) i=4;
-		else if("2-3".equals(VmType)) i=5;
-		else if("3-1".equals(VmType)) i=6;
-		else if("3-2".equals(VmType)) i=7;
-		return i;
 	}
 	public float getVmProportion(int vmType){
 		String proportion = "";
-		proportion = this.getValue(vmType, "proportion");
+		proportion = getValue(vmType, "proportion");
 		return Float.parseFloat(proportion);
 	}
+
+//	public int getVmTypeNo(String VmType){
+//		int i=-1;
+//		if ("1-1".equals(VmType)) i=0;
+//		else if("1-2".equals(VmType)) i=1;
+//		else if("1-3".equals(VmType)) i=2;
+//		else if("2-1".equals(VmType)) i=3;
+//		else if("2-2".equals(VmType)) i=4;
+//		else if("2-3".equals(VmType)) i=5;
+//		else if("3-1".equals(VmType)) i=6;
+//		else if("3-2".equals(VmType)) i=7;
+//		return i;
+//	}
+
 	/**
-	 * Calculate the probability span of a VM type
-	 * @param vmType
+	 * Calculate the probability span of a VM type;计算每一个VM的占比范围？
+	 * @param
 	 * @return
 	 */
 	public float[] getVmTypeProbabilitySpan(){

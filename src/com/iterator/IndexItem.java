@@ -2,16 +2,7 @@ package com.iterator;
 
 import java.util.ArrayList;
 
-import com.comparedindex.CalAverageUtility;
-import com.comparedindex.CalCapacityMakespan;
-import com.comparedindex.CalEffectivePM;
-import com.comparedindex.CalEnergyConsumption;
-import com.comparedindex.CalImbalanceDegree;
-import com.comparedindex.CalMakespan;
-import com.comparedindex.CalProcessTime;
-import com.comparedindex.CalRejectedNum;
-import com.comparedindex.CalSkewCapacityMakespan;
-import com.comparedindex.CalSkewMakespan;
+import com.comparedindex.*;
 import com.datacenter.DataCenter;
 import com.resource.PhysicalMachine;
 
@@ -33,6 +24,9 @@ public class IndexItem {
     private boolean effectivePM = false;
     private boolean rejectedVMNum = false;
     private boolean processTime = false;
+    private boolean totalTurnTime = false;
+    private boolean combined = false;
+
     ArrayList<ComparisonIndex> aci = new ArrayList<ComparisonIndex>();
     ArrayList<PhysicalMachine> pq1 = new ArrayList<PhysicalMachine>();
     ArrayList<PhysicalMachine> pq2 = new ArrayList<PhysicalMachine>();
@@ -99,9 +93,7 @@ public class IndexItem {
         return skew_capaciy_makespan;
     }
 
-    public void setSkew_capaciy_makespan(boolean skew_capaciy_makespan) {
-        this.skew_capaciy_makespan = skew_capaciy_makespan;
-    }
+    public void setSkew_capaciy_makespan(boolean skew_capaciy_makespan) { this.skew_capaciy_makespan = skew_capaciy_makespan; }
     //Offline indices
 
     public boolean isEnergyConsumption() {
@@ -124,9 +116,7 @@ public class IndexItem {
         return rejectedVMNum;
     }
 
-    public void setRejectedVMNum(boolean rejectedVMNum) {
-        this.rejectedVMNum = rejectedVMNum;
-    }
+    public void setRejectedVMNum(boolean rejectedVMNum) { this.rejectedVMNum = rejectedVMNum; }
 
     public boolean isProcessTime() {
         return processTime;
@@ -134,6 +124,22 @@ public class IndexItem {
 
     public void setProcessTime(boolean processTime) {
         this.processTime = processTime;
+    }
+
+    public boolean isTotalTurnTime() {
+        return totalTurnTime;
+    }
+
+    public void setTotalTurnTime(boolean totalTurnTime) {
+        this.totalTurnTime = totalTurnTime;
+    }
+
+    public boolean isCombined() {
+        return combined;
+    }
+
+    public void setCombined(boolean combined) {
+        this.combined = combined;
     }
 
     public Iterator createIterator() {
@@ -160,7 +166,8 @@ public class IndexItem {
 
         //Offline indices
         if (isEnergyConsumption()) {
-            aci.add(new CalEnergyConsumption(pq1, pq2, pq3));
+            //aci.add(new CalEnergyConsumption(pq1, pq2, pq3));
+            aci.add(new CalEnergyConsumption(arr_dc));
         }
         if (isEffectivePM()) {
             aci.add(new CalEffectivePM(arr_dc));
@@ -170,6 +177,12 @@ public class IndexItem {
         }
         if (isProcessTime()) {
             aci.add(new CalProcessTime(arr_dc));
+        }
+        if (isTotalTurnTime()) {
+            aci.add(new CalTotalTurnTime(arr_dc));
+        }
+        if (isCombined()) {
+            aci.add(new CalCombined(arr_dc));
         }
         return new IndexIterator(aci);
 

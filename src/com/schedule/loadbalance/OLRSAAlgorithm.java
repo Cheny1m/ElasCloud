@@ -91,9 +91,8 @@ public class OLRSAAlgorithm extends OnlineAlgorithm {
 					.get(rackIndex).getLbf_ID();
 
 			if (vm.getVmType() > 0 && vm.getVmType() < 4) {
-				Collections.sort(
-						arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex)
-								.getPmQueueOne(), new SortByPMUtility());
+				Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne(), new SortByCapacityMakespan());
+				//Collections.sort(arr_dc.get(dataCenterIndex).getArr_lbf().get(rackIndex).getPmQueueOne(), new SortByPMUtility());
 				allocateVm(allocatedDataCenterID, allocatedRackID, vm, arr_dc
 						.get(dataCenterIndex).getArr_lbf().get(rackIndex)
 						.getPmQueueOne().get(index));
@@ -142,7 +141,8 @@ public class OLRSAAlgorithm extends OnlineAlgorithm {
 
 			updateResource(vm2, pm2, decrease);
 
-			vmId++;
+			//vmId++;
+			vmId = 0;
 			triedAllocationTimes = 0;
 			checkVmIdAvailable();
 			index = 0;
@@ -188,10 +188,10 @@ public class OLRSAAlgorithm extends OnlineAlgorithm {
 		boolean allocateSuccess = true;
 		boolean oneSlotAllocation;
 		for (int t = vm3.getStartTime(); t < vm3.getEndTime(); t++) {
-			oneSlotAllocation = (pm3.resource.get(t).getCpuUtility() > vm3
+			oneSlotAllocation = (pm3.resource.get(t).getCpuUtility() >= vm3
 					.getCpuTotal())
-					&& (pm3.resource.get(t).getMemUtility() > vm3.getMemTotal())
-					&& (pm3.resource.get(t).getStoUtility() > vm3
+					&& (pm3.resource.get(t).getMemUtility() >= vm3.getMemTotal())
+					&& (pm3.resource.get(t).getStoUtility() >= vm3
 							.getStorageTotal());
 			allocateSuccess = allocateSuccess && oneSlotAllocation;
 
@@ -207,7 +207,7 @@ public class OLRSAAlgorithm extends OnlineAlgorithm {
 	 * Update the available resource. When parameter 3 equals to increase,
 	 * available resource would increased, else resource would be decreased.
 	 * 
-	 * @param vm4s
+	 * @param vm4
 	 * @param pm4
 	 * @param incOrDec
 	 */

@@ -34,7 +34,8 @@ public class DataCenterFactory {
     public static int MAXTIME;
     public static final String FINISHEDINFO = "---Allocation Finished---";
     public static final String FAILEDINFO = "---Resource not enough, try another PM---";
-    public static ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
+    //public static ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
+    public ArrayList<VirtualMachine> vmQueue = new ArrayList<VirtualMachine>();
     //数据中心list  3个pm列表的合成
     ArrayList<DataCenter> arr_dc = new ArrayList<DataCenter>();
     IndexItem ii;
@@ -95,7 +96,7 @@ public class DataCenterFactory {
         DataCenter dc1 = new DataCenter(0, 0);
         ArrayList<Rack> arr_rack = new ArrayList<Rack>();
         //机架未与GUI实现对接
-        arr_rack.add(new Rack(0, 60, 0, 0, 0));
+        arr_rack.add(new Rack(0 ,100, 0, 0, 0));
         //arr_rack.add(new Rack(1, 60, 0, 0, 100));
         dc1.setArr_rack(arr_rack);
         dc1.initalAllResourse();
@@ -124,7 +125,7 @@ public class DataCenterFactory {
 
     /**
      * Allocate VM requests to corresponding PM
-     * @param aa
+     * @param
      */
     //请求；与loadbalance的区别是将3个pm序列合成了数据中心
     public void allocate(OnlineAlgorithm onla) {
@@ -189,14 +190,13 @@ public class DataCenterFactory {
         return arr_dc;
     }
 
+    public ArrayList<VirtualMachine> getVmQueue() {return vmQueue;}
+
     /**
      * Scheduling description
      * @return
      */
-    public String getDescription() {
-
-        return "";
-    }
+    public String getDescription() { return "DataBalanceFactory"; }
 
     //好像未添加比较值模块
 }
